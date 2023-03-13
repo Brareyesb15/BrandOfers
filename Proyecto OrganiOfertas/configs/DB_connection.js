@@ -1,6 +1,6 @@
 require('dotenv').config();
 const { Sequelize, Op, BelongsTo } = require('sequelize');
-const modeltblUsers = require('./models/tblUsers');
+const modelofertas = require ("../src/models/ofertas")
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_DEPLOY, DB_DB } = process.env;
 
 
@@ -23,8 +23,9 @@ const { DB_USER, DB_PASSWORD, DB_HOST, DB_DEPLOY, DB_DB } = process.env;
 
 //Acá irán las funciones de los modelos. ej: modelStudents(sequelize)
 
+modelofertas(sequelize)
 
-const { } = sequelize.models;
+const {} = sequelize.models;
 
 // Acá van las relaciones: 
 

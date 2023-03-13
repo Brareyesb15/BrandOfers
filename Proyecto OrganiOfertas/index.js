@@ -1,8 +1,8 @@
 require('dotenv').config();
-const { server, express } = require("./src/App");
+const { server, express } = require("./configs/App")
 const PORT = process.env.PORT
 
-const {sequelize} = require ("./src/DB_connection")
+const {sequelize} = require ("./configs/DB_connection")
 
 
 sequelize.sync({ force: true }).then(async () => {
