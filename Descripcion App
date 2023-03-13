@@ -1,0 +1,20 @@
+Descripcion y estructura de la app: 
+Guardar todas las ofertas presentadas de manera rápida, ingresando los datos necesarios para recordarlo y guardarlo y poder buscar
+según qué temas las ofertas que guardaste. 
+
+Tabla de Ofertas:
+        empresa : text
+        fecha de presentación: fecha actual al momento de la creación
+        Tecnologías: text, te permite clickear en guardar para pushear al array y seguir creando
+        stack: text, te permite escribir fullstack, backend, frontend, devops. 
+        Descripcion : escribir la descripción, textarea 
+        link de  la oferta: link 
+        
+
+Entrevistas: 
+
+        fecha: te permite escribir la fecha de la entrevista. Date es el type, debe tener hora.
+        resultado: escribir en qué quedo, que info te dieron. 
+        feedback: textarea
+        (EN EL FORMULARIO PONDRÁS ALGO MÁS, NUEVA FECHA: TE PERMITE AGREGAR UNA NUEVA RELACIÓN ENTREVISTA X TABLA DE OFERTAS)
+
