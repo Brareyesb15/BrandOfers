@@ -2,14 +2,43 @@
 import { useState } from 'react';
 
 export default function FormOfertas() {
+  const [tempTec, setTempTec] = useState('');
   const [formData, setFormData] = useState({
     empresa: '',
     descripcion: '',
-    tecnologias: "",
-    linkOferta: "",
-    stack: []
+    tecnologias: [],
+    linkOferta: '',
+    stack: ''
   });
-const handleSubmit = () => {}
+
+  const handleSubmit = () => {};
+
+  const handleChangeTecs = (e) => {
+    const { value } = e.target;
+    setTempTec(value);
+  };
+
+  const handleAddTec = () => {
+    if (tempTec.trim() !== '') {
+      setFormData({
+        ...formData,
+        tecnologias: [...formData.tecnologias, tempTec.trim()]
+      });
+      setTempTec('');
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    
+  };
+
+  console.log(formData);
     return (
         <>
         <h2>Ingresa la oferta</h2>
@@ -20,13 +49,13 @@ const handleSubmit = () => {}
                   Empresa:
                   <input
                     type="text"
-                    name="Title"
+                    name="empresa"
                     minLength="1"
                     maxLength="100"
                     placeholder="Insertar Título"
                     required
-                    // value={formData.Title}
-                    // onChange={handleInputChange}
+                    value={formData.empresa}
+                    onChange={handleInputChange}
                   />
                 </div>
             </label>
@@ -40,8 +69,8 @@ const handleSubmit = () => {}
                     minLength="5"
                     maxLength="500"
                     placeholder="Insertar Descripción"
-                    // value={formData.Description}
-                    // onChange={handleInputChange}
+                    value={formData.descripcion}
+                    onChange={handleInputChange}
                     rows="10"
                     cols="65"
                     required></textarea>                  
@@ -49,39 +78,43 @@ const handleSubmit = () => {}
               </div>
             </label>
             <label>
-              Tecnologías:
-              <input
-                type="text"
-                name="Duration"
-                // value={formData.Duration}
-                // onChange={handleInputChange}
-                min={1}
-                max={50}
-                required
-              />
-              <br></br>
+                Tecnologías:
+                <input
+                  type="text"
+                  name="tecnologias"
+                  value={tempTec}
+                  onChange={handleChangeTecs}
+                  required
+                />
+                <button type="button" onClick={handleAddTec}>Agregar tecnología</button>
+                <ul>
+                  {formData.tecnologias.map((tec, index) => (
+                    <li key={index}>{tec}</li>
+                  ))}
+                </ul>
+                <br />
               Link de la Oferta:
                   <input
                     type="text"
-                    name="Title"
+                    name="linkOferta"
                     minLength="1"
                     maxLength="100"
                     placeholder="Insertar Título"
                     required
-                    // value={formData.Title}
-                    // onChange={handleInputChange}
+                    value={formData.linkOferta}
+                    onChange={handleInputChange}
                   />
                   <br />
                   Stack:
                   <input
                     type="text"
-                    name="Title"
+                    name="stack"
                     minLength="1"
                     maxLength="100"
                     placeholder="Ins  ertar Título"
                     required
-                    // value={formData.Title}
-                    // onChange={handleInputChange}
+                    value={formData.stack}
+                    onChange={handleInputChange}
                   />
             </label>
         </form>
@@ -90,4 +123,4 @@ const handleSubmit = () => {}
 
 
 
-}
+} 
