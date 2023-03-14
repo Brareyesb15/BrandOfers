@@ -1,19 +1,27 @@
 "use client"
+import { useState } from 'react';
 
 export default function FormOfertas() {
+  const [formData, setFormData] = useState({
+    empresa: '',
+    descripcion: '',
+    tecnologias: "",
+    linkOferta: "",
+    stack: []
+  });
 const handleSubmit = () => {}
     return (
         <>
-        <h2>Crear Nuevo Curso</h2>
+        <h2>Ingresa la oferta</h2>
           <form onSubmit={handleSubmit}>
             <label>
              
                 <div >
-                  Titulo:
+                  Empresa:
                   <input
                     type="text"
                     name="Title"
-                    minLength="5"
+                    minLength="1"
                     maxLength="100"
                     placeholder="Insertar Título"
                     required
@@ -28,7 +36,7 @@ const handleSubmit = () => {}
                 <div>
                   Descripción:
                   <textarea
-                    name="Description"
+                    name="descripcion"
                     minLength="5"
                     maxLength="500"
                     placeholder="Insertar Descripción"
@@ -40,20 +48,41 @@ const handleSubmit = () => {}
                 </div>              
               </div>
             </label>
-            <br />
-            <label>Categorias: </label>
-            <br />
             <label>
-              Duración:
+              Tecnologías:
               <input
-                type="number"
+                type="text"
                 name="Duration"
                 // value={formData.Duration}
                 // onChange={handleInputChange}
-                min={30}
-                max={150}
+                min={1}
+                max={50}
                 required
               />
+              <br></br>
+              Link de la Oferta:
+                  <input
+                    type="text"
+                    name="Title"
+                    minLength="1"
+                    maxLength="100"
+                    placeholder="Insertar Título"
+                    required
+                    // value={formData.Title}
+                    // onChange={handleInputChange}
+                  />
+                  <br />
+                  Stack:
+                  <input
+                    type="text"
+                    name="Title"
+                    minLength="1"
+                    maxLength="100"
+                    placeholder="Ins  ertar Título"
+                    required
+                    // value={formData.Title}
+                    // onChange={handleInputChange}
+                  />
             </label>
         </form>
     </>
