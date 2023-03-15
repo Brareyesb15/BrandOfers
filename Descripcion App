@@ -18,3 +18,10 @@ Entrevistas:
         feedback: textarea
         (EN EL FORMULARIO PONDRÁS ALGO MÁS, NUEVA FECHA: TE PERMITE AGREGAR UNA NUEVA RELACIÓN ENTREVISTA X TABLA DE OFERTAS)
 
+
+
+Home: 
+componente que tiene varias opciones: 
+buscar por tal: buscar por tal: buscar por tal: buscar por tal : 
+Dependiendo de lo que escojas te busca y te renderiza el curso. Todas las renderizaciones vendrán en un componente especifico y tendrán un botón para agregarle una entrevista. Aquí termina la funcionalidad de la aplicación. 
+También deben poder verse todas las ofertas y poder ordenarlas. Limite: Mañana miercoles es el limite brandon jose por favor. 
