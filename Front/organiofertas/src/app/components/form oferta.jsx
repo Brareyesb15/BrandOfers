@@ -12,10 +12,11 @@ export default function FormOfertas() {
     stack: ''
   });
 
-  const handleSubmit = () => async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("se ejecutó")
     try {
-      const res = await fetch(`http://localhost:5000/???`, {
+      const res = await fetch(`http://localhost:5000/oferta`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -23,7 +24,7 @@ export default function FormOfertas() {
         body: JSON.stringify(formData),
       });
       const data = await res.json();
-      console.log(data);
+      console.log("termine este fetch falso", data);
     } catch (error) {
       console.error(error);
     }
@@ -100,7 +101,6 @@ export default function FormOfertas() {
                   name="tecnologias"
                   value={tempTec}
                   onChange={handleChangeTecs}
-                  required
                 />
                 <button type="button" onClick={handleAddTec}>Agregar tecnología</button>
                 <ul>
@@ -133,6 +133,7 @@ export default function FormOfertas() {
                     onChange={handleInputChange}
                   />
             </label>
+            <button type="submit" >guardar oferta</button>
         </form>
     </>
     )

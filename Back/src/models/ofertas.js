@@ -23,7 +23,7 @@ module.exports = sequelize => {
             defaultValue : true, 
         },
         linkOferta : {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull:true
         },
         fechaPresentacion: {
