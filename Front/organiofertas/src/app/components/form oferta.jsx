@@ -4,17 +4,17 @@ import { useState } from 'react';
 
 export default function FormOfertas() {
   const [tempTec, setTempTec] = useState('');
-  const [formData, setFormData] = useState({
+  const [initial, setInitial] = useState({
     empresa: '',
     descripcion: '',
     tecnologias: [],
     linkOferta: '',
     stack: ''
   });
+  const [formData,setFormData] = useState(initial)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("se ejecutó")
     try {
       const res = await fetch(`http://localhost:5000/oferta`, {
         method: 'POST',
@@ -23,8 +23,8 @@ export default function FormOfertas() {
         },
         body: JSON.stringify(formData),
       });
-      const data = await res.json();
-      console.log("termine este fetch falso", data);
+      setFormData(initial);
+    
     } catch (error) {
       console.error(error);
     }
