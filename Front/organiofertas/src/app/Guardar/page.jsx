@@ -1,10 +1,10 @@
 import FormOfertas from "../components/form oferta"
 
 
-export default function About() {
+export default function Guardar() {
     return (
       <>
-      <div>Estamos en About</div>
+      <div>Estamos en guardar</div>
         <FormOfertas />
       </>
     )

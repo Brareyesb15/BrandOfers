@@ -5,8 +5,8 @@ const links = [{
     route: "/"            // trabajo de ruteo, las guardas en un link para trabajarlo.
   },
   {
-    label: "About",
-    route: "/about"
+    label: "Guardar",
+    route: "/Guardar"
   }]
   export default function Navigation() {
     return (
