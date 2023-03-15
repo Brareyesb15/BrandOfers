@@ -1,4 +1,4 @@
-// const mainRouter = require("./routes/Router.js.js")
+const mainRouter = require("../src/routes/Router")
 const express = require("express");
 const morgan = require("morgan"); // middleware que te da informacion por consola cuando se haga una solicitud. 
 const bodyParser = require ("body-parser")
@@ -22,7 +22,7 @@ server.use(morgan("dev"));
 
 server.use(express.json());
 
-// server.use(mainRouter); // te permite modularizar tus routes.
+server.use(mainRouter); // te permite modularizar tus routes.
 
 module.exports = {server,express}; 
 

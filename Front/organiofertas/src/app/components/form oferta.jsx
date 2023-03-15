@@ -1,6 +1,7 @@
 "use client"
 import { useState } from 'react';
 
+
 export default function FormOfertas() {
   const [tempTec, setTempTec] = useState('');
   const [formData, setFormData] = useState({
@@ -11,7 +12,22 @@ export default function FormOfertas() {
     stack: ''
   });
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch(`http://localhost:5000/???`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   const handleChangeTecs = (e) => {
     const { value } = e.target;
