@@ -14,6 +14,7 @@ export default function FormOfertas() {
     ingles: "",
     experiencia: "",
     pais: "",
+    postulacion: ""
 
 
   });
@@ -185,6 +186,13 @@ export default function FormOfertas() {
                     value={formData.pais}
                     onChange={handleInputChange}
                   />
+                  <br />  
+                  <label>Tipo de postulación:</label>
+                      <select name="postulacion" onChange={handleInputChange}>
+                        <option value="Espontanea">Espontánea</option>
+                        <option value="Regular">Regular</option>
+                      </select>
+                      <br />
             </label>
             <button type="submit" >guardar oferta</button>
         </form>

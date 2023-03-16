@@ -47,6 +47,12 @@ module.exports = sequelize => {
         pais: {
             type: DataTypes.STRING,
             allowNull:true
+        },
+        postulacion: {
+            type: DataTypes.ENUM(
+                "Espontanea",
+                "Regular"
+            )
         }
         
     },

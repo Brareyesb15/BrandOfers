@@ -25,3 +25,13 @@ componente que tiene varias opciones:
 buscar por tal: buscar por tal: buscar por tal: buscar por tal : 
 Dependiendo de lo que escojas te busca y te renderiza el curso. Todas las renderizaciones vendrán en un componente especifico y tendrán un botón para agregarle una entrevista. Aquí termina la funcionalidad de la aplicación. 
 También deben poder verse todas las ofertas y poder ordenarlas. Limite: Mañana miercoles es el limite brandon jose por favor. 
+
+Puedes agregar más datos a la tabla... conforme vayas viendo job preparation puedes ir agregando más cosas a la tabla de ofertas. Lo ídeal sería que puedas recabar el máximo de información para así poder sacar estadisticas de lo que estás haciendo, y poder extraer qué va bien y qué va mal. 
+
+AGREGAR UN DATATYPE NUEVO A OFERTAS: Datatype: Espontanea, regular. 
+Idioma: 
+
+Portales de empleo: Glastdoor, Getonboard 
+Necesitas 50 portales de empleos. 
+
+OJO, TIENES MUCHAS FORMAS PARA OFERTAS : Regulares, es decir, a través de portales de empleo, linkedin o busquedas en el buscador de linkedin, o Espontaneas, en las que tu buscas lo cercano a  tu perfil y envías tu solicitud. 
