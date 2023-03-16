@@ -5,11 +5,17 @@ import { useState } from 'react';
 export default function FormOfertas() {
   const [tempTec, setTempTec] = useState('');
   const [initial, setInitial] = useState({
+    titulo: "",
     empresa: '',
     descripcion: '',
     tecnologias: [],
     linkOferta: '',
-    stack: ''
+    stack: '',
+    ingles: "",
+    experiencia: "",
+    pais: "",
+
+
   });
   const [formData,setFormData] = useState(initial)
 
@@ -63,6 +69,17 @@ export default function FormOfertas() {
             <label>
              
                 <div >
+                Titulo de la Oferta:
+                  <input
+                    type="text"
+                    name="titulo"
+                    minLength="1"
+                    maxLength="100"
+                    placeholder="Insertar Título"
+                    required
+                    value={formData.titulo}
+                    onChange={handleInputChange}
+                  />
                   Empresa:
                   <input
                     type="text"
@@ -127,9 +144,45 @@ export default function FormOfertas() {
                     name="stack"
                     minLength="1"
                     maxLength="100"
-                    placeholder="Ins  ertar Título"
+                    placeholder="Insertar Título"
                     required
                     value={formData.stack}
+                    onChange={handleInputChange}
+                  />
+                  <br />
+                  Nivel de ingles:
+                  <input
+                    type="text"
+                    name="ingles"
+                    minLength="1"
+                    maxLength="100"
+                    placeholder="Insertar Título"
+                    required
+                    value={formData.ingles}
+                    onChange={handleInputChange}
+                  />
+                  <br />
+                  experiencia
+                  <input
+                    type="text"
+                    name="experiencia"
+                    minLength="1"
+                    maxLength="100"
+                    placeholder="Insertar Título"
+                    required
+                    value={formData.experiencia}
+                    onChange={handleInputChange}
+                  />
+                  <br />
+                  País del aspirante:
+                  <input
+                    type="text"
+                    name="pais"
+                    minLength="1"
+                    maxLength="100"
+                    placeholder="Insertar Título"
+                    required
+                    value={formData.pais}
                     onChange={handleInputChange}
                   />
             </label>
