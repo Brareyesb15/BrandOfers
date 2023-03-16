@@ -2,6 +2,11 @@ const { DataTypes } = require('sequelize');
 
 module.exports = sequelize => {
     sequelize.define("ofertas", {
+        titulo: {
+            type: DataTypes.STRING,
+            allowNull: true 
+
+        },
         empresa: {
             type: DataTypes.STRING,
             allowNull: true
@@ -28,7 +33,20 @@ module.exports = sequelize => {
         },
         fechaPresentacion: {
             type: DataTypes.DATEONLY,
-            defaultValue: DataTypes.NOW
+            defaultValue: DataTypes.NOW,
+            allowNull:true
+        },
+        ingles: {
+            type: DataTypes.STRING,
+            allowNull:true
+        },
+        experiencia: {
+            type: DataTypes.STRING,
+            allowNull:true
+        },
+        pais: {
+            type: DataTypes.STRING,
+            allowNull:true
         }
         
     },
