@@ -7,8 +7,7 @@ const {sequelize} = require ("./configs/DB_connection")
 
 
 sequelize.sync({ force: true }).then(async () => {
-  postTecs()
-  
+
 
 })
 
