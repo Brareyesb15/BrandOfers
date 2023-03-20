@@ -11,10 +11,11 @@ export default function FormOfertas() {
     tecnologias: [],
     linkOferta: '',
     stack: '',
-    ingles: "",
+    ingles: {},
     experiencia: "",
     pais: "",
-    postulacion: ""
+    postulacion: "",
+    experiencia: ""
 
 
   });
@@ -191,6 +192,14 @@ export default function FormOfertas() {
                       <select name="postulacion" onChange={handleInputChange}>
                         <option value="Espontanea">Espontánea</option>
                         <option value="Regular">Regular</option>
+                      </select>
+                      <br />
+                      <label>Experiencia:</label>
+                      <select name="experiencia" onChange={handleInputChange}>
+                        <option value="Menos de 1 año">Menos de 1 año</option>
+                        <option value="Entre 1 y 2 años">Entre 1 y 2 años</option>
+                        <option value="Entre 2 y 5 años">Entre 2 y 5 años</option>
+                        <option value="Más de 5 años">Más de 5 años</option>
                       </select>
                       <br />
             </label>
