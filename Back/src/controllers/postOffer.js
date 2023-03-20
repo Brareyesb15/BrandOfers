@@ -11,10 +11,10 @@ const postOffer = async (oferta) => {
     tecnologias: oferta.tecnologias,
     linkOferta : oferta.linkOferta,
     stack: oferta.stack,
-    ingles: oferta.ingles,
     experiencia: oferta.experiencia,
     pais: oferta.pais,
-    postulacion: oferta.postulacion
+    postulacion: oferta.postulacion,
+    idioma: oferta.idioma
 
     }
     )

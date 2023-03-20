@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect} from 'react';
 import tecs from "../../../../../Back/utils/tecs"
+import {idiomas,nivel} from "../../../../../Back/utils/idiomas"
 
 
 export default function FormOfertas() {
@@ -12,7 +13,7 @@ export default function FormOfertas() {
     tecnologias: [],
     linkOferta: '',
     stack: '',
-    ingles: {},
+    idioma: {idioma : "", nivel : ""},
     experiencia: "",
     pais: "",
     postulacion: "",
@@ -39,39 +40,22 @@ export default function FormOfertas() {
     }
   };
 
-  // const handleChangeTecs = (e) => {
-  //   const { value } = e.target;
-  //   setTempTec(value);
-  // };
-
-  // const handleAddTec = () => {
-  //   if (tempTec.trim() !== '') {
-  //     setFormData({
-  //       ...formData,
-  //       tecnologias: [...formData.tecnologias, tempTec.trim()]
-  //     });
-  //     setTempTec('');
-  //   }
-  // };
-
   const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
-  
-    if (type === "checkbox") {
-      setTempTec((prevTec) =>
-        checked ? [...prevTec, name] : prevTec.filter((tec) => tec !== name)
+    const { name, value, checked, type} = e.target;
+    
+    if (name === "idioma" || name === "nivel") {
+      setFormData({
+        ...formData,
+        idioma: {
+          ...formData.idioma,
+          [name]: value,
+        },
+      });
+    } else if (type === "checkbox") {
+      console.log("entrando al checkbox tec",value)
+      setTempTec((prevTec) => 
+        checked ? [...prevTec, value] : prevTec.filter((tec) => tec !== value)
       );
-    } else if (type === "select-multiple") {
-      const options = e.target.options;
-      const selectedValues = [];
-  
-      for (let i = 0; i < options.length; i++) {
-        if (options[i].selected) {
-          selectedValues.push(options[i].value);
-        }
-      }
-  
-      setTempTec(selectedValues);
     } else {
       setFormData({
         ...formData,
@@ -144,19 +128,13 @@ export default function FormOfertas() {
                   type="checkbox"
                   name={tec}
                   checked={tempTec.includes(tec)}
+                  value={tec}
                   onChange={handleInputChange}
                   
                 />
                 {tec}
               </label>
             ))}
-                {/* <input
-                  type="text"
-                  name="tecnologias"
-                  value={tempTec}
-                  onChange={handleChangeTecs}
-                />
-                <button type="button" onClick={handleAddTec}>Agregar tecnología</button> */}
                 <ul>
                   {formData.tecnologias.map((tec, index) => (
                     <li key={index}>{tec}</li>
@@ -187,29 +165,25 @@ export default function FormOfertas() {
                     onChange={handleInputChange}
                   />
                   <br />
-                  Nivel de ingles:
-                  <input
-                    type="text"
-                    name="ingles"
-                    minLength="1"
-                    maxLength="100"
-                    placeholder="Insertar Título"
-                    required
-                    value={formData.ingles}
-                    onChange={handleInputChange}
-                  />
-                  <br />
-                  experiencia
-                  <input
-                    type="text"
-                    name="experiencia"
-                    minLength="1"
-                    maxLength="100"
-                    placeholder="Insertar Título"
-                    required
-                    value={formData.experiencia}
-                    onChange={handleInputChange}
-                  />
+                  Idioma:
+  <select name="idioma" value={formData.idioma.idioma} onChange={handleInputChange}>
+    {idiomas.map((idioma) => (
+      <option key={idioma} value={idioma}>
+        {idioma}
+      </option>
+    ))}
+  </select>
+</label>
+<label>
+  Nivel de idioma:
+  <select name="nivel" value={formData.idioma.nivel} onChange={handleInputChange}>
+    {nivel.map((niv) => (
+      <option key={niv} value={niv}>
+        {niv}
+      </option>
+    ))}
+  </select>
+          
                   <br />
                   País del aspirante:
                   <input

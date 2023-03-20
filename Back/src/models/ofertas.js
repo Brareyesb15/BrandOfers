@@ -55,6 +55,10 @@ module.exports = sequelize => {
         {
             type: DataTypes.ARRAY(DataTypes.STRING),  // la logica dirá que en el form puedas escoger varias de las tecnologias disponibles, y una opcion de crear nueva tecnologia para agregar. 
             allowNull: true 
+        },
+        idioma: {
+         type: DataTypes.JSON
+
         }
         
     },
