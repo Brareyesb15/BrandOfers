@@ -57,7 +57,9 @@ module.exports = sequelize => {
             allowNull: true 
         },
         idioma: {
-         type: DataTypes.JSON
+         type: DataTypes.JSON // IDIOMA YA NO LO TRABAJAS DESDE OTRA TABLA, SOLO DESDE UNA. Cual puede ser el cambio? Ahora mismo tienes un array
+                            // en utils que se encarga de renderizar las opciones de idiomas. Si quieres agregar uno nuevo puedes cambiar ese array? 
+                            // si no se puede puedes crear un tabla que solo guarde eso y en el front la traes para ese trabajo. 
 
         }
         
