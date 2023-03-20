@@ -43,6 +43,18 @@ module.exports = sequelize => {
         },
         pais:{
             type: DataTypes.STRING
+        },
+        stack: {
+          type: DataTypes.ENUM(
+                "Backend",
+                "Frontend",    // en el form agregar: Agregar nuevo stack, y agregarlo, buscar como, igual que en idiomas. 
+                "Fullstack"
+            )
+        },
+        tecnologias: 
+        {
+            type: DataTypes.ARRAY(DataTypes.STRING),
+            allowNull: true
         }
         
     },
