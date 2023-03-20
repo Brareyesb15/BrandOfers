@@ -1,9 +1,10 @@
 "use client"
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
+import tecs from "../../../../../Back/utils/tecs"
 
 
 export default function FormOfertas() {
-  const [tempTec, setTempTec] = useState('');
+  const [tempTec, setTempTec] = useState([]);
   const [initial, setInitial] = useState({
     titulo: "",
     empresa: '',
@@ -38,30 +39,52 @@ export default function FormOfertas() {
     }
   };
 
-  const handleChangeTecs = (e) => {
-    const { value } = e.target;
-    setTempTec(value);
-  };
+  // const handleChangeTecs = (e) => {
+  //   const { value } = e.target;
+  //   setTempTec(value);
+  // };
 
-  const handleAddTec = () => {
-    if (tempTec.trim() !== '') {
-      setFormData({
-        ...formData,
-        tecnologias: [...formData.tecnologias, tempTec.trim()]
-      });
-      setTempTec('');
-    }
-  };
+  // const handleAddTec = () => {
+  //   if (tempTec.trim() !== '') {
+  //     setFormData({
+  //       ...formData,
+  //       tecnologias: [...formData.tecnologias, tempTec.trim()]
+  //     });
+  //     setTempTec('');
+  //   }
+  // };
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-
+    const { name, value, type, checked } = e.target;
+  
+    if (type === "checkbox") {
+      setTempTec((prevTec) =>
+        checked ? [...prevTec, name] : prevTec.filter((tec) => tec !== name)
+      );
+    } else if (type === "select-multiple") {
+      const options = e.target.options;
+      const selectedValues = [];
+  
+      for (let i = 0; i < options.length; i++) {
+        if (options[i].selected) {
+          selectedValues.push(options[i].value);
+        }
+      }
+  
+      setTempTec(selectedValues);
+    } else {
       setFormData({
         ...formData,
         [name]: value,
       });
-    
+    }
   };
+  useEffect(() => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      tecnologias: tempTec,
+    }));
+  }, [tempTec]);
 
   console.log(formData);
     return (
@@ -115,13 +138,25 @@ export default function FormOfertas() {
             </label>
             <label>
                 Tecnologías:
+                {tecs.map((tec,id) => (
+              <label key={id}>
                 <input
+                  type="checkbox"
+                  name={tec}
+                  checked={tempTec.includes(tec)}
+                  onChange={handleInputChange}
+                  
+                />
+                {tec}
+              </label>
+            ))}
+                {/* <input
                   type="text"
                   name="tecnologias"
                   value={tempTec}
                   onChange={handleChangeTecs}
                 />
-                <button type="button" onClick={handleAddTec}>Agregar tecnología</button>
+                <button type="button" onClick={handleAddTec}>Agregar tecnología</button> */}
                 <ul>
                   {formData.tecnologias.map((tec, index) => (
                     <li key={index}>{tec}</li>
