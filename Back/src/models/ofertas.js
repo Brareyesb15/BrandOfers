@@ -5,7 +5,6 @@ module.exports = sequelize => {
         titulo: {
             type: DataTypes.STRING,
             allowNull: true 
-
         },
         empresa: {
             type: DataTypes.STRING,
@@ -13,14 +12,6 @@ module.exports = sequelize => {
         },
         descripcion: {
             type: DataTypes.TEXT,
-            allowNull: true
-        },
-        tecnologias:{
-            type: DataTypes.ARRAY(DataTypes.STRING), //
-            allowNull: true
-        },
-        stack: {
-            type: DataTypes.STRING,
             allowNull: true
         },
         active : {
@@ -36,23 +27,34 @@ module.exports = sequelize => {
             defaultValue: DataTypes.NOW,
             allowNull:true
         },
-        ingles: {
-            type: DataTypes.STRING,
-            allowNull:true
-        },
         experiencia: {
-            type: DataTypes.STRING,
-            allowNull:true
-        },
-        pais: {
-            type: DataTypes.STRING,
-            allowNull:true
+            type: DataTypes.ENUM(
+                "Menos de 1 año",
+                "Entre 1 y 2 años",
+                "Entre 2 y 5 años",
+                "Más de 5 años"
+            )
         },
         postulacion: {
             type: DataTypes.ENUM(
                 "Espontanea",
                 "Regular"
             )
+        },
+        pais:{
+            type: DataTypes.STRING
+        },
+        stack: {
+          type: DataTypes.ENUM(
+                "Backend",
+                "Frontend",    // en el form agregar: Agregar nuevo stack, y agregarlo, buscar como, igual que en idiomas. 
+                "Fullstack"
+            )
+        },
+        tecnologias: 
+        {
+            type: DataTypes.ARRAY(DataTypes.STRING),  // la logica dirá que en el form puedas escoger varias de las tecnologias disponibles, y una opcion de crear nueva tecnologia para agregar. 
+            allowNull: true 
         }
         
     },
