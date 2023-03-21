@@ -1,4 +1,5 @@
 const {Router} = require("express");
+const getAll = require("../controllers/getAll");
 const postOffer = require("../controllers/postOffer");
 
 
@@ -23,6 +24,10 @@ mainRouter.post("/oferta", async (req,res) => {
     catch(error){
         res.status(400).json(error.message)
     }
+})
+
+mainRouter.get("/obtener", async(req,res) => {
+    await getAll(req,res)
 })
 
 module.exports = mainRouter;
