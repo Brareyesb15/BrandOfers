@@ -1,9 +1,12 @@
-
+import Fetching from "./components/fetching ofertas"
 
 
 export default function Home() {
   return (
+    <>
     <div>Estamos en home</div>
+     <Fetching />
+    </>
   )
 }
 
