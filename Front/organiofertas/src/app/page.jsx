@@ -1,4 +1,5 @@
 import Fetching from "./components/fetching ofertas"
+import RealFetching from "./components/realfetching"
 
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
     <div>Estamos en home</div>
      <Fetching />
+     <RealFetching />
     </>
   )
 }

@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   Table,
   TableBody,
@@ -14,8 +14,16 @@ import {
 } from '@mui/material';
 import { TableSortLabel } from '@mui/material';
 import tecs from "../../../../../Back/utils/tecs"
+import { use } from 'react';
+
+const traer = async() => {
+   return await fetch(`http://localhost:5000/obtener`).data
+}
 
 export default function Fetching() {
+const offers = use(traer()) 
+
+console.log("oferta",   offers)
     return ( 
         <>
         <div>holaaaa</div>

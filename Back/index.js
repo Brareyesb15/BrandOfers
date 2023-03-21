@@ -6,7 +6,7 @@ const PORT = process.env.PORT
 const {sequelize} = require ("./configs/DB_connection")
 
 
-sequelize.sync({ force: true }).then(async () => {
+sequelize.sync({ force: false}).then(async () => {
 
 
 })
