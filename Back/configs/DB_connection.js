@@ -2,7 +2,6 @@ require('dotenv').config();
 const { Sequelize, Op, BelongsTo } = require('sequelize');
 const modelofertas = require ("../src/models/ofertas")
 const modelentrevistas = require ("../src/models/entrevistas")
-const modeloidiomas = require ("../src/models/idiomas")
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_DEPLOY, DB_DB } = process.env;
 
 
@@ -27,7 +26,6 @@ const { DB_USER, DB_PASSWORD, DB_HOST, DB_DEPLOY, DB_DB } = process.env;
 
 modelofertas(sequelize)
 modelentrevistas(sequelize)
-modeloidiomas(sequelize)
 
 const {entrevistas, ofertas,idiomas} = sequelize.models;
 
@@ -35,9 +33,6 @@ const {entrevistas, ofertas,idiomas} = sequelize.models;
 
 ofertas.belongsToMany(entrevistas, { through: "ofertasXEntrevistas", unique: false });
 entrevistas.belongsToMany(ofertas, { through: "ofertasXEntrevistas", unique: false });
-
-ofertas.belongsToMany(idiomas, { through: "ofertasXIdiomas", unique: false });
-idiomas.belongsToMany(ofertas, { through: "ofertasXIdiomas", unique: false });
 
 
 // tblReviews.belongsTo(tblCourses, {
