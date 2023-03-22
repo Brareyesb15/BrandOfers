@@ -17,7 +17,8 @@ export default function FormOfertas() {
     experiencia: "",
     pais: "",
     postulacion: "",
-    experiencia: ""
+    experiencia: "",
+    plataforma: ""
 
 
   });
@@ -150,6 +151,18 @@ export default function FormOfertas() {
                     placeholder="Insertar Título"
                     required
                     value={formData.linkOferta}
+                    onChange={handleInputChange}
+                  />
+                  <br />
+              Plataforma:
+                  <input
+                    type="text"
+                    name="plataforma"
+                    minLength="1"
+                    maxLength="100"
+                    placeholder="Insertar Título"
+                    required
+                    value={formData.plataforma}
                     onChange={handleInputChange}
                   />
                   <br />
