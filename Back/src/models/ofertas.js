@@ -61,6 +61,9 @@ module.exports = sequelize => {
                             // en utils que se encarga de renderizar las opciones de idiomas. Si quieres agregar uno nuevo puedes cambiar ese array? 
                             // si no se puede puedes crear un tabla que solo guarde eso y en el front la traes para ese trabajo. 
 
+        },
+        plataforma: {
+            type: DataTypes.STRING
         }
         
     },
