@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   Table,
   TableBody,
@@ -14,8 +14,19 @@ import {
 } from '@mui/material';
 import { TableSortLabel } from '@mui/material';
 import tecs from "../../../../../Back/utils/tecs"
+import { use } from 'react';
 
-export default function Fetching() {
+const traer = async () => {
+  const response =  await fetch(`http://localhost:5000/obtener`)
+  return response.json()
+}
+
+const dataProm = traer()
+
+export default function Fetching() {  // el async acá rompe toda la funcion. No puede ser una funcion con async en estos componentes, para eso usa el use. 
+  const offers = use(dataProm)
+  console.log(offers)
+
     return ( 
         <>
         <div>holaaaa</div>
@@ -25,42 +36,40 @@ export default function Fetching() {
             <TableRow>
               <TableCell>
                 <TableSortLabel>
-                  Name
+                 Oferta
                 </TableSortLabel>
               </TableCell>
               <TableCell>
                 <TableSortLabel>
-                  Email
+                  Fecha
                 </TableSortLabel>
               </TableCell>
               <TableCell>
                 <TableSortLabel >
-                  Register Date
+                 Empresa
                 </TableSortLabel>
               </TableCell>
               <TableCell>
                 <TableSortLabel >
-                  Active
+                  Descripcion
                 </TableSortLabel>
               </TableCell>
               <TableCell>
-                Edit
+                Idioma
               </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-          {tecs.map((student) => (
-            <TableRow key={student}>
-              <TableCell>{student}</TableCell>
-              <TableCell>{student}</TableCell>
-              <TableCell>{student}</TableCell>
+          {offers.map((student) => (
+            <TableRow key={student.titulo}>
+              <TableCell>{student.titulo}</TableCell>
+              <TableCell>{student.titulo}</TableCell>
+              <TableCell>{student.postulacion}</TableCell>
               <TableCell>
-  <Switch defaultChecked={student} onChange={(e) => handleToggle(e, student)} />
 </TableCell>
-              <TableCell><NativeSelect defaultValue={"Student"} onChange={(e) => handleUserType(e, student)}>    
-                <option value={"Student"}>Student</option>
-                <option value={"Instructor"}>Instructor</option>
-                <option value={"AdvUser"}>AdvUser</option></NativeSelect></TableCell>
+              <TableCell><NativeSelect defaultValue={"Student"} >    
+            
+                <option value={"Inglés"}>Inglés</option></NativeSelect></TableCell>
             </TableRow>
           ))}
         </TableBody>
