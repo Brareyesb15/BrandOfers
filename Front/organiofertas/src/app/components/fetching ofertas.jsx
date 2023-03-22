@@ -16,14 +16,17 @@ import { TableSortLabel } from '@mui/material';
 import tecs from "../../../../../Back/utils/tecs"
 import { use } from 'react';
 
-const traer = async() => {
-   return await fetch(`http://localhost:5000/obtener`).data
+const traer = async () => {
+  const response =  await fetch(`http://localhost:5000/obtener`)
+  return response.json()
 }
 
-export default function Fetching() {
-const offers = use(traer()) 
+const dataProm = traer()
 
-console.log("oferta",   offers)
+export default function Fetching() {  // el async acá rompe toda la funcion. No puede ser una funcion con async en estos componentes, para eso usa el use. 
+  const offers = use(dataProm)
+  console.log(offers)
+
     return ( 
         <>
         <div>holaaaa</div>
@@ -57,15 +60,15 @@ console.log("oferta",   offers)
             </TableRow>
           </TableHead>
           <TableBody>
-          {tecs.map((student) => (
-            <TableRow key={student}>
-              <TableCell>{student}</TableCell>
-              <TableCell>{student}</TableCell>
-              <TableCell>{student}</TableCell>
+          {offers.map((student) => (
+            <TableRow key={student.titulo}>
+              <TableCell>{student.titulo}</TableCell>
+              <TableCell>{student.titulo}</TableCell>
+              <TableCell>{student.postulacion}</TableCell>
               <TableCell>
-  <Switch defaultChecked={student} onChange={(e) => handleToggle(e, student)} />
+  <Switch defaultChecked={student.postulacion} />
 </TableCell>
-              <TableCell><NativeSelect defaultValue={"Student"} onChange={(e) => handleUserType(e, student)}>    
+              <TableCell><NativeSelect defaultValue={"Student"} >    
                 <option value={"Student"}>Student</option>
                 <option value={"Instructor"}>Instructor</option>
                 <option value={"AdvUser"}>AdvUser</option></NativeSelect></TableCell>

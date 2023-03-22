@@ -2,7 +2,7 @@ const {ofertas} = require("../../configs/DB_connection");
 
 
 const getAll = async (req,res) => {
-    console.log("en post offer", ofertas)
+    console.log("en get offer", ofertas)
     try{
   const result = await ofertas.findAll()  
 
