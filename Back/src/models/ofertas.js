@@ -63,7 +63,8 @@ module.exports = sequelize => {
 
         },
         plataforma: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: true
         }
         
     },
