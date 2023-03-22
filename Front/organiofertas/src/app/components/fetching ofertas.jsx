@@ -36,26 +36,26 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
             <TableRow>
               <TableCell>
                 <TableSortLabel>
-                  Name
+                 Oferta
                 </TableSortLabel>
               </TableCell>
               <TableCell>
                 <TableSortLabel>
-                  Email
+                  Fecha
                 </TableSortLabel>
               </TableCell>
               <TableCell>
                 <TableSortLabel >
-                  Register Date
+                 Empresa
                 </TableSortLabel>
               </TableCell>
               <TableCell>
                 <TableSortLabel >
-                  Active
+                  Descripcion
                 </TableSortLabel>
               </TableCell>
               <TableCell>
-                Edit
+                Idioma
               </TableCell>
             </TableRow>
           </TableHead>
@@ -66,12 +66,10 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
               <TableCell>{student.titulo}</TableCell>
               <TableCell>{student.postulacion}</TableCell>
               <TableCell>
-  <Switch defaultChecked={student.postulacion} />
 </TableCell>
               <TableCell><NativeSelect defaultValue={"Student"} >    
-                <option value={"Student"}>Student</option>
-                <option value={"Instructor"}>Instructor</option>
-                <option value={"AdvUser"}>AdvUser</option></NativeSelect></TableCell>
+            
+                <option value={"Inglés"}>Inglés</option></NativeSelect></TableCell>
             </TableRow>
           ))}
         </TableBody>
