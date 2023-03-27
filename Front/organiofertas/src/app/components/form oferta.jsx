@@ -3,6 +3,7 @@ import { useState, useEffect} from 'react';
 import tecs from "../../../../../Back/utils/tecs"
 import {idiomas,nivel} from "../../../../../Back/utils/idiomas"
 
+// OJO!!! PONELE UN SELECT AL STACK.
 
 export default function FormOfertas() {
   const [tempTec, setTempTec] = useState([]);
@@ -16,8 +17,8 @@ export default function FormOfertas() {
     idioma: {idioma : "", nivel : ""},
     experiencia: "",
     pais: "",
-    postulacion: "",
-    experiencia: "",
+    postulacion: "Espontanea",
+    experiencia: "Menos de 1 año",
     plataforma: ""
 
 
@@ -147,7 +148,6 @@ export default function FormOfertas() {
                     type="text"
                     name="linkOferta"
                     minLength="1"
-                    maxLength="100"
                     placeholder="Insertar Título"
                     required
                     value={formData.linkOferta}

@@ -14,7 +14,8 @@ const postOffer = async (oferta) => {
     experiencia: oferta.experiencia,
     pais: oferta.pais,
     postulacion: oferta.postulacion,
-    idioma: oferta.idioma
+    idioma: oferta.idioma,
+    plataforma: oferta.plataforma
 
     }
     )
