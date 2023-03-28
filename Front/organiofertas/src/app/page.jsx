@@ -1,5 +1,6 @@
+import Fetching from "./components/tablas";
 
-import Fetching from "./components/fetching ofertas"
+
 
 
 export default function Home() {

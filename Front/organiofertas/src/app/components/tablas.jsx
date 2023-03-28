@@ -8,12 +8,9 @@ import {
   TableHead,
   TableRow,
   Paper,
-  Checkbox,
-  Switch,
   NativeSelect
 } from '@mui/material';
 import { TableSortLabel } from '@mui/material';
-import tecs from "../../../../../Back/utils/tecs"
 import { use } from 'react';
 
 const traer = async () => {
@@ -23,9 +20,9 @@ const traer = async () => {
 
 const dataProm = traer()
 
+
 export default function Fetching() {  // el async acá rompe toda la funcion. No puede ser una funcion con async en estos componentes, para eso usa el use. 
   const offers = use(dataProm)
-  console.log(offers)
 
     return ( 
         <>
