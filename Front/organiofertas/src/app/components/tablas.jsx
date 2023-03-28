@@ -31,6 +31,12 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
         <Table>
           <TableHead>
             <TableRow>
+
+              <TableCell>
+                <TableSortLabel>
+           
+                </TableSortLabel>
+              </TableCell>
               <TableCell>
                 <TableSortLabel>
                  Oferta
@@ -38,32 +44,71 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
               </TableCell>
               <TableCell>
                 <TableSortLabel>
+                 Empresa
+                </TableSortLabel>
+              </TableCell>
+              <TableCell>
+                <TableSortLabel>
+                 Descripción
+                </TableSortLabel>
+              </TableCell>
+              <TableCell>
+                <TableSortLabel>
+                 Link
+                </TableSortLabel>
+              </TableCell>
+              
+              <TableCell>
+                <TableSortLabel>
                   Fecha
                 </TableSortLabel>
               </TableCell>
               <TableCell>
                 <TableSortLabel >
-                 Empresa
+                    Experiencia
                 </TableSortLabel>
               </TableCell>
               <TableCell>
                 <TableSortLabel >
-                  Descripcion
+                  Tipo de Postulación
                 </TableSortLabel>
               </TableCell>
               <TableCell>
-                Idioma
+                País
+              </TableCell>
+              <TableCell>
+                <TableSortLabel>
+                 Stack
+                </TableSortLabel>
+              </TableCell>
+              <TableCell>
+                <TableSortLabel>
+                 Tecnologías
+                </TableSortLabel>
+              </TableCell>
+              <TableCell>
+                <TableSortLabel>
+                Plataforma
+                </TableSortLabel>
               </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-          {offers.map((student) => (
-            <TableRow key={student.titulo}>
+          {offers.map((student,i) => (
+            <TableRow key={i}>
+              <TableCell>{i+1}</TableCell>
               <TableCell>{student.titulo}</TableCell>
-              <TableCell>{student.titulo}</TableCell>
+              <TableCell>{student.empresa}</TableCell>
+              <TableCell>{student.descripcion}</TableCell>
+              <TableCell>{student.linkOferta}</TableCell>
+              <TableCell>{student.fechaPresentacion}</TableCell>
+              <TableCell>{student.experiencia}</TableCell>
               <TableCell>{student.postulacion}</TableCell>
-              <TableCell>
-</TableCell>
+              <TableCell>{student.pais}</TableCell>
+              <TableCell>{student.stack}</TableCell>
+              <TableCell>{student.tecnologias}</TableCell>
+              <TableCell>{student.plataforma}</TableCell>
+             
               <TableCell><NativeSelect defaultValue={"Student"} >    
             
                 <option value={"Inglés"}>Inglés</option></NativeSelect></TableCell>
