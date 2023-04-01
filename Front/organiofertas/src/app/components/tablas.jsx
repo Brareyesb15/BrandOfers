@@ -8,8 +8,6 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  Paper,
-  NativeSelect,
 
 } from '@mui/material';
 import { TableSortLabel } from '@mui/material';
@@ -29,14 +27,13 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
 
     return ( 
         <>
-        <TableContainer component={Paper} className="table-container">
+        <TableContainer>
         <Table>
           <TableHead>
             <TableRow>
 
               <TableCell>
                 <TableSortLabel>
-           
                 </TableSortLabel>
               </TableCell>
               <TableCell>
