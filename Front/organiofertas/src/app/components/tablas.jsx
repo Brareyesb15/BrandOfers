@@ -25,10 +25,10 @@ const dataProm = traer()
 
 export default function Fetching() {  // el async acá rompe toda la funcion. No puede ser una funcion con async en estos componentes, para eso usa el use. 
   const offers = use(dataProm)
+  console.log(offers[0].tecnologias)
 
     return ( 
         <>
-        <div>holaaaa</div>
         <TableContainer component={Paper} className="table-container">
         <Table>
           <TableHead>
@@ -51,32 +51,23 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
               </TableCell>
               <TableCell>
                 <TableSortLabel>
-                 Descripción
-                </TableSortLabel>
-              </TableCell>
-              <TableCell>
-                <TableSortLabel>
-                 Link
-                </TableSortLabel>
-              </TableCell>
-              
-              <TableCell>
-                <TableSortLabel>
                   Fecha
                 </TableSortLabel>
               </TableCell>
               <TableCell>
-                <TableSortLabel >
-                    Experiencia
+                <TableSortLabel>
+                 Experiencia
                 </TableSortLabel>
               </TableCell>
               <TableCell>
-                <TableSortLabel >
-                  Tipo de Postulación
+                <TableSortLabel>
+                 Postulación
                 </TableSortLabel>
               </TableCell>
               <TableCell>
-                País
+                <TableSortLabel>
+                 País
+                </TableSortLabel>
               </TableCell>
               <TableCell>
                 <TableSortLabel>
@@ -90,9 +81,10 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
               </TableCell>
               <TableCell>
                 <TableSortLabel>
-                Plataforma
+                 Plataforma
                 </TableSortLabel>
               </TableCell>
+              
             </TableRow>
           </TableHead>
           <TableBody>
@@ -101,19 +93,14 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
               <TableCell>{i+1}</TableCell>
               <TableCell>{student.titulo}</TableCell>
               <TableCell>{student.empresa}</TableCell>
-              <TableCell>{student.descripcion}</TableCell>
-              <TableCell>{student.linkOferta}</TableCell>
               <TableCell>{student.fechaPresentacion}</TableCell>
               <TableCell>{student.experiencia}</TableCell>
               <TableCell>{student.postulacion}</TableCell>
               <TableCell>{student.pais}</TableCell>
               <TableCell>{student.stack}</TableCell>
-              <TableCell>{student.tecnologias}</TableCell>
+              <TableCell>{student.tecnologias.join(" ")}</TableCell>
               <TableCell>{student.plataforma}</TableCell>
              
-              <TableCell><NativeSelect defaultValue={"Student"} >    
-            
-                <option value={"Inglés"}>Inglés</option></NativeSelect></TableCell>
             </TableRow>
           ))}
         </TableBody>
