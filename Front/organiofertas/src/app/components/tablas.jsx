@@ -1,4 +1,5 @@
 "use client"
+import "./tablas.css"
 import React from 'react';
 import {
   Table,
@@ -8,7 +9,8 @@ import {
   TableHead,
   TableRow,
   Paper,
-  NativeSelect
+  NativeSelect,
+
 } from '@mui/material';
 import { TableSortLabel } from '@mui/material';
 import { use } from 'react';
@@ -27,7 +29,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
     return ( 
         <>
         <div>holaaaa</div>
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} className="table-container">
         <Table>
           <TableHead>
             <TableRow>
@@ -117,5 +119,5 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
         </TableBody>
       </Table>
     </TableContainer>
-    </>
+</>
     )}
