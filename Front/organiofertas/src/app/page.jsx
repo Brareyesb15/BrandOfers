@@ -1,8 +1,8 @@
+import Fetching from "./components/tablas";
+import dynamic from "next/dynamic";
 
-import Fetching from "./components/fetching ofertas"
 
-
-export default function Home() {
+function Home() {
   return (
     <>
     <div>Estamos en home</div>
@@ -10,6 +10,8 @@ export default function Home() {
     </>
   )
 }
+
+export default dynamic (() => Promise.resolve(Home), {ssr: false})
 
 
 // FUNDAMENTAL: Archivo Page.jsx, es una regla que tiene next para definir las rutas. 
