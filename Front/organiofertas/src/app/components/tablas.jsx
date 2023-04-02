@@ -23,7 +23,9 @@ const dataProm = traer()
 
 export default function Fetching() {  // el async acá rompe toda la funcion. No puede ser una funcion con async en estos componentes, para eso usa el use. 
   const offers = use(dataProm)
-  console.log(offers[0].tecnologias)
+  const [orderBy, setOrderBy] = useState('Name');
+  const [order, setOrder] = useState('asc');
+
 
     return ( 
         <>
