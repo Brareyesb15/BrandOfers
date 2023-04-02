@@ -8,10 +8,9 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-
 } from '@mui/material';
 import { TableSortLabel } from '@mui/material';
-import { use } from 'react';
+import { use, useState } from 'react';
 
 const traer = async () => {
   const response =  await fetch(`http://localhost:5000/obtener`)
@@ -23,9 +22,31 @@ const dataProm = traer()
 
 export default function Fetching() {  // el async acá rompe toda la funcion. No puede ser una funcion con async en estos componentes, para eso usa el use. 
   const offers = use(dataProm)
-  const [orderBy, setOrderBy] = useState('Name');
+  const [orderBy, setOrderBy] = useState('Oferta');
   const [order, setOrder] = useState('asc');
 
+  const handleSort = (column) => {
+    const isAsc = orderBy === column && order === 'asc';
+    setOrder(isAsc ? 'desc' : 'asc');
+    setOrderBy(column);
+  }
+
+  const sortData = (data) => {
+    const sortedData = data.sort((a, b) => {
+      if (orderBy === "Fecha") {
+        const dateA = new Date(a.fechaPresentacion);
+        const dateB = new Date(b.fechaPresentacion);
+        if (order === "asc") {
+          return dateA - dateB;
+        } else {
+          return dateB - dateA;
+        }
+      } else {
+        return 0;
+      }
+    });
+    return sortedData;
+  };
 
     return ( 
         <>
@@ -49,7 +70,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
                 </TableSortLabel>
               </TableCell>
               <TableCell>
-                <TableSortLabel>
+                <TableSortLabel active={orderBy === 'Fecha'} direction={orderBy === 'Fecha'? order : 'asc'} onClick={() => handleSort('Fecha')}>
                   Fecha
                 </TableSortLabel>
               </TableCell>
@@ -87,7 +108,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
             </TableRow>
           </TableHead>
           <TableBody>
-          {offers.map((student,i) => (
+          {sortData(offers).map((student,i) => (
             <TableRow key={i}>
               <TableCell>{i+1}</TableCell>
               <TableCell>{student.titulo}</TableCell>
