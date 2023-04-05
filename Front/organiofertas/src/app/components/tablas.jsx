@@ -10,6 +10,7 @@ import {
   TableRow,
 } from '@mui/material';
 import { TableSortLabel } from '@mui/material';
+import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 import { use, useState } from 'react';
 
 const traer = async () => {
@@ -47,6 +48,15 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
     });
     return sortedData;
   };
+
+  const options = ['Fullstack', 'Backend', 'Frontend'];
+
+
+  const [selectedOption, setSelectedOption] = useState('');
+
+  const handleOptionSelect = (option) => {
+    setSelectedOption(option);
+  }
 
     return ( 
         <>
@@ -90,9 +100,21 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
                 </TableSortLabel>
               </TableCell>
               <TableCell>
-                <TableSortLabel>
-                 Stack
-                </TableSortLabel>
+                <FormControl>
+                  <InputLabel id="stack-label">Stack</InputLabel>
+                  <Select
+                    labelId="stack-label"
+                    id="stack-select"
+                    value={selectedOption}
+                    onChange={(event) => handleOptionSelect(event.target.value)}
+                  >
+                    {options.map((option) => (
+                      <MenuItem key={option} value={option}>
+                        {option}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
               </TableCell>
               <TableCell>
                 <TableSortLabel>
