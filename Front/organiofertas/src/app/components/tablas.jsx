@@ -67,12 +67,18 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
     <TableRow>
       <TableCell></TableCell>
       <TableCell>Oferta</TableCell>
-      <TableCell>Stack</TableCell>
+      <TableCell>Empresa</TableCell>
       <TableCell>
-        <TableSortLabel>
-          Tecnologías
-        </TableSortLabel>
+        <TableSortLabel  active={orderBy === 'Fecha'} direction={orderBy === 'Fecha'? order : 'asc'} onClick={() => handleSort('Fecha')}>
+        Fecha
+        </TableSortLabel> 
       </TableCell>
+      <TableCell>Experiencia</TableCell>
+      <TableCell>Postulación</TableCell>
+      <TableCell>País</TableCell>
+      <TableCell>Stack</TableCell>
+      <TableCell>Tecnologías</TableCell>
+      <TableCell>Plataforma</TableCell>
     </TableRow>
     <TableRow>
       <TableCell>
@@ -87,6 +93,36 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
       <TableCell>
         {/* No hay selector */}
       </TableCell>
+      <TableCell>
+        {/* Selector de postulación */}
+      </TableCell>
+      <TableCell>
+        {/* Selector de país */}
+      </TableCell>
+      <TableCell>
+      </TableCell>
+      <TableCell>
+      <FormControl style={{ minWidth: 100}}>
+                  <Select
+                    labelId="stack-label"
+                    id="stack-select"
+                    value={selectedOption}
+                    onChange={(event) => handleOptionSelect(event.target.value)}
+                  >
+                    {options.map((option) => (
+                      <MenuItem key={option} value={option}>
+                        {option}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+      </TableCell>
+      <TableCell>
+        {/* No hay selector */}
+      </TableCell>
+      <TableCell>
+        {/* No hay selector */}
+      </TableCell>
     </TableRow>
   </TableHead>
           <TableBody>
@@ -95,7 +131,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
               <TableCell>{i+1}</TableCell>
               <TableCell>{student.titulo}</TableCell>
               <TableCell>{student.empresa}</TableCell>
-              <TableCell>{student.fechaPresentacion}</TableCell>
+              <TableCell style={{ minWidth: "100px", maxWidth: "150px" }}>{student.fechaPresentacion}</TableCell>
               <TableCell>{student.experiencia}</TableCell>
               <TableCell>{student.postulacion}</TableCell>
               <TableCell>{student.pais}</TableCell>
