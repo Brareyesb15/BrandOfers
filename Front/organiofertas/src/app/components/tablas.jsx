@@ -49,7 +49,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
     return sortedData;
   };
 
-  const options = ['Fullstack', 'Backend', 'Frontend'];
+  const options = ["Todos", 'Fullstack', 'Backend', 'Frontend'];
 
 
   const [selectedOption, setSelectedOption] = useState('');
@@ -100,13 +100,14 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
                 </TableSortLabel>
               </TableCell>
               <TableCell>
-                <FormControl>
+                <FormControl style={{ minWidth: 100}}>
                   <InputLabel id="stack-label">Stack</InputLabel>
                   <Select
                     labelId="stack-label"
                     id="stack-select"
                     value={selectedOption}
                     onChange={(event) => handleOptionSelect(event.target.value)}
+                    style={{ zIndex: 999, marginTop: "40px"}}
                   >
                     {options.map((option) => (
                       <MenuItem key={option} value={option}>
