@@ -1,6 +1,7 @@
 "use client"
 import "./tablas.css"
 import React from 'react';
+import BuscOferta from "./Buscador oferta";
 import {
   Table,
   TableBody,
@@ -82,22 +83,21 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
     </TableRow>
     <TableRow>
       <TableCell>
-        {/* Selector de postulación */}
       </TableCell>
       <TableCell>
-        {/* Selector de país */}
+        <BuscOferta></BuscOferta>
       </TableCell>
       <TableCell>
-        {/* Selector de stack */}
+        
       </TableCell>
       <TableCell>
-        {/* No hay selector */}
+        
       </TableCell>
       <TableCell>
-        {/* Selector de postulación */}
+        
       </TableCell>
       <TableCell>
-        {/* Selector de país */}
+       
       </TableCell>
       <TableCell>
       </TableCell>
@@ -131,7 +131,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
               <TableCell>{i+1}</TableCell>
               <TableCell>{student.titulo}</TableCell>
               <TableCell>{student.empresa}</TableCell>
-              <TableCell style={{ minWidth: "100px", maxWidth: "150px" }}>{student.fechaPresentacion}</TableCell>
+              <TableCell style={{ maxWidth: "150px" }}>{student.fechaPresentacion}</TableCell>
               <TableCell>{student.experiencia}</TableCell>
               <TableCell>{student.postulacion}</TableCell>
               <TableCell>{student.pais}</TableCell>
