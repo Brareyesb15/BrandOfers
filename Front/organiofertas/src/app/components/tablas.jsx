@@ -71,8 +71,14 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
       <TableCell>
         <TableSortLabel active={orderBy === 'Fecha'} direction={orderBy === 'Fecha'? order : 'asc'} onClick={() => handleSort('Fecha')}>
         Fecha
-        </TableSortLabel>
+        </TableSortLabel> 
       </TableCell>
+      <TableCell>Experiencia</TableCell>
+      <TableCell>Postulación</TableCell>
+      <TableCell>País</TableCell>
+      <TableCell>Stack</TableCell>
+      <TableCell>Tecnologías</TableCell>
+      <TableCell>Plataforma</TableCell>
     </TableRow>
     <TableRow>
       <TableCell>
@@ -83,6 +89,34 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
       </TableCell>
       <TableCell>
         {/* Selector de stack */}
+      </TableCell>
+      <TableCell>
+        {/* No hay selector */}
+      </TableCell>
+      <TableCell>
+        {/* Selector de postulación */}
+      </TableCell>
+      <TableCell>
+        {/* Selector de país */}
+      </TableCell>
+      <TableCell>
+      </TableCell>
+      <TableCell>
+      <FormControl style={{ minWidth: 100}}>
+                  <Select
+                    labelId="stack-label"
+                    id="stack-select"
+                    value={selectedOption}
+                    onChange={(event) => handleOptionSelect(event.target.value)}
+                    style={{ zIndex: 999}}
+                  >
+                    {options.map((option) => (
+                      <MenuItem key={option} value={option}>
+                        {option}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
       </TableCell>
       <TableCell>
         {/* No hay selector */}
