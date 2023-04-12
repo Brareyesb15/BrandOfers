@@ -8,8 +8,10 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  Box
 } from '@mui/material';
 import { TableSortLabel } from '@mui/material';
+import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 import { use, useState } from 'react';
 
 const traer = async () => {
@@ -48,65 +50,45 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
     return sortedData;
   };
 
+  const options = ["Todos", 'Fullstack', 'Backend', 'Frontend'];
+
+
+  const [selectedOption, setSelectedOption] = useState('');
+
+  const handleOptionSelect = (option) => {
+    setSelectedOption(option);
+  }
+
     return ( 
         <>
         <TableContainer>
         <Table>
           <TableHead>
-            <TableRow>
-
-              <TableCell>
-                <TableSortLabel>
-                </TableSortLabel>
-              </TableCell>
-              <TableCell>
-                <TableSortLabel>
-                 Oferta
-                </TableSortLabel>
-              </TableCell>
-              <TableCell>
-                <TableSortLabel>
-                 Empresa
-                </TableSortLabel>
-              </TableCell>
-              <TableCell>
-                <TableSortLabel active={orderBy === 'Fecha'} direction={orderBy === 'Fecha'? order : 'asc'} onClick={() => handleSort('Fecha')}>
-                  Fecha
-                </TableSortLabel>
-              </TableCell>
-              <TableCell>
-                <TableSortLabel>
-                 Experiencia
-                </TableSortLabel>
-              </TableCell>
-              <TableCell>
-                <TableSortLabel>
-                 Postulación
-                </TableSortLabel>
-              </TableCell>
-              <TableCell>
-                <TableSortLabel>
-                 País
-                </TableSortLabel>
-              </TableCell>
-              <TableCell>
-                <TableSortLabel>
-                 Stack
-                </TableSortLabel>
-              </TableCell>
-              <TableCell>
-                <TableSortLabel>
-                 Tecnologías
-                </TableSortLabel>
-              </TableCell>
-              <TableCell>
-                <TableSortLabel>
-                 Plataforma
-                </TableSortLabel>
-              </TableCell>
-              
-            </TableRow>
-          </TableHead>
+    <TableRow>
+      <TableCell></TableCell>
+      <TableCell>Oferta</TableCell>
+      <TableCell>Stack</TableCell>
+      <TableCell>
+        <TableSortLabel>
+          Tecnologías
+        </TableSortLabel>
+      </TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>
+        {/* Selector de postulación */}
+      </TableCell>
+      <TableCell>
+        {/* Selector de país */}
+      </TableCell>
+      <TableCell>
+        {/* Selector de stack */}
+      </TableCell>
+      <TableCell>
+        {/* No hay selector */}
+      </TableCell>
+    </TableRow>
+  </TableHead>
           <TableBody>
           {sortData(offers).map((student,i) => (
             <TableRow key={i}>
