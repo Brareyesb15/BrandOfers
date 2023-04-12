@@ -108,7 +108,6 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
                     id="stack-select"
                     value={selectedOption}
                     onChange={(event) => handleOptionSelect(event.target.value)}
-                    style={{ zIndex: 999}}
                   >
                     {options.map((option) => (
                       <MenuItem key={option} value={option}>
@@ -117,6 +116,9 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
                     ))}
                   </Select>
                 </FormControl>
+      </TableCell>
+      <TableCell>
+        {/* No hay selector */}
       </TableCell>
       <TableCell>
         {/* No hay selector */}
