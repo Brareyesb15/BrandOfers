@@ -65,21 +65,9 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
         <Table>
           <TableHead>
     <TableRow>
-      <TableCell>
-        <TableSortLabel>
-          Postulación
-        </TableSortLabel>
-      </TableCell>
-      <TableCell>
-        <TableSortLabel>
-          País
-        </TableSortLabel>
-      </TableCell>
-      <TableCell>
-        <TableSortLabel>
-          Stack
-        </TableSortLabel>
-      </TableCell>
+      <TableCell></TableCell>
+      <TableCell>Oferta</TableCell>
+      <TableCell>Stack</TableCell>
       <TableCell>
         <TableSortLabel>
           Tecnologías
