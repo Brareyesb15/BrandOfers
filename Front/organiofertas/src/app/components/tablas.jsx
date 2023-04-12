@@ -131,7 +131,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
               <TableCell>{i+1}</TableCell>
               <TableCell>{student.titulo}</TableCell>
               <TableCell>{student.empresa}</TableCell>
-              <TableCell style={{ maxWidth: "150px" }}>{student.fechaPresentacion}</TableCell>
+              <TableCell style={{ minWidth: "100px", maxWidth: "150px" }}>{student.fechaPresentacion}</TableCell>
               <TableCell>{student.experiencia}</TableCell>
               <TableCell>{student.postulacion}</TableCell>
               <TableCell>{student.pais}</TableCell>
