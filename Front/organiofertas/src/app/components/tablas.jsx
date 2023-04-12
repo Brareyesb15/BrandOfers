@@ -69,8 +69,8 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
       <TableCell>Oferta</TableCell>
       <TableCell>Stack</TableCell>
       <TableCell>
-        <TableSortLabel>
-          Tecnologías
+        <TableSortLabel active={orderBy === 'Fecha'} direction={orderBy === 'Fecha'? order : 'asc'} onClick={() => handleSort('Fecha')}>
+        Fecha
         </TableSortLabel>
       </TableCell>
     </TableRow>
