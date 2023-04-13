@@ -1,6 +1,7 @@
 "use client"
 import "./tablas.css"
 import React from 'react';
+import BuscOferta from "./Buscador oferta";
 import {
   Table,
   TableBody,
@@ -51,6 +52,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
   };
 
   const options = ["Todos", 'Fullstack', 'Backend', 'Frontend'];
+  const experiencia = ["-1 año","1 y 2 años","2 y 5 años","+5 años"]
 
 
   const [selectedOption, setSelectedOption] = useState('');
@@ -81,23 +83,31 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
       <TableCell>Plataforma</TableCell>
     </TableRow>
     <TableRow>
+      <TableCell></TableCell>
       <TableCell>
-        {/* Selector de postulación */}
+        <BuscOferta></BuscOferta>
       </TableCell>
       <TableCell>
-        {/* Selector de país */}
+        <BuscOferta></BuscOferta>
+      </TableCell>
+      <TableCell></TableCell>
+      <TableCell>
+        <FormControl style={{ minWidth: 100}}>
+          <Select
+          labelId="experiencia-label"
+          id="experiencia-select"
+          value={selectedOption}
+          onChange={(event) => handleOptionSelect(event.target.value)} >
+                    {experiencia.map((option) => (
+                      <MenuItem key={option} value={option}>
+                        {option}
+                      </MenuItem>
+                    ))}
+          </Select>
+        </FormControl>
       </TableCell>
       <TableCell>
-        {/* Selector de stack */}
-      </TableCell>
-      <TableCell>
-        {/* No hay selector */}
-      </TableCell>
-      <TableCell>
-        {/* Selector de postulación */}
-      </TableCell>
-      <TableCell>
-        {/* Selector de país */}
+       
       </TableCell>
       <TableCell>
       </TableCell>
