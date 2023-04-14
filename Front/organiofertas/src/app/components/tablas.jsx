@@ -90,10 +90,10 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
         <BuscOferta id={"oferta"} offers={offers} setOffers={setOffers}></BuscOferta>
       </TableCell>
       <TableCell>
-        <BuscOferta></BuscOferta>
+        <BuscOferta id={"empresa"} offers={offers} setOffers={setOffers}></BuscOferta>
       </TableCell>
       <TableCell>
-        <BuscOferta></BuscOferta>
+        <BuscOferta id={"fecha"} offers={offers} setOffers={setOffers}></BuscOferta>
       </TableCell>
       <TableCell>
         <FormControl style={{ minWidth: 100}}>
