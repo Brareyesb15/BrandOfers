@@ -7,9 +7,13 @@ export default function BuscOferta({offers,setOffers,id}) {
 
 
     const filter = (buscar) => {
-        console.log(buscar, id)
-
-
+        id === "oferta" ? 
+            console.log("llamado a funcion oferta", buscar) : 
+        id === "empresa" ? 
+            console.log("llamado a funcion empresa", buscar) :
+        id === "fecha" ?  
+            console.log("llamado a funcion fecha", buscar) : 
+        null
 
     }
 
