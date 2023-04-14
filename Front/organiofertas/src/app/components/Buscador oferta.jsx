@@ -15,9 +15,14 @@ export default function BuscOferta({offers,setRoffers,id}) {
         else if (id === "empresa") {
             setRoffers(offers.filter(obj => obj.empresa.toLowerCase().includes(buscar.toLowerCase()))) 
             } 
-        else if (id  === "fecha" ) {
-            setRoffers(offers.filter(obj => obj.fecha.toLowerCase().includes(buscar.toLowerCase()))) 
-            }
+            else if (id === "fecha") {
+                const filteredOffers = offers.filter((obj) => {
+                  const date = new Date(obj.fechaPresentacion);
+                  const formattedDate = date.toISOString().substring(0, 10);
+                  return formattedDate.includes(buscar);
+                });
+                setRoffers(filteredOffers);
+              }
     }
 
     return (
