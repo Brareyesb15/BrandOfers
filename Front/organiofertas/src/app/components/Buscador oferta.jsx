@@ -6,7 +6,9 @@ export default function BuscOferta({offers,setOffers,id}) {
     const [searchValue, setSearchValue] = useState("")
 
 
-    const filter = (off) => {
+    const filter = (buscar) => {
+        console.log(buscar, id)
+
 
 
     }
@@ -17,7 +19,7 @@ export default function BuscOferta({offers,setOffers,id}) {
         <TextField
               label="Buscar"
               value={searchValue}
-              onChange={(e) => {filter(offers)}}
+              onChange={(e) => {setSearchValue(e.target.value); filter(e.target.value)}}
             />
             </>
     )
