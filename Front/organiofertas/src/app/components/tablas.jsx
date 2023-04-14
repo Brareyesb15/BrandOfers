@@ -26,6 +26,7 @@ const dataProm = traer()
 export default function Fetching() {  // el async acá rompe toda la funcion. No puede ser una funcion con async en estos componentes, para eso usa el use. 
   const offer = use(dataProm)
   const [offers,setOffers] = useState(offer)
+  const [roffers,setRoffers] = useState(offers)
   const [orderBy, setOrderBy] = useState('Oferta');
   const [order, setOrder] = useState('asc');
 
@@ -87,13 +88,13 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
     <TableRow>
       <TableCell></TableCell>
       <TableCell>
-        <BuscOferta id={"oferta"} offers={offers} setOffers={setOffers}></BuscOferta>
+        <BuscOferta id={"oferta"} offers={offers} setRoffers={setRoffers} ></BuscOferta>
       </TableCell>
       <TableCell>
-        <BuscOferta id={"empresa"} offers={offers} setOffers={setOffers}></BuscOferta>
+        <BuscOferta id={"empresa"} offers={offers} setRoffers={setRoffers}></BuscOferta>
       </TableCell>
       <TableCell>
-        <BuscOferta id={"fecha"} offers={offers} setOffers={setOffers}></BuscOferta>
+        <BuscOferta id={"fecha"} offers={offers} setRoffers={setRoffers}></BuscOferta>
       </TableCell>
       <TableCell>
         <FormControl style={{ minWidth: 100}}>
@@ -191,7 +192,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
     </TableRow>
   </TableHead>
           <TableBody>
-          {sortData(offers).map((student,i) => (
+          {sortData(roffers).map((student,i) => (
             <TableRow key={i}>
               <TableCell>{i+1}</TableCell>
               <TableCell>{student.titulo}</TableCell>
