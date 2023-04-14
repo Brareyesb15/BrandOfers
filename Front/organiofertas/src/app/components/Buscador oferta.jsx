@@ -6,9 +6,10 @@ export default function BuscOferta({offers,setOffers,id}) {
     const [searchValue, setSearchValue] = useState("")
 
 
+
     const filter = (buscar) => {
         id === "oferta" ? 
-            console.log("llamado a funcion oferta", buscar) : 
+        setOffers(offers.filter(obj => obj.titulo.toLowerCase().includes(buscar.toLowerCase()))) : 
         id === "empresa" ? 
             console.log("llamado a funcion empresa", buscar) :
         id === "fecha" ?  
