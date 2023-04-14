@@ -24,7 +24,8 @@ const dataProm = traer()
 
 
 export default function Fetching() {  // el async acá rompe toda la funcion. No puede ser una funcion con async en estos componentes, para eso usa el use. 
-  const offers = use(dataProm)
+  const offer = use(dataProm)
+  const [offers,setOffers] = useState(offer)
   const [orderBy, setOrderBy] = useState('Oferta');
   const [order, setOrder] = useState('asc');
 
@@ -86,13 +87,13 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
     <TableRow>
       <TableCell></TableCell>
       <TableCell>
-        <BuscOferta></BuscOferta>
+        <BuscOferta id={"oferta"} offers={offers} setOffers={setOffers}></BuscOferta>
       </TableCell>
       <TableCell>
-        <BuscOferta></BuscOferta>
+        <BuscOferta id={"empresa"} offers={offers} setOffers={setOffers}></BuscOferta>
       </TableCell>
       <TableCell>
-        <BuscOferta></BuscOferta>
+        <BuscOferta id={"fecha"} offers={offers} setOffers={setOffers}></BuscOferta>
       </TableCell>
       <TableCell>
         <FormControl style={{ minWidth: 100}}>
