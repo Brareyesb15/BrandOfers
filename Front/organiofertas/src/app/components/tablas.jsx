@@ -102,20 +102,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
         <Selector></Selector>
       </TableCell>
       <TableCell>
-      <FormControl style={{ minWidth: 100}}>
-                  <Select
-                    labelId="platform-label"
-                    id="platform-select"
-                    value={selectedOption}
-                    onChange={(event) => handleOptionSelect(event.target.value)}
-                  >
-                    {/* AQUI VIENE UNA LLAMADA PARA LA BUSQUEDA DE LAS plataformas EXISTENTES.*/stack.map((option) => (
-                      <MenuItem key={option} value={option}>
-                        {option}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
+        <Selector></Selector>
       </TableCell>
     </TableRow>
   </TableHead>
