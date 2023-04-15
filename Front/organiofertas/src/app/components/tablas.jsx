@@ -53,12 +53,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
     return sortedData;
   };
 
-  const stack = ["Todos", 'Fullstack', 'Backend', 'Frontend'];
-  const experiencia = ["Todos","-1 año","1 y 2 años","2 y 5 años","+5 años"];
-  const postulacion = ["Todas","Espontanea", "Regular"]
 
-
-  const [selectedOption, setSelectedOption] = useState('');
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
