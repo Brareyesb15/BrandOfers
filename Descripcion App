@@ -56,3 +56,7 @@ Comparar con la capacitech kids y empezar a darle interactividad a las tablas!!!
 13-4 : 
 Mañana trabajarle los filtros combinados, están andando bien los filtros hasta ahorita pero no combinan. Revisar tus viejos proyectos para eso. Dedica más horas"
 
+Puedes agregar un guardador de estadisticas de busquedas booleanas. Es decir, que  combinaciones te están dando más resultados. 
+
+14-4 :
+"encrucijada: acá tenes que pasarle a cada uno de ellos por props lo que van a renderizar para que cada uno lo renderice. Es decir, los arrays. O que los renderices desde allá. Buscar la mejor forma" Vas por selectores, obvio
