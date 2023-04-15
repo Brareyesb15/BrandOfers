@@ -12,8 +12,8 @@ import {
   Box
 } from '@mui/material';
 import { TableSortLabel } from '@mui/material';
-import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 import { use, useState } from 'react';
+import Selector from "./Selectores";
 
 const traer = async () => {
   const response =  await fetch(`http://localhost:5000/obtener`)
@@ -53,16 +53,6 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
     return sortedData;
   };
 
-  const options = ["Todos", 'Fullstack', 'Backend', 'Frontend'];
-  const experiencia = ["Todos","-1 año","1 y 2 años","2 y 5 años","+5 años"];
-  const postulacion = ["Todas","Espontanea", "Regular"]
-
-
-  const [selectedOption, setSelectedOption] = useState('');
-
-  const handleOptionSelect = (option) => {
-    setSelectedOption(option);
-  }
 
     return ( 
         <>
@@ -97,97 +87,22 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
         <BuscOferta id={"fecha"} offers={offers} setRoffers={setRoffers}></BuscOferta>
       </TableCell>
       <TableCell>
-        <FormControl style={{ minWidth: 100}}>
-          <Select
-          labelId="experiencia-label"
-          id="experiencia-select"
-          value={selectedOption}
-          onChange={(event) => handleOptionSelect(event.target.value)} >
-                    {experiencia.map((option) => (
-                      <MenuItem key={option} value={option}>
-                        {option}
-                      </MenuItem>
-                    ))}
-          </Select>
-        </FormControl>
+        <Selector></Selector>
       </TableCell>
       <TableCell>
-      <FormControl style={{ minWidth: 100}}>
-          <Select
-          labelId="postulacion-label"
-          id="postulacion-select"
-          value={selectedOption}
-          onChange={(event) => handleOptionSelect(event.target.value)} >
-                    {postulacion.map((option) => (
-                      <MenuItem key={option} value={option}>
-                        {option}
-                      </MenuItem>
-                    ))}
-          </Select>
-        </FormControl>
+        <Selector></Selector>
       </TableCell>
       <TableCell>
-      <FormControl style={{ minWidth: 100}}>
-          <Select
-          labelId="pais-label"
-          id="pais-select"
-          value={selectedOption}
-          onChange={(event) => handleOptionSelect(event.target.value)} >
-                    {/* AQUI VIENE UNA LLAMADA PARA LA BUSQUEDA DE PAISES.*/ postulacion.map((option) => (
-                      <MenuItem key={option} value={option}>
-                        {option}
-                      </MenuItem>
-                    ))}
-          </Select>
-        </FormControl>
-        </TableCell>
-      <TableCell>
-      <FormControl style={{ minWidth: 100}}>
-                  <Select
-                    labelId="stack-label"
-                    id="stack-select"
-                    value={selectedOption}
-                    onChange={(event) => handleOptionSelect(event.target.value)}
-                  >
-                    {options.map((option) => (
-                      <MenuItem key={option} value={option}>
-                        {option}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
+        <Selector></Selector>
       </TableCell>
       <TableCell>
-      <FormControl style={{ minWidth: 100}}>
-                  <Select
-                    labelId="tecs-label"
-                    id="tecs-select"
-                    value={selectedOption}
-                    onChange={(event) => handleOptionSelect(event.target.value)}
-                  >
-                    {/* AQUI VIENE UNA LLAMADA PARA LA BUSQUEDA DE LAS TECS EXISTENTES.*/options.map((option) => (
-                      <MenuItem key={option} value={option}>
-                        {option}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
+        <Selector></Selector>
       </TableCell>
       <TableCell>
-      <FormControl style={{ minWidth: 100}}>
-                  <Select
-                    labelId="platform-label"
-                    id="platform-select"
-                    value={selectedOption}
-                    onChange={(event) => handleOptionSelect(event.target.value)}
-                  >
-                    {/* AQUI VIENE UNA LLAMADA PARA LA BUSQUEDA DE LAS plataformas EXISTENTES.*/options.map((option) => (
-                      <MenuItem key={option} value={option}>
-                        {option}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
+        <Selector></Selector>
+      </TableCell>
+      <TableCell>
+        <Selector></Selector>
       </TableCell>
     </TableRow>
   </TableHead>
