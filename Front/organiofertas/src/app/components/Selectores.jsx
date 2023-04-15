@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 
 
-export default function Selector({}) {
+export default function Selector({offers,setRoffers,id}) {
     const [selectedOption, setSelectedOption] = useState('');
     
         const stack = ["Todos", 'Fullstack', 'Backend', 'Frontend'];
@@ -12,13 +12,14 @@ export default function Selector({}) {
         
 
     const handleOptionSelect = (option) => {
+        console.log(selectedOption)
     setSelectedOption(option);}
   return (
     <>
     <FormControl style={{ minWidth: 100}}>
           <Select
-          labelId="experiencia-label"
-          id="experiencia-select"
+          labelId="label"
+          id="select"
           value={selectedOption}
           onChange={(event) => handleOptionSelect(event.target.value)} >
                     {experiencia.map((option) => (
