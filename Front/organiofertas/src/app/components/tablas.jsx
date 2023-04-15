@@ -53,7 +53,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
     return sortedData;
   };
 
-  const options = ["Todos", 'Fullstack', 'Backend', 'Frontend'];
+  const stack = ["Todos", 'Fullstack', 'Backend', 'Frontend'];
   const experiencia = ["Todos","-1 año","1 y 2 años","2 y 5 años","+5 años"];
   const postulacion = ["Todas","Espontanea", "Regular"]
 
@@ -149,7 +149,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
                     value={selectedOption}
                     onChange={(event) => handleOptionSelect(event.target.value)}
                   >
-                    {options.map((option) => (
+                    {stack.map((option) => (
                       <MenuItem key={option} value={option}>
                         {option}
                       </MenuItem>
@@ -165,7 +165,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
                     value={selectedOption}
                     onChange={(event) => handleOptionSelect(event.target.value)}
                   >
-                    {/* AQUI VIENE UNA LLAMADA PARA LA BUSQUEDA DE LAS TECS EXISTENTES.*/options.map((option) => (
+                    {/* AQUI VIENE UNA LLAMADA PARA LA BUSQUEDA DE LAS TECS EXISTENTES.*/stack.map((option) => (
                       <MenuItem key={option} value={option}>
                         {option}
                       </MenuItem>
@@ -181,7 +181,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
                     value={selectedOption}
                     onChange={(event) => handleOptionSelect(event.target.value)}
                   >
-                    {/* AQUI VIENE UNA LLAMADA PARA LA BUSQUEDA DE LAS plataformas EXISTENTES.*/options.map((option) => (
+                    {/* AQUI VIENE UNA LLAMADA PARA LA BUSQUEDA DE LAS plataformas EXISTENTES.*/stack.map((option) => (
                       <MenuItem key={option} value={option}>
                         {option}
                       </MenuItem>
