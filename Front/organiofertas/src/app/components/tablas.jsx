@@ -87,22 +87,22 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
         <BuscOferta id={"fecha"} offers={offers} setRoffers={setRoffers}></BuscOferta>
       </TableCell>
       <TableCell>
-        <Selector></Selector>
+        <Selector id={"experiencia"}></Selector>
       </TableCell>
       <TableCell>
-        <Selector></Selector>
+        <Selector id={"postulacion"}></Selector>
       </TableCell>
       <TableCell>
-        <Selector></Selector>
+        <Selector id={"pais"}></Selector>
       </TableCell>
       <TableCell>
-        <Selector></Selector>
+        <Selector id={"stack"}></Selector>
       </TableCell>
       <TableCell>
-        <Selector></Selector>
+        <Selector id={"tecnologias"}></Selector>
       </TableCell>
       <TableCell>
-        <Selector></Selector>
+        <Selector id={"plataforma"}></Selector>
       </TableCell>
     </TableRow>
   </TableHead>
