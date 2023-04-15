@@ -13,6 +13,7 @@ import {
 } from '@mui/material';
 import { TableSortLabel } from '@mui/material';
 import { use, useState } from 'react';
+import Selector from "./Selectores";
 
 const traer = async () => {
   const response =  await fetch(`http://localhost:5000/obtener`)
@@ -86,19 +87,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
         <BuscOferta id={"fecha"} offers={offers} setRoffers={setRoffers}></BuscOferta>
       </TableCell>
       <TableCell>
-        <FormControl style={{ minWidth: 100}}>
-          <Select
-          labelId="experiencia-label"
-          id="experiencia-select"
-          value={selectedOption}
-          onChange={(event) => handleOptionSelect(event.target.value)} >
-                    {experiencia.map((option) => (
-                      <MenuItem key={option} value={option}>
-                        {option}
-                      </MenuItem>
-                    ))}
-          </Select>
-        </FormControl>
+        <Selector></Selector>
       </TableCell>
       <TableCell>
       <FormControl style={{ minWidth: 100}}>
