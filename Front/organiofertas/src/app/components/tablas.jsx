@@ -12,7 +12,6 @@ import {
   Box
 } from '@mui/material';
 import { TableSortLabel } from '@mui/material';
-import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 import { use, useState } from 'react';
 
 const traer = async () => {
@@ -53,11 +52,6 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
     return sortedData;
   };
 
-
-
-  const handleOptionSelect = (option) => {
-    setSelectedOption(option);
-  }
 
     return ( 
         <>
