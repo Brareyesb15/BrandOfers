@@ -90,19 +90,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
         <Selector></Selector>
       </TableCell>
       <TableCell>
-      <FormControl style={{ minWidth: 100}}>
-          <Select
-          labelId="postulacion-label"
-          id="postulacion-select"
-          value={selectedOption}
-          onChange={(event) => handleOptionSelect(event.target.value)} >
-                    {postulacion.map((option) => (
-                      <MenuItem key={option} value={option}>
-                        {option}
-                      </MenuItem>
-                    ))}
-          </Select>
-        </FormControl>
+        <Selector></Selector>
       </TableCell>
       <TableCell>
       <FormControl style={{ minWidth: 100}}>
