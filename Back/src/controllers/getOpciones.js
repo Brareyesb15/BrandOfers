@@ -1,14 +1,18 @@
 const {ofertas} = require("../../configs/DB_connection");
 
 
-const getOps = async (req,res,opcion) => {
-    
+const getOps = async (req,res) => {
+    let {opcion} = req.params
 try{
     
+    const oferta = await ofertas.findAll();
+    let ret = []
+    
+    opcion === "pais" ? (ret = oferta.map(o => o.pais).filter((p, i, arr) => arr.indexOf(p) === i)) : 
+    (ret = oferta.map(o => o.plataforma).filter((p, i, arr) => arr.indexOf(p) === i));
 
-  const result = await ofertas.findAll()  
 
-  return res.status(200).send(result)
+  return res.status(200).send(ret)
     
 }
 catch(error){
@@ -16,4 +20,4 @@ catch(error){
     }
 }
 
-module.exports = {getOps}; 
+module.exports = getOps; 
