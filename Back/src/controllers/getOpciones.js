@@ -5,11 +5,11 @@ const getOps = async (req,res) => {
     let {opcion} = req.params
 try{
     
-    const ofertas = await OfertaTrabajo.findAll();
+    const oferta = await ofertas.findAll();
     let ret = []
     
-    opcion === "pais" ? ((ret = ofertas.map(o => o.pais)), ret.filter((p, i) => ret.indexOf(p) === i)) : 
-    ((ret = ofertas.map(o => o.plataforma)), ret.filter((p, i) => ret.indexOf(p) === i)); 
+    opcion === "pais" ? (ret = oferta.map(o => o.pais).filter((p, i, arr) => arr.indexOf(p) === i)) : 
+    (ret = oferta.map(o => o.plataforma).filter((p, i, arr) => arr.indexOf(p) === i));
 
 
   return res.status(200).send(ret)
