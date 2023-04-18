@@ -3,7 +3,7 @@ import React, { use, useState } from 'react';
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 
 const traerOpciones = async (opcion) => {
-  const response =  await fetch(`http://localhost:5000/opciones/:${opcion}`)
+  const response =  await fetch(`http://localhost:5000/opciones/${opcion}`)
   return response.json()
 }
 
@@ -20,7 +20,7 @@ export default function Selector({offers,setRoffers,id}) {
         id === "pais"? render = use(traerOpciones(id)): 
         id === "stack"? render = ["Todos", 'Fullstack', 'Backend', 'Frontend'] :
         // id === "tecnologias" ? render = Aquí va una selección, puede escoger varias, ahorita buscas como. 
-        // id === "plataforma" ? render = "plataformas" : 
+         id === "plataforma" ? render = use(traerOpciones(id)): 
         null
     
         
