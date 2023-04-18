@@ -1,8 +1,8 @@
 const {ofertas} = require("../../configs/DB_connection");
 
 
-const getOps = async (req,res,opcion) => {
-    
+const getOps = async (req,res) => {
+    let {opcion} = req.params
 try{
     
     const ofertas = await OfertaTrabajo.findAll();
