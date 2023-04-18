@@ -5,10 +5,14 @@ const getOps = async (req,res,opcion) => {
     
 try{
     
+    const ofertas = await OfertaTrabajo.findAll();
+    let ret = []
+    
+    opcion === "pais" ? ((ret = ofertas.map(o => o.pais)), ret.filter((p, i) => ret.indexOf(p) === i)) : 
+    ((ret = ofertas.map(o => o.plataforma)), ret.filter((p, i) => ret.indexOf(p) === i)); 
 
-  const result = await ofertas.findAll()  
 
-  return res.status(200).send(result)
+  return res.status(200).send(ret)
     
 }
 catch(error){
@@ -16,4 +20,4 @@ catch(error){
     }
 }
 
-module.exports = {getOps}; 
+module.exports = getOps; 
