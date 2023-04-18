@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 
 const traerOpciones = async (opcion) => {
-  const response =  await fetch(`http://localhost:5000/obtener/:${opcion}`)
+  const response =  await fetch(`http://localhost:5000/opciones/:${opcion}`)
   return response.json()
 }
 

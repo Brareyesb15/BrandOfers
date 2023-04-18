@@ -30,4 +30,6 @@ mainRouter.get("/obtener", async(req,res) => {
     await getAll(req,res)
 })
 
+mainRouter.get("/opciones/:opciones")
+
 module.exports = mainRouter;
