@@ -2,11 +2,17 @@
 import React, { useState } from 'react';
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 
+const traerOpciones = async (opcion) => {
+  const response =  await fetch(`http://localhost:5000/obtener/:${opcion}`)
+  return response.json()
+}
 
 export default function Selector({offers,setRoffers,id}) {
+    const data = traerOpciones(id)
+
     const [selectedOption, setSelectedOption] = useState('');
     let render = []
- 
+  
 
 
         id === "experiencia"? render = ["Todos","-1 año","1 y 2 años","2 y 5 años","+5 años"]: 
