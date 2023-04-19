@@ -1,12 +1,12 @@
 "use client"
 import React, { useState } from 'react';
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+import tecs from '../../../../../Back/utils/tecs';
 
 export default function SelectorTec({ offers, setRoffers, id }) {
   const [selectedOptions, setSelectedOptions] = useState([]);
-  console.log(selectedOptions)
 
-  const render = ["porte", "pepe", "camino"];
+  const render = tecs
 
   const handleOptionSelect = (event) => {
     const option = event.target.value;
@@ -36,17 +36,17 @@ export default function SelectorTec({ offers, setRoffers, id }) {
           id="select"
           value={selectedOptions}
           onChange={handleOptionSelect}
-          renderValue={(selected) => selected.join(', ')}
+          renderValue={() => null}
         >
           {render.map((option) => (
-            <MenuItem key={option} value={option}>
+            <MenuItem key={option} value={option} style={{ backgroundColor: selectedOptions.includes(option) ? 'lightgray' : 'white' }}>
               {option}
             </MenuItem>
           ))}
         </Select>
-        <div>
+        <div style={{ marginTop: 10 }}>
           {selectedOptions.map(option => (
-            <span key={option}>{option} </span>
+            <span key={option} style={{ backgroundColor: 'lightgray', padding: '5px', borderRadius: '5px', marginRight: '5px' }}>{option}</span>
           ))}
         </div>
       </FormControl>
