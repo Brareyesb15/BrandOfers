@@ -1,11 +1,12 @@
 "use client"
 import React, { useState } from 'react';
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+import tecs from '../../../../../Back/utils/tecs';
 
 export default function SelectorTec({ offers, setRoffers, id }) {
   const [selectedOptions, setSelectedOptions] = useState([]);
 
-  const render = ["porte", "pepe", "camino"];
+  const render = tecs
 
   const handleOptionSelect = (event) => {
     const option = event.target.value;
