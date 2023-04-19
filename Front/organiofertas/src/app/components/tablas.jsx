@@ -14,6 +14,7 @@ import {
 import { TableSortLabel } from '@mui/material';
 import { use, useState } from 'react';
 import Selector from "./Selectores";
+import SelectorTec from "./SelectorTec";
 
 const traer = async () => {
   const response =  await fetch(`http://localhost:5000/obtener`)
@@ -99,7 +100,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
         <Selector id={"stack"} offers={offers} setRoffers={setRoffers} ></Selector>
       </TableCell>
       <TableCell>
-        <Selector id={"tecnologias"} offers={offers} setRoffers={setRoffers} ></Selector>
+        <SelectorTec id={"tecnologias"} offers={offers} setRoffers={setRoffers} ></SelectorTec>
       </TableCell>
       <TableCell>
         <Selector id={"plataforma"} offers={offers} setRoffers={setRoffers} ></Selector>
