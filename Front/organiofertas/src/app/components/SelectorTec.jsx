@@ -34,7 +34,6 @@ export default function SelectorTec({ offers, setRoffers, id }) {
         <Select
           labelId="label"
           id="select"
-          multiple
           value={selectedOptions}
           onChange={handleOptionSelect}
           renderValue={(selected) => selected.join(', ')}
