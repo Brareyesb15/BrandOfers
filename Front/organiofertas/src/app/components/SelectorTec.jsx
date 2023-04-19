@@ -35,7 +35,7 @@ export default function SelectorTec({ offers, setRoffers, id }) {
           id="select"
           value={selectedOptions}
           onChange={handleOptionSelect}
-          renderValue={(selected) => selected.join(', ')}
+          renderValue={() => null}
         >
           {render.map((option) => (
             <MenuItem key={option} value={option} style={{ backgroundColor: selectedOptions.includes(option) ? 'lightgray' : 'white' }}>
