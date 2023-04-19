@@ -11,17 +11,23 @@ const traerOpciones = async (opcion) => {
 export default function Selector({offers,setRoffers,id}) {
 
     const [selectedOption, setSelectedOption] = useState('');
+    const [prevSelectedOption, setPrevSelectedOption] = useState('');
     let render = []
   
 
 
-        id === "experiencia"? (render = ["Todos","-1 año","1 y 2 años","2 y 5 años","+5 años"] 
-        ):
-        id === "postulacion"? render = ["Todas","Espontanea", "Regular"]  :
-        id === "pais"? render = use(traerOpciones(id)): 
-        id === "stack"? render = ["Todos", 'Fullstack', 'Backend', 'Frontend'] :
-         id === "plataforma" ? render = use(traerOpciones(id)): 
-        null
+        if (id === "experiencia") {
+          render = ["Todos","-1 año","1 y 2 años","2 y 5 años","+5 años"];
+          if (selectedOption !== prevSelectedOption) {
+          setRoffers(offers.filter(obj => obj.experiencia.toLowerCase().includes(selectedOption.toLowerCase())));
+          setPrevSelectedOption(selectedOption);
+          }}
+        
+        // id === "postulacion"? render = ["Todas","Espontanea", "Regular"]  :
+        // id === "pais"? render = use(traerOpciones(id)): 
+        // id === "stack"? render = ["Todos", 'Fullstack', 'Backend', 'Frontend'] :
+        //  id === "plataforma" ? render = use(traerOpciones(id)): 
+        // null
     
         
 
