@@ -19,6 +19,11 @@ export default function Selector({offers,setRoffers,id}) {
         if (id === "experiencia") {
           render = ["Todos","-1 año","1 y 2 años","2 y 5 años","+5 años"];
           if (selectedOption !== prevSelectedOption) {
+            selectedOption === "Todos" ? null : 
+            selectedOption === "-1 año" ? (setRoffers(offers.filter(obj => obj.experiencia.toLowerCase().includes("Menos de 1 año".toLowerCase()))),
+            setPrevSelectedOption(selectedOption)) :
+            selectedOption === "+5 años" ? (setRoffers(offers.filter(obj => obj.experiencia.toLowerCase().includes("Más de 5 años".toLowerCase()))),
+            setPrevSelectedOption(selectedOption)) :
           setRoffers(offers.filter(obj => obj.experiencia.toLowerCase().includes(selectedOption.toLowerCase())));
           setPrevSelectedOption(selectedOption);
           }}
