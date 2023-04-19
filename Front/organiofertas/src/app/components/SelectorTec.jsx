@@ -4,7 +4,6 @@ import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 
 export default function SelectorTec({ offers, setRoffers, id }) {
   const [selectedOptions, setSelectedOptions] = useState([]);
-  console.log(selectedOptions)
 
   const render = ["porte", "pepe", "camino"];
 
@@ -39,14 +38,14 @@ export default function SelectorTec({ offers, setRoffers, id }) {
           renderValue={(selected) => selected.join(', ')}
         >
           {render.map((option) => (
-            <MenuItem key={option} value={option}>
+            <MenuItem key={option} value={option} style={{ backgroundColor: selectedOptions.includes(option) ? 'lightgray' : 'white' }}>
               {option}
             </MenuItem>
           ))}
         </Select>
-        <div>
+        <div style={{ marginTop: 10 }}>
           {selectedOptions.map(option => (
-            <span key={option}>{option} </span>
+            <span key={option} style={{ backgroundColor: 'lightgray', padding: '5px', borderRadius: '5px', marginRight: '5px' }}>{option}</span>
           ))}
         </div>
       </FormControl>
