@@ -5,15 +5,18 @@ import tecs from '../../../../../Back/utils/tecs';
 
 export default function SelectorTec({ offers, setRoffers, id }) {
   const [selectedOptions, setSelectedOptions] = useState([]);
+  console.log(selectedOptions)
 
   const render = tecs
 
   const handleOptionSelect = (event) => {
     const option = event.target.value;
+    console.log("opcion =>>>>", option)
     
     setSelectedOptions(prevOptions => {
       const index = prevOptions.indexOf(option);
       let newOptions = [...prevOptions];
+      console.log(newOptions)
     
       if (index > -1) {
         // Si la opción ya existe en la lista, la eliminamos

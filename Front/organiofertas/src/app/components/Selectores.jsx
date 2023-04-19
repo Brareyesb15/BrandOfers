@@ -15,19 +15,21 @@ export default function Selector({offers,setRoffers,id}) {
   
 
 
-        id === "experiencia"? render = ["Todos","-1 año","1 y 2 años","2 y 5 años","+5 años"]: 
+        id === "experiencia"? (render = ["Todos","-1 año","1 y 2 años","2 y 5 años","+5 años"] 
+        ):
         id === "postulacion"? render = ["Todas","Espontanea", "Regular"]  :
         id === "pais"? render = use(traerOpciones(id)): 
         id === "stack"? render = ["Todos", 'Fullstack', 'Backend', 'Frontend'] :
-        // id === "tecnologias" ? render = Aquí va una selección, puede escoger varias, ahorita buscas como. 
          id === "plataforma" ? render = use(traerOpciones(id)): 
         null
     
         
 
     const handleOptionSelect = (option) => {
-        console.log(selectedOption)
     setSelectedOption(option);}
+    
+    console.log(selectedOption)
+
   return (
     <>
     <FormControl style={{ minWidth: 100}}>
