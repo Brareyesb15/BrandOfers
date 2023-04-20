@@ -66,3 +66,6 @@ Listo los selectores, solo falta el de tecnologías que se van a poder escoger v
 
 18-4 
 Listo el de tecnologías ya se pueden escoger varias opciones. Filtro de experiencia ya está listo! :D 
+
+19-4
+Sobre bug de loop infinto en selectores: Debuggeado el loop infinito, se causaba por el manejo de estados. Como trabajaba en un estado para todo, cuando el estado cambiaba el id cambiaba también, generando un loop infinito. Problema resuelto agregando useEffects que hicieran la tarea por separado. Podría arreglarlo de otra forma más limpia creando otros componentes pero en aras de terminar esta app lo dejaré así.
