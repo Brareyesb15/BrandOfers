@@ -19,7 +19,7 @@ export default function Selector({offers,setRoffers,id}) {
         if (id === "experiencia") {
           render = ["Todos","-1 año","1 y 2 años","2 y 5 años","+5 años"];
           if (selectedOption !== prevSelectedOption) {
-            selectedOption === "Todos" ? null : 
+            selectedOption === "Todos" ? setRoffers(offers) : 
             selectedOption === "-1 año" ? (setRoffers(offers.filter(obj => obj.experiencia.toLowerCase().includes("Menos de 1 año".toLowerCase()))),
             setPrevSelectedOption(selectedOption)) :
             selectedOption === "+5 años" ? (setRoffers(offers.filter(obj => obj.experiencia.toLowerCase().includes("Más de 5 años".toLowerCase()))),
@@ -27,12 +27,11 @@ export default function Selector({offers,setRoffers,id}) {
           setRoffers(offers.filter(obj => obj.experiencia.toLowerCase().includes(selectedOption.toLowerCase())));
           setPrevSelectedOption(selectedOption);
           }}
-        
-        // id === "postulacion"? render = ["Todas","Espontanea", "Regular"]  :
-        // id === "pais"? render = use(traerOpciones(id)): 
-        // id === "stack"? render = ["Todos", 'Fullstack', 'Backend', 'Frontend'] :
-        //  id === "plataforma" ? render = use(traerOpciones(id)): 
-        // null
+        else if  (id === "postulacion") {render = ["Todas","Espontanea", "Regular"]}
+        // else if  (id === "pais") { render = use(traerOpciones(id))}
+        else if  (id === "stack"){ render = ["Todos", 'Fullstack', 'Backend', 'Frontend'] }
+        // else if  ( id === "plataforma") {render = use(traerOpciones(id))}  
+       
     
         
 
