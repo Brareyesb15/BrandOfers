@@ -49,6 +49,9 @@ export default function Selector({offers,setRoffers,id}) {
         }
         setPrevSelectedOption(selectedOption);
       }
+      if (id === "pais"){
+        setRoffers(offers.filter(obj => obj.pais.toLowerCase().includes(selectedOption.toLowerCase())));
+      }
       if (id === "postulacion"){
         setRoffers(offers.filter(obj => obj.postulacion.toLowerCase().includes(selectedOption.toLowerCase())));
       }
