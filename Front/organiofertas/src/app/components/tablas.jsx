@@ -75,6 +75,8 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
       {/* <TableCell>Stack</TableCell> */}
       <TableCell>Tecnologías</TableCell>
       <TableCell>Plataforma</TableCell>
+      <TableCell>Estado</TableCell>
+
     </TableRow>
     <TableRow>
       <TableCell></TableCell>
@@ -105,6 +107,10 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
       <TableCell>
         <Selector id={"plataforma"} offers={offers} setRoffers={setRoffers} ></Selector>
       </TableCell>
+      <TableCell>
+        <Selector id={"active"} offers={offers} setRoffers={setRoffers} ></Selector>
+      </TableCell>
+      
     </TableRow>
   </TableHead>
           <TableBody>
@@ -120,6 +126,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
               {/* <TableCell>{student.stack}</TableCell> */}
               <TableCell>{student.tecnologias.join(" ")}</TableCell>
               <TableCell>{student.plataforma}</TableCell>
+              <TableCell>{student.active? "Activa" : "Inactiva"}</TableCell>  
              
             </TableRow>
           ))}

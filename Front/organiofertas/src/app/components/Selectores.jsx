@@ -30,6 +30,9 @@ export default function Selector({offers,setRoffers,id}) {
     } else if (id === "stack") {
       setRender(["Todos", 'Fullstack', 'Backend', 'Frontend']);
     }
+    else if (id === "estado") {
+      setRender(["Todas", 'Activa', 'Inactiva']);
+    }
       
   }, [id]);
 
