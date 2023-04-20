@@ -35,26 +35,29 @@ export default function Selector({offers,setRoffers,id}) {
 
   useEffect(() => {
     if (selectedOption !== prevSelectedOption) {
-      if (selectedOption === "Todos") {
-        setRoffers(offers);
-      } else if (selectedOption === "-1 año") {
-        setRoffers(offers.filter(obj => obj.experiencia.toLowerCase().includes("Menos de 1 año".toLowerCase())));
+      if (id === "experiencia"){ 
+        if (selectedOption === "Todos") {
+          setRoffers(offers);
+        } else if (selectedOption === "-1 año") {
+          setRoffers(offers.filter(obj => obj.experiencia.toLowerCase().includes("Menos de 1 año".toLowerCase())));
+          setPrevSelectedOption(selectedOption);
+        } else if (selectedOption === "+5 años") {
+          setRoffers(offers.filter(obj => obj.experiencia.toLowerCase().includes("Más de 5 años".toLowerCase())));
+          setPrevSelectedOption(selectedOption);
+        } else {
+          setRoffers(offers.filter(obj => obj.experiencia.toLowerCase().includes(selectedOption.toLowerCase())));
+        }
         setPrevSelectedOption(selectedOption);
-      } else if (selectedOption === "+5 años") {
-        setRoffers(offers.filter(obj => obj.experiencia.toLowerCase().includes("Más de 5 años".toLowerCase())));
-        setPrevSelectedOption(selectedOption);
-      } else {
-        setRoffers(offers.filter(obj => obj.experiencia.toLowerCase().includes(selectedOption.toLowerCase())));
       }
-      setPrevSelectedOption(selectedOption);
-    }
-  }, [selectedOption, prevSelectedOption, offers, setRoffers]);
+      if (id === "postulacion"){
+        setRoffers(offers.filter(obj => obj.postulacion.toLowerCase().includes(selectedOption.toLowerCase())));
+      }
+      }}, [selectedOption, prevSelectedOption, offers, setRoffers]);
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
   }
     
-  console.log(selectedOption)
 
   return (
     <>
