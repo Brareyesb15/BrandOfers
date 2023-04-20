@@ -55,6 +55,9 @@ export default function Selector({offers,setRoffers,id}) {
       if (id === "postulacion"){
         setRoffers(offers.filter(obj => obj.postulacion.toLowerCase().includes(selectedOption.toLowerCase())));
       }
+      if (id === "stack"){
+        setRoffers(offers.filter(obj => obj.stack.toLowerCase().includes(selectedOption.toLowerCase())));
+      }
       }}, [selectedOption, prevSelectedOption, offers, setRoffers]);
 
   const handleOptionSelect = (option) => {
