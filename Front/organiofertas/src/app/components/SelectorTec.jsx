@@ -1,11 +1,12 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 import tecs from '../../../../../Back/utils/tecs';
 
 export default function SelectorTec({ offers, setRoffers, id }) {
   const [selectedOptions, setSelectedOptions] = useState([]);
-
+  const [prevSelectedOption, setPrevSelectedOption] = useState('');
+  console.log(selectedOptions)
 
   const render = tecs
 
@@ -30,6 +31,18 @@ export default function SelectorTec({ offers, setRoffers, id }) {
     });
   };
 
+  useEffect(() => {
+    if (selectedOptions !== prevSelectedOption) {
+      setRoffers(
+        offers.filter((offer) => {
+          const offerTechnologies = offer.tecnologias.map((tech) => tech.toLowerCase());
+          return selectedOptions.every((option) =>
+            offerTechnologies.includes(option.toLowerCase())
+          );
+        })
+      );
+    }
+  }, [selectedOptions, prevSelectedOption, offers, setRoffers]);
   return (
     <>
       <FormControl style={{ minWidth: 100 }}>
