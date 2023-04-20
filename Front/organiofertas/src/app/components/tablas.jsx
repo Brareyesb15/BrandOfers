@@ -108,7 +108,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
         <Selector id={"plataforma"} offers={offers} setRoffers={setRoffers} ></Selector>
       </TableCell>
       <TableCell>
-        <Selector id={"active"} offers={offers} setRoffers={setRoffers} ></Selector>
+        <Selector id={"estado"} offers={offers} setRoffers={setRoffers} ></Selector>
       </TableCell>
       
     </TableRow>
