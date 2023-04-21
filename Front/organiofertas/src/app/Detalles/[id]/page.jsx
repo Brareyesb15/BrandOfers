@@ -30,7 +30,8 @@ console.log(detalles.linkOferta)
                 <p>Estado: {detalles.active? "Activo": "Inactivo"}</p>
                 <p>Idioma: {detalles.idioma.idioma} Nivel: {detalles.idioma.nivel}</p>
                 <a href={detalles.linkOferta} target="_blank">Link</a>
-                <p></p>
+                <p>Plataforma: {detalles.plataforma}</p>
+                <p>Tipo de postulación: {detalles.postulacion}</p>
             </div>
             ) : (
             <p>Cargando detalles...</p>
