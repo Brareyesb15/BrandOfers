@@ -3,7 +3,7 @@ const getAll = require("../controllers/getAll");
 const postOffer = require("../controllers/postOffer");
 const  getOps  = require("../controllers/getOpciones");
 const getDetails = require("../controllers/getDetails");
-
+const getTecs = require("../controllers/getTecs");
 
 
 const mainRouter = Router();    
