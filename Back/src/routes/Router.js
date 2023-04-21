@@ -44,4 +44,8 @@ mainRouter.get("/detalles/:opcion", async (req,res) => {
 
     await getDetails(req,res)
 })
+
+mainRouter.get("/tecs", async(req,res) => {
+    await getTecs(req,res)
+})
 module.exports = mainRouter;
