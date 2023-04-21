@@ -8,7 +8,7 @@ const getTecs = async (req,res) => {
             attributes: ['tecnologias']
           })
         const result = oferta.map(oferta => oferta.tecnologias);
-
+       
   return res.status(200).send(result)
     
 }
