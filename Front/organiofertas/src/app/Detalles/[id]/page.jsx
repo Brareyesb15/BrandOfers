@@ -9,7 +9,6 @@ const traerDetalles= async (opcion) => {
     return response.json()
   }
 
-const traer = (id) => {traerDetalles(id)}
 
 
 export default function DetalleID() {
@@ -20,7 +19,23 @@ export default function DetalleID() {
 
     return (
       <>
-      <div>Estamos en detalle ID</div>
+      {detalles ? (
+            <div>
+                <h2>Oferta: {detalles.titulo}</h2>
+                <p>{detalles.descripcion}</p>
+                <p>Empresa: {detalles.empresa}</p>
+                <p>País: {detalles.pais}</p>
+                <p>Experiencia: {detalles.experiencia}</p>
+                <p>Tecnologías: {detalles.tecnologias.join(", ")}</p>
+                <p>Estado: {detalles.active? "Activo": "Inactivo"}</p>
+                <p>Idioma: {detalles.idioma.idioma} Nivel: {detalles.idioma.nivel}</p>
+                <p>Link: {detalles.linkOferta}</p>
+                <p></p>
+            </div>
+            ) : (
+            <p>Cargando detalles...</p>
+                )}
+      
       </>
     )
   }
