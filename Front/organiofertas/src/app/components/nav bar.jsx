@@ -7,7 +7,12 @@ const links = [{
   {
     label: "Guardar Oferta",
     route: "/Guardar"
-  }]
+  },
+  {
+    label : "Estadisticas",
+    route: "/Estadisticas"
+  }
+]
   export default function Navigation() {
     return (
         <header>
