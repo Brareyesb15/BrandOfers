@@ -114,22 +114,21 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
     </TableRow>
   </TableHead>
           <TableBody>
-          {sortData(roffers).map((student,i) => (
-            <TableRow key={i}>
-              <TableCell>{i+1}</TableCell>
-              <TableCell>{student.titulo}</TableCell>
-              <TableCell>{student.empresa}</TableCell>
-              <TableCell style={{ minWidth: "100px", maxWidth: "150px" }}>{student.fechaPresentacion}</TableCell>
-              {/* <TableCell>{student.experiencia}</TableCell> */}
-              <TableCell>{student.postulacion}</TableCell>
-              <TableCell>{student.pais}</TableCell>
-              {/* <TableCell>{student.stack}</TableCell> */}
-              <TableCell>{student.tecnologias.join(" ")}</TableCell>
-              <TableCell>{student.plataforma}</TableCell>
-              <TableCell>{student.active? "Activa" : "Inactiva"}</TableCell>  
-             
-            </TableRow>
-          ))}
+          {sortData(roffers).map((oferta, i) => (
+              <TableRow key={i}>
+                <TableCell>{i+1}</TableCell>
+                <TableCell><a href={`details/${oferta.id}`}>{oferta.titulo}</a></TableCell>
+                <TableCell>{oferta.empresa}</TableCell>
+                <TableCell style={{ minWidth: "100px", maxWidth: "150px" }}>{oferta.fechaPresentacion}</TableCell>
+                {/* <TableCell>{oferta.experiencia}</TableCell> */}
+                <TableCell>{oferta.postulacion}</TableCell>
+                <TableCell>{oferta.pais}</TableCell>
+                {/* <TableCell>{oferta.stack}</TableCell> */}
+                <TableCell>{oferta.tecnologias.join(" ")}</TableCell>
+                <TableCell>{oferta.plataforma}</TableCell>
+                <TableCell>{oferta.active ? "Activa" : "Inactiva"}</TableCell>  
+              </TableRow>
+))}
         </TableBody>
       </Table>
     </TableContainer>
