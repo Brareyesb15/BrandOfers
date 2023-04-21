@@ -74,3 +74,14 @@ Terminados los filtros. Toca trabajar a futuro en los combinados, aun no encuent
 
 20-4 
 terminado el tema de los detalles además de algunos debugueos. Muy contento con el trabajo de hoy. Mañana ya vendría el tema de las estadisticas ahora sí!!! jajaja 
+
+21-4 
+
+Estadisticas: Planeamiento de qué estadisticas tengo: 
+Estadisticas por paises: Diagrama circular. 
+experiencia: circular. 
+Tecnologías: Acá es donde más puedo hacer : 
+        Frecuencia de cada tecnologia: circular. 
+        Correlación de tecnologías:   calcular si algunas tecnologías aparecen frecuentemente juntas, mediante un diagrama de 
+        dispersión o correlación. Usaré PCA para esto. Más adelante más detalles.
+        
