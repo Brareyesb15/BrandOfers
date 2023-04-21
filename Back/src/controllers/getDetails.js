@@ -1,0 +1,18 @@
+const {ofertas} = require("../../configs/DB_connection");
+
+
+const getDetails = async (req,res) => {
+    let {opcion} = req.params
+try{
+    
+    const oferta = await ofertas.findByPk(opcion);
+
+  return res.status(200).send(oferta)
+    
+}
+catch(error){
+        return res.status(400).send(error.message)
+    }
+}
+
+module.exports = getDetails; 

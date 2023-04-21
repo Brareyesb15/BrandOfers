@@ -2,6 +2,8 @@ const {Router} = require("express");
 const getAll = require("../controllers/getAll");
 const postOffer = require("../controllers/postOffer");
 const  getOps  = require("../controllers/getOpciones");
+const getDetails = require("../controllers/getDetails");
+
 
 
 const mainRouter = Router();    
