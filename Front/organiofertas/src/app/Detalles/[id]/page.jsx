@@ -16,7 +16,7 @@ export default function DetalleID() {
     const detalles = use(traerDetalles(id))
     console.log(detalles)
 
-
+console.log(detalles.linkOferta)
     return (
       <>
       {detalles ? (
@@ -29,7 +29,7 @@ export default function DetalleID() {
                 <p>Tecnologías: {detalles.tecnologias.join(", ")}</p>
                 <p>Estado: {detalles.active? "Activo": "Inactivo"}</p>
                 <p>Idioma: {detalles.idioma.idioma} Nivel: {detalles.idioma.nivel}</p>
-                <p>Link: {detalles.linkOferta}</p>
+                <a href={detalles.linkOferta} target="_blank">Link</a>
                 <p></p>
             </div>
             ) : (
