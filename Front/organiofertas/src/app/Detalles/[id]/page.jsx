@@ -32,6 +32,7 @@ console.log(detalles.linkOferta)
                 <a href={detalles.linkOferta} target="_blank">Link</a>
                 <p>Plataforma: {detalles.plataforma}</p>
                 <p>Tipo de postulación: {detalles.postulacion}</p>
+                <p>Stack: {detalles.stack}</p>
             </div>
             ) : (
             <p>Cargando detalles...</p>
