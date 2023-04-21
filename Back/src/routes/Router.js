@@ -37,4 +37,9 @@ mainRouter.get("/opciones/:opcion", async (req,res) => {
     await getOps(req,res)
 })
 
+mainRouter.get("/detalles/:opcion", async (req,res) => {
+
+
+    await getDetails(req,res)
+})
 module.exports = mainRouter;
