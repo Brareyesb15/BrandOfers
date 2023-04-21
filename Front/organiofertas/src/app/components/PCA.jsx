@@ -7,9 +7,18 @@ const traerTecs = async () => {
     return response.json()
   }
 
-  export default function Pca() {
+const dataProm = traerTecs()
+export default function Pca() {
 
-    const info = use(traerTecs)
+    const info = use(dataProm)
+    
+    console.log(info)
+
+    return (
+        <>
+        <p>HOLAAA ESTAMOS EN PCA</p>
+        </>
+    )
 
 
   }
