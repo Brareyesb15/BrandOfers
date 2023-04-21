@@ -69,12 +69,14 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
         Fecha
         </TableSortLabel> 
       </TableCell>
-      <TableCell>Experiencia</TableCell>
+      {/* <TableCell>Experiencia</TableCell> */}
       <TableCell>Postulación</TableCell>
       <TableCell>País</TableCell>
-      <TableCell>Stack</TableCell>
+      {/* <TableCell>Stack</TableCell> */}
       <TableCell>Tecnologías</TableCell>
       <TableCell>Plataforma</TableCell>
+      <TableCell>Estado</TableCell>
+
     </TableRow>
     <TableRow>
       <TableCell></TableCell>
@@ -87,24 +89,28 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
       <TableCell>
         <BuscOferta id={"fecha"} offers={offers} setRoffers={setRoffers}></BuscOferta>
       </TableCell>
-      <TableCell>
-        <Selector id={"experiencia"} offers={offers} setRoffers={setRoffers} ></Selector>
-      </TableCell>
+        {/* <TableCell>
+          <Selector id={"experiencia"} offers={offers} setRoffers={setRoffers} ></Selector>
+        </TableCell> */}
       <TableCell>
         <Selector id={"postulacion"} offers={offers} setRoffers={setRoffers} ></Selector>
       </TableCell>
       <TableCell>
         <Selector id={"pais"} offers={offers} setRoffers={setRoffers} ></Selector>
       </TableCell>
-      <TableCell>
+      {/* <TableCell>
         <Selector id={"stack"} offers={offers} setRoffers={setRoffers} ></Selector>
-      </TableCell>
+      </TableCell> */}
       <TableCell>
         <SelectorTec id={"tecnologias"} offers={offers} setRoffers={setRoffers} ></SelectorTec>
       </TableCell>
       <TableCell>
         <Selector id={"plataforma"} offers={offers} setRoffers={setRoffers} ></Selector>
       </TableCell>
+      <TableCell>
+        <Selector id={"estado"} offers={offers} setRoffers={setRoffers} ></Selector>
+      </TableCell>
+      
     </TableRow>
   </TableHead>
           <TableBody>
@@ -114,12 +120,13 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
               <TableCell>{student.titulo}</TableCell>
               <TableCell>{student.empresa}</TableCell>
               <TableCell style={{ minWidth: "100px", maxWidth: "150px" }}>{student.fechaPresentacion}</TableCell>
-              <TableCell>{student.experiencia}</TableCell>
+              {/* <TableCell>{student.experiencia}</TableCell> */}
               <TableCell>{student.postulacion}</TableCell>
               <TableCell>{student.pais}</TableCell>
-              <TableCell>{student.stack}</TableCell>
+              {/* <TableCell>{student.stack}</TableCell> */}
               <TableCell>{student.tecnologias.join(" ")}</TableCell>
               <TableCell>{student.plataforma}</TableCell>
+              <TableCell>{student.active? "Activa" : "Inactiva"}</TableCell>  
              
             </TableRow>
           ))}

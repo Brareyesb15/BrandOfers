@@ -30,6 +30,9 @@ export default function Selector({offers,setRoffers,id}) {
     } else if (id === "stack") {
       setRender(["Todos", 'Fullstack', 'Backend', 'Frontend']);
     }
+    else if (id === "estado") {
+      setRender(["Todas", 'Activa', 'Inactiva']);
+    }
       
   }, [id]);
 
@@ -60,6 +63,18 @@ export default function Selector({offers,setRoffers,id}) {
       }
       if (id === "plataforma"){
         setRoffers(offers.filter(obj => obj.plataforma.toLowerCase().includes(selectedOption.toLowerCase())));
+      }
+      if (id === "estado") {
+        setRoffers(offers.filter(obj => {
+          console.log(id,selectedOption)
+          if (selectedOption === "Activa") {
+            return obj.active;
+          } else if (selectedOption === "Inactiva") {
+            return !obj.active;
+          } else { // selectedOption === "Todos"
+            return true; // devolver todos los elementos de offers
+          }
+        }));
       }
       }}, [selectedOption, prevSelectedOption, offers, setRoffers]);
 
