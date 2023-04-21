@@ -2,6 +2,8 @@ const {Router} = require("express");
 const getAll = require("../controllers/getAll");
 const postOffer = require("../controllers/postOffer");
 const  getOps  = require("../controllers/getOpciones");
+const getDetails = require("../controllers/getDetails");
+
 
 
 const mainRouter = Router();    
@@ -37,4 +39,9 @@ mainRouter.get("/opciones/:opcion", async (req,res) => {
     await getOps(req,res)
 })
 
+mainRouter.get("/detalles/:opcion", async (req,res) => {
+
+
+    await getDetails(req,res)
+})
 module.exports = mainRouter;
