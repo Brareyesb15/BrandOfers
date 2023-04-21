@@ -117,7 +117,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
           {sortData(roffers).map((oferta, i) => (
               <TableRow key={i}>
                 <TableCell>{i+1}</TableCell>
-                <TableCell><a href={`details/${oferta.id}`}>{oferta.titulo}</a></TableCell>
+                <TableCell><a href={`Detalles/${oferta.id}`}>{oferta.titulo}</a></TableCell>
                 <TableCell>{oferta.empresa}</TableCell>
                 <TableCell style={{ minWidth: "100px", maxWidth: "150px" }}>{oferta.fechaPresentacion}</TableCell>
                 {/* <TableCell>{oferta.experiencia}</TableCell> */}
