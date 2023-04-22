@@ -1,7 +1,11 @@
 "use client"
-import { PCA } from "pca-js"
 import React, { useState, useEffect, use } from 'react';
-import {transpose, dot, div, sqrt} from 'numeric';  
+import { Bar } from 'react-chartjs-2';
+import Chart from 'chart.js';
+import BarChart from './tecsGrafico';
+
+
+
 
 const traerTecs = async () => {
     const response =  await fetch(`http://localhost:5000/tecs`)
@@ -9,7 +13,9 @@ const traerTecs = async () => {
   }
 
 const dataProm = traerTecs()
-export default function Pca() {
+
+export default function Tecs() {
+  
 
     const matrix = use(dataProm)
     const combinations = {
@@ -70,7 +76,7 @@ export default function Pca() {
 
     return (
         <>
-        <p>HOLAAA ESTAMOS EN PCA</p>
+        <BarChart data={resultFour}>resultado 4</BarChart>
         </>
     )
 
