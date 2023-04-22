@@ -82,6 +82,14 @@ Estadisticas por paises: Diagrama circular.
 experiencia: circular. 
 Tecnologías: Acá es donde más puedo hacer : 
         Frecuencia de cada tecnologia: circular. 
-        Correlación de tecnologías:   calcular si algunas tecnologías aparecen frecuentemente juntas, mediante un diagrama de 
-        dispersión o correlación. Usaré PCA para esto. Más adelante más detalles.
-        
+        Correlación de tecnologías:  Tecnologías que se encuentran juntas. 
+Estado: Cuantas se encuentrn activas y cuantas inactivas. 
+Idioma: circular por idiomas generales.
+        Por idiomas: toma el idioma y te dice en qué nivel te lo piden más. este puede ser barras apiladas.
+Plataforma: barras sobre plataformas más usadas. 
+Fecha: grafico lineal. 
+Tipo de postulación: circular.
+Stack: circular.  
+
+
+Bueno, en trabajo de graficos ahora mismo. Mirar este video : https://www.youtube.com/watch?v=d_Ldw7z8kqc para el trabajo de los graficos correctamente. Puede que sea necesario intentar usar chart en otro proyecto a ver si funciona independientemente y es cuestión de next o si es un problema de que aún no sé usar la extensión. 
