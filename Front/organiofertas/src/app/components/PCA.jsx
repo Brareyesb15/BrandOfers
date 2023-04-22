@@ -53,9 +53,9 @@ export default function Pca() {
       });
       
       // Ordenar los resultados y seleccionar los valores más comunes para cada combinación.
-      const resultFour = Object.entries(combinations.four).sort((a, b) => b[1] - a[1]).slice(0, 5);
-      const resultThree = Object.entries(combinations.three).sort((a, b) => b[1] - a[1]).slice(0, 5);
-      const resultTwo = Object.entries(combinations.two).sort((a, b) => b[1] - a[1]).slice(0, 5);
+      const resultFour = Object.entries(combinations.four).sort((a, b) => b[1] - a[1]).slice(0, 10);
+      const resultThree = Object.entries(combinations.three).sort((a, b) => b[1] - a[1]).slice(0, 10);
+      const resultTwo = Object.entries(combinations.two).sort((a, b) => b[1] - a[1]).slice(0, 10);
       
       console.log("Combinaciones de cuatro tecnologías más comunes:");
       console.log(resultFour);
@@ -65,6 +65,8 @@ export default function Pca() {
       
       console.log("Combinaciones de dos tecnologías más comunes:");
       console.log(resultTwo);
+      
+            
 
     return (
         <>
