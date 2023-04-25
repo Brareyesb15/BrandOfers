@@ -34,6 +34,6 @@ var data = {
     ],
 };
 
-export default function Pies() {
+export default function Pais() {
     return <Pie data={data} options={options} />
 }
