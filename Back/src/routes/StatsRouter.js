@@ -12,4 +12,8 @@ StatsRouter.get("/paises", async(req,res) => {
     await getPaises(req,res)
 })
 
+StatsRouter.get("/exp", async(req,res) => {
+    await getExp(req,res)
+})
+
 module.exports = StatsRouter
