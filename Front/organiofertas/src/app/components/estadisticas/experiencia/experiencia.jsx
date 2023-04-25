@@ -7,27 +7,27 @@ const traerExp = async () => {
     return response.json()
   }
 
-const dataProm = traerPaises()
+const dataProm = traerExp()
 
-export default function Paises() {
+export default function Exp() {
     
     const data = use(dataProm)
-    console.log(data)
 
-    function getCountryCounts(countries) {
-        const uniqueCountries = [...new Set(countries)];
-        const counts = uniqueCountries.map(country => countries.filter(c => c === country).length);
-        return [uniqueCountries, counts];
+
+    function getExperiencias(exp) {
+        const uniqueExp = [...new Set(exp)];
+        const counts = uniqueExp.map(expe => exp.filter(c => c === expe).length);
+        return [uniqueExp, counts];
       }
 
-        const [uniqueCountries, counts] = getCountryCounts(data);
-        console.log(uniqueCountries);
+        const [uniqueExp, counts] = getExperiencias(data);
+        console.log(uniqueExp);
         console.log(counts);
 
     return (
     <>
     <div>
-        <Pais paises={uniqueCountries} num={counts}></Pais>
+        <Pais exp={uniqueExp} num={counts}></Pais>
    </div>
     </>
 )

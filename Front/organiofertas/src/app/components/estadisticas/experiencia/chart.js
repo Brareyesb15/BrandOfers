@@ -13,10 +13,10 @@ export default function Experiencia({exp,num}) {
     };
     
     let data = {
-        labels: paises,
+        labels: exp,
         datasets: [
             {
-                label: "Numero de ofertas por país",
+                label: "Numero de ofertas por experiencia",
                 data: num,
                 backgroundColor: [
                     '#641E16 ',
