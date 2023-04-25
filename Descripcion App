@@ -79,7 +79,7 @@ terminado el tema de los detalles además de algunos debugueos. Muy contento con
 
 Estadisticas: Planeamiento de qué estadisticas tengo: 
 Estadisticas por paises: Diagrama circular. 
-experiencia: circular. 
+experiencia: circular.   
 Tecnologías: Acá es donde más puedo hacer : 
         Frecuencia de cada tecnologia: circular. 
         Correlación de tecnologías:  Tecnologías que se encuentran juntas. 
@@ -93,3 +93,12 @@ Stack: circular.
 
 
 Bueno, en trabajo de graficos ahora mismo. Mirar este video : https://www.youtube.com/watch?v=d_Ldw7z8kqc para el trabajo de los graficos correctamente. Puede que sea necesario intentar usar chart en otro proyecto a ver si funciona independientemente y es cuestión de next o si es un problema de que aún no sé usar la extensión. 
+
+
+TIP PARA AGREGAR: Agregar un boton en los detalles que te permita agregar por qué te han cancelado, o un pop up para agregar esa info, también puede ser un tema de opciones para poder sacar estadisticas sobre eso.    
+
+24-04 :
+Muy buen día de laburo. Adelantados muchos de los charts. Solo faltan algunos. 
+Andando: Tecnologías a medías, falta lo otro, revisar parametros. stack, postulacion, paises, experiencia completos. 
+Mañana arreglar detalles visuales, de color, la base de datos también debe mejorar, no puede haber méxico con tilde y méxico sin tilde y así. Verificaciones son necesarias. 
+
