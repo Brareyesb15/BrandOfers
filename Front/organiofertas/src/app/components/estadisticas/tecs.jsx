@@ -75,7 +75,7 @@ export default function Tecs() {
 
     return (
         <>
-       <LinesChart data={resultFour}></LinesChart>
+       <LinesChart datos={resultFour}></LinesChart>
 
         </>
     )

@@ -57,6 +57,6 @@ var misoptions = {
     }
 };
 
-export default function LinesChart() {
+export default function LinesChart({datos}) {
     return <Line data={midata} options={misoptions}/>
 }
