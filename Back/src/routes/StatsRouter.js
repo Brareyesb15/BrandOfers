@@ -3,6 +3,7 @@ const getTecs = require("../controllers/getTecs");
 const getPaises = require("../controllers/getPaises");
 const getExp = require("../controllers/getExp");
 const getPost = require("../controllers/getPost");
+const getStack = require("../controllers/getStack");
 
 
 
@@ -23,5 +24,10 @@ StatsRouter.get("/exp", async(req,res) => {
 StatsRouter.get("/post", async(req,res) => {
     await getPost(req,res)
 })
+
+StatsRouter.get("/stack", async(req,res) => {
+    await getStack(req,res)
+})  
+
 
 module.exports = StatsRouter
