@@ -4,7 +4,7 @@ import LinesChart from './chart';
 
 
 const traerTecs = async () => {
-    const response =  await fetch(`http://localhost:5000/tecs`)
+    const response =  await fetch(`http://localhost:5000/stats/tecs`)
     return response.json()
   }
 

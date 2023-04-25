@@ -10,8 +10,8 @@ const dataProm = traerPaises()
 
 export default function Paises() {
     
-    const data = use(dataProm)
-    
+    // const data = use(dataProm)
+
     return (
     <>
     <div>

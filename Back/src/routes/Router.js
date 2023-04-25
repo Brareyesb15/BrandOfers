@@ -3,7 +3,7 @@ const getAll = require("../controllers/getAll");
 const postOffer = require("../controllers/postOffer");
 const  getOps  = require("../controllers/getOpciones");
 const getDetails = require("../controllers/getDetails");
-const getTecs = require("../controllers/getTecs");
+const StatsRouter = require("../routes/StatsRouter")
 
 
 const mainRouter = Router();    
@@ -45,7 +45,8 @@ mainRouter.get("/detalles/:opcion", async (req,res) => {
     await getDetails(req,res)
 })
 
-mainRouter.get("/tecs", async(req,res) => {
-    await getTecs(req,res)
-})
+
+mainRouter.use("/stats", StatsRouter)
+
+
 module.exports = mainRouter;
