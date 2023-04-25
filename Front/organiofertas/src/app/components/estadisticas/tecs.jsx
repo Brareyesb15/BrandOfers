@@ -3,8 +3,7 @@ import React, { useState, useEffect, use } from 'react';
 import { Bar } from 'react-chartjs-2';
 import Chart from 'chart.js';
 import BarChart from './tecsGrafico';
-
-
+import LinesChart from './chart';
 
 
 const traerTecs = async () => {
@@ -59,9 +58,9 @@ export default function Tecs() {
       });
       
       // Ordenar los resultados y seleccionar los valores más comunes para cada combinación.
-      const resultFour = Object.entries(combinations.four).sort((a, b) => b[1] - a[1]).slice(0, 10);
-      const resultThree = Object.entries(combinations.three).sort((a, b) => b[1] - a[1]).slice(0, 10);
-      const resultTwo = Object.entries(combinations.two).sort((a, b) => b[1] - a[1]).slice(0, 10);
+      const resultFour = Object.entries(combinations.four).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([technologies, count]) => [technologies.replace(/,/g, ', '), count]);
+      const resultThree = Object.entries(combinations.three).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([technologies, count]) => [technologies.replace(/,/g, ', '), count]);
+      const resultTwo = Object.entries(combinations.two).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([technologies, count]) => [technologies.replace(/,/g, ', '), count]);
       
       console.log("Combinaciones de cuatro tecnologías más comunes:");
       console.log(resultFour);
@@ -76,7 +75,8 @@ export default function Tecs() {
 
     return (
         <>
-        <BarChart data={resultFour}>resultado 4</BarChart>
+       <LinesChart datos={resultFour}></LinesChart>
+
         </>
     )
 
