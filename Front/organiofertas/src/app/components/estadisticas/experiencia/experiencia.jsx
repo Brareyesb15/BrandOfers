@@ -2,6 +2,7 @@
 import Experiencia from "./chart"
 import React, { useState, useEffect, use } from 'react';
 
+
 const traerExp = async () => {
     const response =  await fetch(`http://localhost:5000/stats/exp`)
     return response.json()
@@ -27,7 +28,7 @@ export default function Exp() {
     return (
     <>
     <div>
-        <Pais exp={uniqueExp} num={counts}></Pais>
+        <Experiencia exp={uniqueExp} num={counts}></Experiencia>
    </div>
     </>
 )
