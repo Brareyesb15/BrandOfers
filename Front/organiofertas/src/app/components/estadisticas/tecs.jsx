@@ -3,8 +3,7 @@ import React, { useState, useEffect, use } from 'react';
 import { Bar } from 'react-chartjs-2';
 import Chart from 'chart.js';
 import BarChart from './tecsGrafico';
-
-
+import LinesChart from './chart';
 
 
 const traerTecs = async () => {
@@ -76,7 +75,7 @@ export default function Tecs() {
 
     return (
         <>
-        <BarChart data={resultFour}>resultado 4</BarChart>
+        <LinesChart />
         </>
     )
 
