@@ -1,6 +1,6 @@
 "use client"
 import Postulacion from "./chart"
-import React, { useState, useEffect, use } from 'react';
+import React, { use } from 'react';
 
 
 const traerPost = async () => {
@@ -13,6 +13,7 @@ const dataProm = traerPost()
 export default function Post() {
     
     const data = use(dataProm)
+    console.log(data)
 
 
     function getPostulaciones(post) {

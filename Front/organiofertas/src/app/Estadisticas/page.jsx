@@ -1,5 +1,6 @@
 import Exp from "../components/estadisticas/experiencia/experiencia"
 import Paises from "../components/estadisticas/paises/paises"
+import Post from "../components/estadisticas/postulacion/postulacion"
 import Tecs from "../components/estadisticas/tecnologias/tecs"
 
 
@@ -12,6 +13,7 @@ export default function Estadisticas() {
     <Tecs>Estadisticas sobre Tecnologías</Tecs>
     <Paises>Estadisticas sobre Países</Paises>
     <Exp></Exp>
+    <Post></Post>
     </>
   )
 }
