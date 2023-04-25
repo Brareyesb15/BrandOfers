@@ -1,6 +1,8 @@
 const {Router} = require("express");
 const getTecs = require("../controllers/getTecs");
-const getPaises = require("../controllers/getPaises")
+const getPaises = require("../controllers/getPaises");
+const getExp = require("../controllers/getExp");
+
 
 const StatsRouter = Router()
 

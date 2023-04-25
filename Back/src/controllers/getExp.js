@@ -2,20 +2,17 @@ const {ofertas} = require("../../configs/DB_connection");
 
 
 const getExp = async (req,res) => {
-    let {opcion} = req.params
-try{
-    
-    const oferta = await ofertas.findAll();
-    let ret = []
-    
-    opcion === "pais" ? (ret = oferta.map(o => o.pais).filter((p, i, arr) => arr.indexOf(p) === i)) : 
-    (ret = oferta.map(o => o.plataforma).filter((p, i, arr) => arr.indexOf(p) === i));
-
-
-  return res.status(200).send(ret)
+    try{
+        const oferta = await ofertas.findAll({
+            attributes: ['experiencia']
+          })
+          console.log(oferta)
+        const result = oferta.map(oferta => oferta.experiencia);
+       
+  return res.status(200).send(result)
     
 }
-catch(error){
+    catch(error){
         return res.status(400).send(error.message)
     }
 }
