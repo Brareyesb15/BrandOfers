@@ -1,4 +1,4 @@
-import Tecs from "../components/estadisticas/tecs"
+import Tecs from "../components/estadisticas/tecnologias/tecs"
 
 
 
