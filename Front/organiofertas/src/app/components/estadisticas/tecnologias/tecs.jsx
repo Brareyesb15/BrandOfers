@@ -1,13 +1,10 @@
 "use client"
 import React, { useState, useEffect, use } from 'react';
-import { Bar } from 'react-chartjs-2';
-import Chart from 'chart.js';
-import BarChart from './tecsGrafico';
 import LinesChart from './chart';
 
 
 const traerTecs = async () => {
-    const response =  await fetch(`http://localhost:5000/tecs`)
+    const response =  await fetch(`http://localhost:5000/stats/tecs`)
     return response.json()
   }
 
@@ -62,21 +59,13 @@ export default function Tecs() {
       const resultThree = Object.entries(combinations.three).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([technologies, count]) => [technologies.replace(/,/g, ', '), count]);
       const resultTwo = Object.entries(combinations.two).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([technologies, count]) => [technologies.replace(/,/g, ', '), count]);
       
-      console.log("Combinaciones de cuatro tecnologías más comunes:");
-      console.log(resultFour);
-      
-      console.log("Combinaciones de tres tecnologías más comunes:");
-      console.log(resultThree);
-      
-      console.log("Combinaciones de dos tecnologías más comunes:");
-      console.log(resultTwo);
-      
-            
-
     return (
         <>
+        <div>
        <LinesChart datos={resultFour}></LinesChart>
-
+       <LinesChart datos={resultThree}></LinesChart>
+       <LinesChart datos={resultTwo}></LinesChart>
+       </div>
         </>
     )
 

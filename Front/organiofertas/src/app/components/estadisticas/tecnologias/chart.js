@@ -27,8 +27,8 @@ export default function Bars({datos}) {
 // var beneficios = [72, 56, 20, 36, 80, 40, 30, -20, 25, 30, 12, 60];
 // var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
-let meses = datos.map(array => array[0]);
-let beneficios = datos.map(array => array[1]);
+let tecs = datos.map(array => array[0]);
+let num = datos.map(array => array[1]);
 
 
 var misoptions = {
@@ -42,7 +42,7 @@ var misoptions = {
     scales : {
         y : {
             min : 0,
-            max : 10
+            max : num[0] + 3
         },
         x: {
             ticks: { color: "#34495E"}
@@ -51,11 +51,11 @@ var misoptions = {
 };
 
 var midata = {
-    labels: meses,
+    labels: tecs,
     datasets: [
         {
-            label: 'Beneficios',
-            data: beneficios,
+            label: 'nums',
+            data: num,
             backgroundColor: "#34495E"
         }
     ]
