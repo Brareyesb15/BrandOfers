@@ -17,7 +17,7 @@ export default function Stack() {
 
     function getStack(stack) {
         const uniqueStack = [...new Set(stack)];
-        const counts = uniqueStack.map(sta=> post.filter(c => c === sta).length);
+        const counts = uniqueStack.map(sta=> stack.filter(c => c === sta).length);
         return [uniqueStack, counts];
       }
 
@@ -27,7 +27,7 @@ export default function Stack() {
     return (
     <>
     <div>
-        <Stacko post={uniquePost} num={counts}></Stacko>
+        <Stacko stac={uniqueStack} num={counts}></Stacko>
    </div>
     </>
 )
