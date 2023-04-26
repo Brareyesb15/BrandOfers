@@ -56,9 +56,18 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
   };
 
   const handleClick = async (oferta) => {
-  const response =  await fetch(`http://localhost:5000/activate/${oferta.id}`)
-  return response.json()
-}
+    const options = {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ activate: !oferta.activate })
+    };
+  
+    const response = await fetch(`http://localhost:5000/activate/${oferta.id}`, options);
+    const data = await response.json();
+    
+    // actualizar el estado de la oferta
+    setRoffers(data)
+  }
 
   
 
