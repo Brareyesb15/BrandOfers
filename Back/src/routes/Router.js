@@ -45,6 +45,9 @@ mainRouter.get("/detalles/:opcion", async (req,res) => {
     await getDetails(req,res)
 })
 
+mainRouter.put("/activate/:id",async (req,res) => {
+    await putActivate(req,res)
+})
 
 mainRouter.use("/stats", StatsRouter)
 
