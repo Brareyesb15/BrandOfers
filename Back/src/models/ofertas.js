@@ -38,7 +38,8 @@ module.exports = sequelize => {
         postulacion: {
             type: DataTypes.ENUM(
                 "Espontanea",
-                "Regular"
+                "Regular",
+                "Mixta"
             )
         },
         pais:{

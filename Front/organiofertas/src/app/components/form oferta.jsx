@@ -112,7 +112,7 @@ export default function FormOfertas() {
                   <textarea
                     name="descripcion"
                     minLength="5"
-                    maxLength="500"
+                    maxLength="1500"
                     placeholder="Insertar Descripción"
                     value={formData.descripcion}
                     onChange={handleInputChange}
@@ -214,6 +214,7 @@ export default function FormOfertas() {
                       <select name="postulacion" onChange={handleInputChange}>
                         <option value="Espontanea">Espontánea</option>
                         <option value="Regular">Regular</option>
+                        <option value="Mixta">Mixta</option>
                       </select>
                       <br />
                       <label>Experiencia:</label>
