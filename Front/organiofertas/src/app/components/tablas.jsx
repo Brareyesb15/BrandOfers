@@ -63,6 +63,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
           <TableHead>
     <TableRow>
       <TableCell></TableCell>
+      <TableCell>Estado</TableCell>
       <TableCell>Oferta</TableCell>
       <TableCell>Empresa</TableCell>
       <TableCell>
@@ -118,6 +119,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
           {sortData(roffers).map((oferta, i) => (
               <TableRow key={i}>
                 <TableCell>{i+1}</TableCell>
+                <TableCell> <button onClick={() => handleClick(oferta)}>{oferta.active ? "Desactivar" : "Activar"}</button></TableCell>
                 <TableCell><Link href={`Detalles/${oferta.id}`}>{oferta.titulo}</Link></TableCell>
                 <TableCell>{oferta.empresa}</TableCell>
                 <TableCell style={{ minWidth: "100px", maxWidth: "150px" }}>{oferta.fechaPresentacion}</TableCell>
