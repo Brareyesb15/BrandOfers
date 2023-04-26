@@ -3,7 +3,8 @@ const getAll = require("../controllers/getAll");
 const postOffer = require("../controllers/postOffer");
 const  getOps  = require("../controllers/getOpciones");
 const getDetails = require("../controllers/getDetails");
-const StatsRouter = require("../routes/StatsRouter")
+const StatsRouter = require("../routes/StatsRouter");
+const putActivate = require("../controllers/putActivate");
 
 
 const mainRouter = Router();    
