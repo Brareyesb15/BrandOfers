@@ -21,7 +21,7 @@ const traer = async () => {
   const response =  await fetch(`http://localhost:5000/obtener`)
   return response.json()
 }
-
+ 
 const dataProm = traer()
 
 
@@ -54,6 +54,13 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
     });
     return sortedData;
   };
+
+  const handleClick = async (oferta) => {
+  const response =  await fetch(`http://localhost:5000/activate/${oferta.id}`)
+  return response.json()
+}
+
+  
 
 
     return ( 
@@ -129,7 +136,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
                 {/* <TableCell>{oferta.stack}</TableCell> */}
                 <TableCell>{oferta.tecnologias.join(" ")}</TableCell>
                 <TableCell>{oferta.plataforma}</TableCell>
-                <TableCell>{oferta.active ? "Activa" : "Inactiva"}</TableCell>  
+                <TableCell>{oferta.active ?  "Activa" : "Inactiva"}</TableCell>  
               </TableRow>
 ))}
         </TableBody>
