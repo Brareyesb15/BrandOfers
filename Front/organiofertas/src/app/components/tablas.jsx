@@ -21,7 +21,7 @@ const traer = async () => {
   const response =  await fetch(`http://localhost:5000/obtener`)
   return response.json()
 }
-
+ 
 const dataProm = traer()
 
 
@@ -55,6 +55,22 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
     return sortedData;
   };
 
+  const handleClick = async (oferta) => {
+    const options = {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ activate: !oferta.activate })
+    };
+  
+    const response = await fetch(`http://localhost:5000/activate/${oferta.id}`, options);
+    const data = await response.json();
+    
+    // actualizar el estado de la oferta
+    setRoffers(data)
+  }
+
+  
+
 
     return ( 
         <>
@@ -63,6 +79,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
           <TableHead>
     <TableRow>
       <TableCell></TableCell>
+      <TableCell>Estado</TableCell>
       <TableCell>Oferta</TableCell>
       <TableCell>Empresa</TableCell>
       <TableCell>
@@ -118,6 +135,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
           {sortData(roffers).map((oferta, i) => (
               <TableRow key={i}>
                 <TableCell>{i+1}</TableCell>
+                <TableCell> <button onClick={() => handleClick(oferta)}>{oferta.active ? "Desactivar" : "Activar"}</button></TableCell>
                 <TableCell><Link href={`Detalles/${oferta.id}`}>{oferta.titulo}</Link></TableCell>
                 <TableCell>{oferta.empresa}</TableCell>
                 <TableCell style={{ minWidth: "100px", maxWidth: "150px" }}>{oferta.fechaPresentacion}</TableCell>
@@ -127,7 +145,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
                 {/* <TableCell>{oferta.stack}</TableCell> */}
                 <TableCell>{oferta.tecnologias.join(" ")}</TableCell>
                 <TableCell>{oferta.plataforma}</TableCell>
-                <TableCell>{oferta.active ? "Activa" : "Inactiva"}</TableCell>  
+                <TableCell>{oferta.active ?  "Activa" : "Inactiva"}</TableCell>  
               </TableRow>
 ))}
         </TableBody>
