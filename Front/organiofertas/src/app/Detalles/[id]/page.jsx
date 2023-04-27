@@ -1,8 +1,9 @@
 "use client"
 import { usePathname, useSearchParams} from 'next/navigation'
 import React from "react";
-import {use, useState} from "react"
+import {use} from "react"
 import NewComponent from "../../components/new component"
+
 
 
 const traerDetalles= async (opcion) => {
@@ -10,40 +11,33 @@ const traerDetalles= async (opcion) => {
   return response.json()
 }
 
+
 export default function DetalleID() {
   let id = parseInt(usePathname().substring(10))
   const detalles = use(traerDetalles(id))
-  const [showNewComponent, setShowNewComponent] = useState("amigo")
-
- const setearEstado = () => {
-  setShowNewComponent("fruta")
-  console.log("dentro de la funcion", showNewComponent)
- }
 
   return (
     <>
-      {detalles ? (
-        <div>
-          <h2>Oferta: {detalles.titulo}</h2>
-          <p>{detalles.descripcion}</p>
-          <p>Empresa: {detalles.empresa}</p>
-          <p>País: {detalles.pais}</p>
-          <p>Experiencia: {detalles.experiencia}</p>
-          <p>Tecnologías: {detalles.tecnologias.join(", ")}</p>
-          <p>Estado: {detalles.active? "Activo": "Inactivo"}</p>
-          <p>Idioma: {detalles.idioma.idioma} Nivel: {detalles.idioma.nivel}</p>
-          <a href={detalles.linkOferta} target="_blank">Link</a>
-          <p>Plataforma: {detalles.plataforma}</p>
-          <p>Tipo de postulación: {detalles.postulacion}</p>
-          <p>Stack: {detalles.stack}</p>
-        </div>
-      ) : (
-        <p>Cargando detalles...</p>
-      )}
-
-      <button onClick={setearEstado}>Agregar detalles</button>
+        {detalles ? (
+          <div>
+            <h2>Oferta: {detalles.titulo}</h2>
+            <p>{detalles.descripcion}</p>
+            <p>Empresa: {detalles.empresa}</p>
+            <p>País: {detalles.pais}</p>
+            <p>Experiencia: {detalles.experiencia}</p>
+            <p>Tecnologías: {detalles.tecnologias.join(", ")}</p>
+            <p>Estado: {detalles.active? "Activo": "Inactivo"}</p>
+            <p>Idioma: {detalles.idioma.idioma} Nivel: {detalles.idioma.nivel}</p>
+            <a href={detalles.linkOferta} target="_blank">Link</a>
+            <p>Plataforma: {detalles.plataforma}</p>
+            <p>Tipo de postulación: {detalles.postulacion}</p>
+            <p>Stack: {detalles.stack}</p>
+          </div>
+        ) : (
+          <p>Cargando detalles...</p>
+        )}
       
-      {showNewComponent && <NewComponent></NewComponent>}
+      <NewComponent></NewComponent>
     </>
   ) 
 }
