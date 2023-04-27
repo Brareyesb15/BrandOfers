@@ -107,3 +107,9 @@ Mañana arreglar detalles visuales, de color, la base de datos también debe mej
 ATENCION: AGREGAR: Puedes terminar agregando un apartado en las postulaciones que sean mixtas o ambas. 
 Trabajo de postulaciones mixtas hecho y de activar-desactivar tambien hecho. 
 Pendiente? debugueos generales y el trabajo de editar las cosas desde el componente de detalles. Revisar que vas a poder editar. Las ideas que tengo son: Una tabla enlazada con la de ofertas que pueda irse creando relaciones, cosa de que si vas a agregar nueva info, como va o cosas así puedas agregarlo. Entrevistas del mismo modo. Entrevistas va a poder verse adelante en la tabla principal? probablemente. Bueno, así como mataste estadisticas entrevistas también vas a tener que matarlo. Entrevistas y paso a paso. 
+
+26-4
+
+ATENCION PARA EL FINAL: Cambiar el manejo de estados. Que puedan mezclarse, ojo es importante. También que puedan actualizarse en tiempo real, es decir, si desactivas, debes poder en "inactivos" de estado, debe poder actualizarse en el estado también. Todos los cambios deben verse en tiempo real!!!! 
+
+
