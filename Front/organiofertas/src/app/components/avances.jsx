@@ -3,12 +3,12 @@
 
     const send = async(type,data) => {
     try {
-        const res = await fetch(`http://localhost:5000/oferta`, {
+        const res = await fetch(`http://localhost:5000/avance?type=${type}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify(type,data),
         });
       
       } catch (error) {
