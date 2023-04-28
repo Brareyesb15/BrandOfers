@@ -2,7 +2,7 @@
 import { usePathname, useSearchParams} from 'next/navigation'
 import React from "react";
 import {use} from "react"
-import NewComponent from "../../components/new component"
+import Avances from "../../components/avances"
 
 
 
@@ -37,7 +37,7 @@ export default function DetalleID() {
           <p>Cargando detalles...</p>
         )}
       
-      <NewComponent></NewComponent>
+      <Avances oferta={detalles}></Avances>
     </>
   ) 
 }
