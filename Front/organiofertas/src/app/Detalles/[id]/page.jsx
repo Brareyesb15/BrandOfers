@@ -37,7 +37,7 @@ export default function DetalleID() {
           <p>Cargando detalles...</p>
         )}
       
-      <Avances></Avances>
+      <Avances oferta={detalles}></Avances>
     </>
   ) 
 }
