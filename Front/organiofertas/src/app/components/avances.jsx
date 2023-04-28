@@ -1,7 +1,7 @@
     "use client"
     import { useState } from "react";
 
-    const send = async(info) => {
+    const send = async(type,data) => {
     try {
         const res = await fetch(`http://localhost:5000/oferta`, {
           method: 'POST',
@@ -28,14 +28,14 @@
     
       const handleChange = (e) => {
         setTipoAvance(e.target.value);
-        e.target.value === "Entrevista" ? send(/*agregar info*/) : 
-        e.target.value === "Agregar postulación espontanea" ? send (/*agregar info*/) : 
-        send(/*agregar info*/)
+        e.target.value === "Entrevista" ? send("entrevista",data) : 
+        e.target.value === "Agregar postulación espontanea" ? send ("postulacion", data) : 
+        send("otro", data)
       };
     
       return (
         <>
-          <button onClick={setearEstado}>Agregar detalles</button>
+          <button onClick={setearEstado}>Agregar Avance</button>
           {mostrar && (
             <>
               <label htmlFor="tipoAvance">Tipo de avance:</label>
