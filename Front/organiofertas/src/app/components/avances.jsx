@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
 
-export default function NewComponent () {
+export default function Avances () {
     const [mostrar,setMostrar] = useState(false)
 
 
