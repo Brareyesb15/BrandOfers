@@ -98,6 +98,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
     </TableRow>
     <TableRow>
       <TableCell></TableCell>
+      <TableCell></TableCell>
       <TableCell>
         <BuscOferta id={"oferta"} offers={offers} setRoffers={setRoffers} ></BuscOferta>
       </TableCell>

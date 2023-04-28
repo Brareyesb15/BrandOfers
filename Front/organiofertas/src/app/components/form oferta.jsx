@@ -24,7 +24,7 @@ export default function FormOfertas() {
 
   });
   const [formData,setFormData] = useState(initial)
-
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
