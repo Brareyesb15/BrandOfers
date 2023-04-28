@@ -1,12 +1,16 @@
-const {ofertas} = require("../../configs/DB_connection");
+const {ofertas,entrevistas} = require("../../configs/DB_connection");
 
 
 const postAvances= async (req,res) => {
     const {type} = req.query;
+    const {data} = req.body;
+
     try{
- 
-            console.log(type)
-           
+    if (type === "Entrevista"){
+        const newEntrevista = entrevistas.create({feedback : data.text})
+        res.status(200).send("agregada nueva Entrevista", newEntrevista)
+    }
+
 
 }
     catch(error){
