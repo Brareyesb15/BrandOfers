@@ -4,6 +4,9 @@ const {ofertas,entrevistas} = require("../../configs/DB_connection");
 const postAvances= async (req,res) => {
     const {type} = req.query;
     const {data} = req.body;
+    const {id} = req.query
+
+    console.log(type,id)
 
     try{
     if (type === "Entrevista"){
