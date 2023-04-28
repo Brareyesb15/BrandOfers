@@ -1,14 +1,14 @@
     "use client"
     import { useState } from "react";
 
-    const send = async(type,data) => {
+    const send = async(type,data,id) => {
     try {
-        const res = await fetch(`http://localhost:5000/avance?type=${type}`, {
+        const res = await fetch(`http://localhost:5000/avance?type=${type}&id=${id}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(type,data),
+          body: JSON.stringify(data),
         });
       
       } catch (error) {
@@ -28,9 +28,9 @@
     
       const handleChange = (e) => {
         setTipoAvance(e.target.value);
-        e.target.value === "Entrevista" ? send("entrevista",data) : 
-        e.target.value === "Agregar postulación espontanea" ? send ("postulacion", data) : 
-        send("otro", data)
+        e.target.value === "Entrevista" ? send("entrevista",data,oferta.id) : 
+        e.target.value === "Agregar postulación espontanea" ? send ("postulacion", data,oferta.id) : 
+        send("otro", data,oferta.id)
       };
     
       return (

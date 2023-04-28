@@ -112,4 +112,8 @@ Pendiente? debugueos generales y el trabajo de editar las cosas desde el compone
 
 ATENCION PARA EL FINAL: Cambiar el manejo de estados. Que puedan mezclarse, ojo es importante. También que puedan actualizarse en tiempo real, es decir, si desactivas, debes poder en "inactivos" de estado, debe poder actualizarse en el estado también. Todos los cambios deben verse en tiempo real!!!! 
 
+27-4 
+
+Esta bitacora viene medio fully. Resulta que alivié el backend para que trabajara más acorde a lo que se quiere. Está lista la relacion de la tabla de entrevistas con la de oferta, hay que hacer algo igual con otra tabla que se llame espontanea y con otra tabla llamada otros avances. Cosa que dependiendo de cada cual se cree una relación especifica distinta. Cada uno de los avances pertenece a una oferta, punto, por lo cual la relación y los llamados son sencillos. Mañana prosigues con la creación de esas tablas y se termina el controlador para poder guardar la información de los avances. 
+
 

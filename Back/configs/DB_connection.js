@@ -31,13 +31,10 @@ const {entrevistas, ofertas,idiomas} = sequelize.models;
 
 // Acá van las relaciones: 
 
-ofertas.belongsToMany(entrevistas, { through: "ofertasXEntrevistas", unique: false });
-entrevistas.belongsToMany(ofertas, { through: "ofertasXEntrevistas", unique: false });
 
-
-// tblReviews.belongsTo(tblCourses, {
-//    foreignKey: "PK_Course"
-// });
+entrevistas.belongsTo(ofertas, {
+   foreignKey: "idOferta"
+});
 
 // tblCourses.hasMany(tblReviews, {
 //    foreignKey: 'PK_Course'
