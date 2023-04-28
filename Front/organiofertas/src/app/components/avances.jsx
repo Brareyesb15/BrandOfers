@@ -1,5 +1,21 @@
     "use client"
     import { useState } from "react";
+
+    const send = async(info) => {
+    try {
+        const res = await fetch(`http://localhost:5000/oferta`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+      
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
     
     export default function Avances({ oferta }) {
       const [mostrar, setMostrar] = useState(false);
@@ -12,6 +28,7 @@
     
       const handleChange = (e) => {
         setTipoAvance(e.target.value);
+        e.target.value === "Entrevista" ? console.log("entrevista") : console.log("NoEntrevista")
       };
     
       return (
@@ -24,7 +41,7 @@
                 <option value="">Seleccione una opción</option>
                 <option value="Entrevista">Entrevista</option>
                 {oferta.postulacion === "Regular" && (
-                  <option value="Agregada postulación espontanea">
+                  <option value="Agregar postulación espontanea">
                     Agregada postulación espontanea
                   </option>
                 )}
