@@ -28,7 +28,9 @@
     
       const handleChange = (e) => {
         setTipoAvance(e.target.value);
-        e.target.value === "Entrevista" ? console.log("entrevista") : console.log("NoEntrevista")
+        e.target.value === "Entrevista" ? send(/*agregar info*/) : 
+        e.target.value === "Agregar postulación espontanea" ? send (/*agregar info*/) : 
+        send(/*agregar info*/)
       };
     
       return (
