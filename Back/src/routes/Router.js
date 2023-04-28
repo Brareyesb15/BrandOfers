@@ -5,6 +5,8 @@ const  getOps  = require("../controllers/getOpciones");
 const getDetails = require("../controllers/getDetails");
 const StatsRouter = require("../routes/StatsRouter");
 const putActivate = require("../controllers/putActivate");
+const postAvances = require("../controllers/postAvances");
+
 
 
 const mainRouter = Router();    
@@ -51,6 +53,11 @@ mainRouter.put("/activate/:id",async (req,res) => {
 })
 
 mainRouter.use("/stats", StatsRouter)
+
+
+mainRouter.post("/avances", async (req,res) => {
+    await postAvances(req,res)
+})
 
 
 module.exports = mainRouter;
