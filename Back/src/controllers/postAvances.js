@@ -13,7 +13,12 @@ const postAvances= async (req,res) => {
         
         res.status(200).send(newEntrevista)
     }
-    // if (type === )
+    if (type === "Espontanea"){
+        const newEspontanea = avances.create({feedback : "aqui irá data.text", tipo : type, idOferta: id})
+    }
+    else {
+        const newOtro= avances.create({feedback : "aqui irá data.text", tipo : type, idOferta: id})
+    }
 
 
 }

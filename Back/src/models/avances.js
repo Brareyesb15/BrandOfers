@@ -16,8 +16,9 @@ module.exports = sequelize => {
             )
         },
         fecha: {
-            type: DataTypes.DATE, // (YYYY-MM-DD HH:mm:ss).
-            allowNull: true 
+            type: DataTypes.DATEONLY,
+            defaultValue: DataTypes.NOW,
+            allowNull:true
         },
         feedback:{
             type: DataTypes.TEXT,
