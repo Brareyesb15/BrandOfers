@@ -3,7 +3,7 @@
 
     const send = async (type, data, id) => {
       try {
-        const res = await fetch(`http://localhost:5000/avance?type=${type}&id=${id}`, {
+        const res = await fetch(`http://localhost:5000/avances?type=${type}&id=${id}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
