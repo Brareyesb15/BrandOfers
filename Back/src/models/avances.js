@@ -10,10 +10,15 @@ module.exports = sequelize => {
         },
         tipo: {
             type: DataTypes.ENUM(
-                "Entrevista",
-                "Espontanea",
-                "Otro",
+                "entrevista",
+                "espontanea",
+                "otro",
             )
+        },
+        titulo: {
+            type: DataTypes.TEXT,
+            allowNull : false
+
         },
         fecha: {
             type: DataTypes.DATEONLY,
