@@ -1,7 +1,7 @@
 require('dotenv').config();
 const { Sequelize, Op, BelongsTo } = require('sequelize');
 const modelofertas = require ("../src/models/ofertas")
-const modelentrevistas = require ("../src/models/entrevistas")
+const modelavances = require ("../src/models/avances")
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_DEPLOY, DB_DB } = process.env;
 
 
@@ -25,14 +25,14 @@ const { DB_USER, DB_PASSWORD, DB_HOST, DB_DEPLOY, DB_DB } = process.env;
 //Acá irán las funciones de los modelos. ej: modelStudents(sequelize)
 
 modelofertas(sequelize)
-modelentrevistas(sequelize)
+modelavances(sequelize)
 
-const {entrevistas, ofertas,idiomas} = sequelize.models;
+const {avances, ofertas,idiomas} = sequelize.models;
 
 // Acá van las relaciones: 
 
 
-entrevistas.belongsTo(ofertas, {
+avances.belongsTo(ofertas, {
    foreignKey: "idOferta"
 });
 
