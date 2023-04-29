@@ -1,4 +1,4 @@
-const {ofertas,entrevistas} = require("../../configs/DB_connection");
+const {ofertas,avances} = require("../../configs/DB_connection");
 
 
 const postAvances= async (req,res) => {
@@ -9,7 +9,7 @@ const postAvances= async (req,res) => {
 
     try{
     if (type === "Entrevista"){
-        const newEntrevista = entrevistas.create({feedback : "aqui irá data.text", idOferta: id})
+        const newEntrevista = avances.create({feedback : "aqui irá data.text", idOferta: id})
         
         res.status(200).send(newEntrevista)
     }
