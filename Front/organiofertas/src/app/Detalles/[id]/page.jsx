@@ -12,9 +12,13 @@ const traerDetalles= async (opcion) => {
 }
 
 
+
 export default function DetalleID() {
   let id = parseInt(usePathname().substring(10))
   const detalles = use(traerDetalles(id))
+
+  detalles.avances.map(avance => {
+    console.log(avance.tipo, avance.feedback, avance.titulo)})
 
   return (
     <>
@@ -38,6 +42,14 @@ export default function DetalleID() {
         )}
       
       <Avances oferta={detalles}></Avances>
+      <h2>Avances:</h2>
+      {detalles.avances && detalles.avances.map(avance => (
+  <div key={avance.id}>
+    <h3>Tipo: {avance.tipo}</h3>
+    <p>{avance.titulo}</p>
+    <p>{avance.feedback}</p>
+  </div>
+))} 
     </>
   ) 
 }
