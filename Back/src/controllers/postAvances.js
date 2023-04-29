@@ -9,7 +9,7 @@ const postAvances= async (req,res) => {
 
     try{
     if (type === "Entrevista"){
-        const newEntrevista = avances.create({feedback : "aqui irá data.text", tipo : type, idOferta: id})
+        const newEntrevista = avances.create({feedback : data.detalles, titulo: data.titulo, tipo : type, idOferta: id})
         
         res.status(200).send(newEntrevista)
     }

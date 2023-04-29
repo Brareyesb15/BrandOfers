@@ -15,6 +15,11 @@ module.exports = sequelize => {
                 "Otro",
             )
         },
+        titulo: {
+            type: DataTypes.TEXT,
+            allowNull : false
+
+        },
         fecha: {
             type: DataTypes.DATEONLY,
             defaultValue: DataTypes.NOW,
