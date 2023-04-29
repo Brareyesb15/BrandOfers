@@ -27,7 +27,7 @@ const { DB_USER, DB_PASSWORD, DB_HOST, DB_DEPLOY, DB_DB } = process.env;
 modelofertas(sequelize)
 modelavances(sequelize)
 
-const {avances, ofertas,idiomas} = sequelize.models;
+const {avances, ofertas} = sequelize.models;
 
 // Acá van las relaciones: 
 
@@ -35,6 +35,8 @@ const {avances, ofertas,idiomas} = sequelize.models;
 avances.belongsTo(ofertas, {
    foreignKey: "idOferta"
 });
+
+ofertas.hasMany(avances, { foreignKey: 'idOferta' });
 
 // tblCourses.hasMany(tblReviews, {
 //    foreignKey: 'PK_Course'

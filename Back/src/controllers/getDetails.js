@@ -1,11 +1,13 @@
-const {ofertas} = require("../../configs/DB_connection");
+const {ofertas,avances} = require("../../configs/DB_connection");
 
 
 const getDetails = async (req,res) => {
     let {opcion} = req.params
 try{
     
-    const oferta = await ofertas.findByPk(opcion);
+    const oferta = await ofertas.findByPk(opcion, {
+        include: avances, // incluir la tabla "avances"
+      });
 
   return res.status(200).send(oferta)
     
