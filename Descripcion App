@@ -78,18 +78,18 @@ terminado el tema de los detalles además de algunos debugueos. Muy contento con
 21-4 
 
 Estadisticas: Planeamiento de qué estadisticas tengo: 
-Estadisticas por paises: Diagrama circular. 
-experiencia: circular.   
+Estadisticas por paises: Diagrama circular. ----        
+experiencia: circular.   -----
 Tecnologías: Acá es donde más puedo hacer : 
-        Frecuencia de cada tecnologia: circular. 
-        Correlación de tecnologías:  Tecnologías que se encuentran juntas. 
-Estado: Cuantas se encuentrn activas y cuantas inactivas. 
-Idioma: circular por idiomas generales.
+        Frecuencia de cada tecnologia: circular. ----
+        Correlación de tecnologías:  Tecnologías que se encuentran juntas. ----
+Estado: Cuantas se encuentrn activas y cuantas inactivas. ----
+Idioma: circular por idiomas generales. -----
         Por idiomas: toma el idioma y te dice en qué nivel te lo piden más. este puede ser barras apiladas.
 Plataforma: barras sobre plataformas más usadas. 
 Fecha: grafico lineal. 
-Tipo de postulación: circular.
-Stack: circular.  
+Tipo de postulación: circular.  -----
+Stack: circular.  ----
 
 
 Bueno, en trabajo de graficos ahora mismo. Mirar este video : https://www.youtube.com/watch?v=d_Ldw7z8kqc para el trabajo de los graficos correctamente. Puede que sea necesario intentar usar chart en otro proyecto a ver si funciona independientemente y es cuestión de next o si es un problema de que aún no sé usar la extensión. 
@@ -116,4 +116,11 @@ ATENCION PARA EL FINAL: Cambiar el manejo de estados. Que puedan mezclarse, ojo 
 
 Esta bitacora viene medio fully. Resulta que alivié el backend para que trabajara más acorde a lo que se quiere. Está lista la relacion de la tabla de entrevistas con la de oferta, hay que hacer algo igual con otra tabla que se llame espontanea y con otra tabla llamada otros avances. Cosa que dependiendo de cada cual se cree una relación especifica distinta. Cada uno de los avances pertenece a una oferta, punto, por lo cual la relación y los llamados son sencillos. Mañana prosigues con la creación de esas tablas y se termina el controlador para poder guardar la información de los avances. 
 
+2-5 
+
+Volviendo del puente festivo. Muy buen laburo hoy. Listos varias estadisticas más y debugueo. Ya falta muy poco a nivel funcionamiento, algunas estadisticas por trabajar y todo el tema visual luego 
+mañana vienen estos tres: 
+Por idiomas: toma el idioma y te dice en qué nivel te lo piden más. este puede ser barras apiladas.
+Plataforma: barras sobre plataformas más usadas. 
+Fecha: grafico lineal. 
 
