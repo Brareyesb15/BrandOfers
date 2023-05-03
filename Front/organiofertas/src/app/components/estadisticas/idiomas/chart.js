@@ -6,7 +6,7 @@ import { Pie } from 'react-chartjs-2';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 
-export default function Stacko({stac,num}) {
+export default function Idiomi({idio,num}) {
 
     let options = {
         responsive : true,
@@ -14,10 +14,10 @@ export default function Stacko({stac,num}) {
     };
     
     let data = {
-        labels: stac,
+        labels: idio,
         datasets: [
             {
-                label: "Numero de ofertas por stack",
+                label: "Numero de ofertas por idiomas",
                 data: num,
                 backgroundColor: [
                     '#641E16 ',

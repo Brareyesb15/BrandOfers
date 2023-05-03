@@ -23,6 +23,7 @@ export default function Idioma() {
       }
 
         const [uniqueIdioma, counts] = getIdioma(data);
+        console.log(uniqueIdioma,counts)
         
 
     return (
