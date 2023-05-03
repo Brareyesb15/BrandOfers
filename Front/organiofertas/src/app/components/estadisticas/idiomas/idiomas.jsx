@@ -13,6 +13,7 @@ const dataProm = traerIdioma()
 export default function Idioma() {
     
     const data = use(dataProm)
+    console.log(data)
 
 
     function getIdioma(idioma) {
