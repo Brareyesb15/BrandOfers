@@ -5,6 +5,7 @@ const getExp = require("../controllers/getExp");
 const getPost = require("../controllers/getPost");
 const getStack = require("../controllers/getStack");
 const getEstado = require("../controllers/getEstado");
+const getIdioma = require("../controllers/getIdioma");
 
 const StatsRouter = Router()
 
@@ -32,5 +33,8 @@ StatsRouter.get("/estado", async(req,res) => {
     await getEstado(req,res)
 })  
 
+StatsRouter.get("/idioma", async(req,res) => {
+    await getIdioma(req,res)
+})  
 
 module.exports = StatsRouter
