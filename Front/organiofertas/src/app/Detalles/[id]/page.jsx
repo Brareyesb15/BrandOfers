@@ -11,14 +11,10 @@ const traerDetalles= async (opcion) => {
   return response.json()
 }
 
-
-
 export default function DetalleID() {
   let id = parseInt(usePathname().substring(10))
   const detalles = use(traerDetalles(id))
 
-  detalles.avances.map(avance => {
-    console.log(avance.tipo, avance.feedback, avance.titulo)})
 
   return (
     <>
