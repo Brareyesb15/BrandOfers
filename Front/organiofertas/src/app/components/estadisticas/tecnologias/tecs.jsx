@@ -80,12 +80,12 @@ export default function Tecs() {
       console.log(resultFour)
     return (
         <>
-        <div>
-       <LinesChart datos={resultFour}></LinesChart>
-       <LinesChart datos={resultThree}></LinesChart>
-       <LinesChart datos={resultTwo}></LinesChart>
-       <LinesChart datos={tecsMas}></LinesChart>
-       </div>
+      <div>
+        <LinesChart datos={tecsMas}></LinesChart>
+        <LinesChart datos={resultFour}></LinesChart>
+        <LinesChart datos={resultThree}></LinesChart>
+        <LinesChart datos={resultTwo}></LinesChart>
+      </div>
         </>
     )
 
