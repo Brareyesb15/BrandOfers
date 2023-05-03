@@ -29,5 +29,9 @@ StatsRouter.get("/stack", async(req,res) => {
     await getStack(req,res)
 })  
 
+StatsRouter.get("/estado", async(req,res) => {
+    await getEstado(req,res)
+})  
+
 
 module.exports = StatsRouter
