@@ -4,8 +4,7 @@ const getPaises = require("../controllers/getPaises");
 const getExp = require("../controllers/getExp");
 const getPost = require("../controllers/getPost");
 const getStack = require("../controllers/getStack");
-
-
+const getEstado = require("../controllers/getEstado");
 
 const StatsRouter = Router()
 
@@ -27,6 +26,10 @@ StatsRouter.get("/post", async(req,res) => {
 
 StatsRouter.get("/stack", async(req,res) => {
     await getStack(req,res)
+})  
+
+StatsRouter.get("/estado", async(req,res) => {
+    await getEstado(req,res)
 })  
 
 

@@ -9,7 +9,7 @@ const traerPost = async () => {
   }
 
 const dataProm = traerPost()
-
+  
 export default function Post() {
     
     const data = use(dataProm)
