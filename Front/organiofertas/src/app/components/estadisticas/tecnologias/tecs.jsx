@@ -12,6 +12,21 @@ const dataProm = traerTecs()
 
 export default function Tecs() {
   
+  function tecnologiasMasComunes(matriz) {
+    const frecuenciaInversa = {};
+    for (const lista of matriz) {
+      const tecnologiasUnicas = new Set(lista);
+      for (const tecnologia of tecnologiasUnicas) {
+        if (tecnologia in frecuenciaInversa) {
+          frecuenciaInversa[tecnologia] += 1;
+        } else {
+          frecuenciaInversa[tecnologia] = 1;
+        }
+      }
+    }
+    const tecnologiasOrdenadas = Object.entries(frecuenciaInversa).sort((a, b) => b[1] - a[1]).slice(0, 15);
+    return tecnologiasOrdenadas.map(([tecnologia, frecuencia]) => [tecnologia, frecuencia]);
+  } 
 
     const matrix = use(dataProm)
     const combinations = {
@@ -19,6 +34,9 @@ export default function Tecs() {
         three: {},
         four: {}
       };
+
+      const tecsMas = tecnologiasMasComunes(matrix)
+      console.log(tecsMas)
       
       matrix.forEach((array) => {
         for (let i = 0; i < array.length; i++) {
@@ -59,12 +77,14 @@ export default function Tecs() {
       const resultThree = Object.entries(combinations.three).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([technologies, count]) => [technologies.replace(/,/g, ', '), count]);
       const resultTwo = Object.entries(combinations.two).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([technologies, count]) => [technologies.replace(/,/g, ', '), count]);
       
+      console.log(resultFour)
     return (
         <>
         <div>
        <LinesChart datos={resultFour}></LinesChart>
        <LinesChart datos={resultThree}></LinesChart>
        <LinesChart datos={resultTwo}></LinesChart>
+       <LinesChart datos={tecsMas}></LinesChart>
        </div>
         </>
     )
