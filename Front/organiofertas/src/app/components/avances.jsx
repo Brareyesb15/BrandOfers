@@ -16,7 +16,7 @@
       }
     };
     
-    export default function Avances({ oferta }) {
+    export default function Avances({ oferta,cambiar}) {
       const [mostrar, setMostrar] = useState(false);
       const [tipoAvance, setTipoAvance] = useState("");
       const [titulo, setTitulo] = useState("");
@@ -56,6 +56,7 @@
         setTipoAvance("");
         setTitulo("");
         setDetalles("");
+        cambiar(true)
       };
     
       return (
