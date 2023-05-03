@@ -1,5 +1,5 @@
 "use client"
-import Estado from "./chart"
+import Estadux from "./chart"
 import React, { use } from 'react';
 
 
@@ -14,23 +14,26 @@ const dataProm = traerEstado()
 export default function Estado() {
     
     const data = use(dataProm)
-    console.log(data)
 
 
     function getEstado(est) {
-        const uniqueEst = [...new Set(est)];
-        const counts = uniqueEst.map(este => este.filter(c => c === este).length);
+        let uniqueEst = [...new Set(est)];
+        console.log(uniqueEst, "arriba")
+        let counts = uniqueEst.map(esta => est.filter(c => c === esta).length);
+        console.log(counts,"medio")
+       
+         uniqueEst = uniqueEst.map(esta => esta === true ? "Activo" : "Inactivo");
         return [uniqueEst, counts];
       }
 
         const [uniqueEst, counts] = getEstado(data);
-        console.log(uniqueEst);
-        console.log(counts);
+        console.log(uniqueEst,"DEEEEE");
+        console.log(counts,"Diiiii");
 
     return (
     <>
     <div>
-        <Estado est={uniqueEst} num={counts}></Estado>
+        <Estadux est={uniqueEst} num={counts}></Estadux>
    </div>
     </>
 )

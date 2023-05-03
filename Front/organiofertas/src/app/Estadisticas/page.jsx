@@ -1,4 +1,4 @@
-import Estado from "../components/estadisticas/estado/chart"
+import Estado from "../components/estadisticas/estado/estado"
 import Exp from "../components/estadisticas/experiencia/experiencia"
 import Paises from "../components/estadisticas/paises/paises"
 import Post from "../components/estadisticas/postulacion/postulacion"
