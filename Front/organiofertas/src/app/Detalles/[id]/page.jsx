@@ -11,6 +11,7 @@ const traerDetalles = async (opcion) => {
 export default function DetalleID() {
   const id = parseInt(usePathname().substring(10));
   const [detalles, setDetalles] = useState(null);
+  const [cambiar, setCambiar] = useState(false)
 
   useEffect(() => {
     async function fetchDetalles() {
@@ -18,7 +19,10 @@ export default function DetalleID() {
       setDetalles(detalles);
     }
     fetchDetalles();
-  }, [id]);
+    setCambiar(false)
+  }, [id,cambiar]);
+
+  console.log(cambiar)
 
   return (
     <>
@@ -45,7 +49,7 @@ export default function DetalleID() {
         <p>Cargando detalles...</p>
       )}
 
-      <Avances oferta={detalles}></Avances>
+      <Avances oferta={detalles} cambiar ={setCambiar}></Avances>
       <h2>Avances:</h2>
       {detalles &&
         detalles.avances &&
