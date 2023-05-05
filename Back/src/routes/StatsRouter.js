@@ -37,4 +37,8 @@ StatsRouter.get("/idioma", async(req,res) => {
     await getIdioma(req,res)
 })  
 
+StatsRouter.get("/plataformas", async(req,res) => {
+    await getPlats(req,res)
+})  
+
 module.exports = StatsRouter
