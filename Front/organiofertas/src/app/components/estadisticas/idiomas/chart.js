@@ -36,4 +36,4 @@ export default function Idiomi({idio,num}) {
         ],
     };
     return <Pie data={data} options={options} />
-}
+}   
