@@ -14,28 +14,21 @@ console.log(dataProm,"DATAAAAAAAAAA")
 export default function Plats() {
     const plataformas = use(dataProm)
   
-  function plataformasMasComunes(matriz) {
-    const frecuenciaInversa = {};
-    for (const lista of matriz) {
-      const platsUnicas = new Set(lista);
-      for (const plats of platsUnicas) {
-        if (plats in frecuenciaInversa) {
-          frecuenciaInversa[plats] += 1;
-        } else {
-          frecuenciaInversa[plats] = 1;
-        }
-      }
-    }
-    const plataformasOrdenadas = Object.entries(frecuenciaInversa).sort((a, b) => b[1] - a[1]).slice(0, 15);
-    return plataformasOrdenadas.map(([plataforma, frecuencia]) => [plataforma, frecuencia]);
-  } 
 
-      const platsMas = plataformasMasComunes(plataformas)
+    function getIdioma(idioma) {
+        const uniqueIdioma = [...new Set(idioma)];
+        const counts = uniqueIdioma.map(sta=> idioma.filter(c => c === sta).length);
+        return [uniqueIdioma, counts];
+      }
+
+        const [uniqueIdioma, counts] = getIdioma(plataformas);
+        console.log(uniqueIdioma,counts)
+
      
     return (
         <>
       <div>
-        <LinesChart datos={platsMas}></LinesChart>
+        <LinesChart plats={uniqueIdioma} nums={counts}></LinesChart>
       </div>
         </>
     )

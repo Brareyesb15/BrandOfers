@@ -23,12 +23,9 @@ ChartJS.register(
 );
 
 
-export default function Bars({datos}) {
+export default function Bars({plats, nums}) {
 // var beneficios = [72, 56, 20, 36, 80, 40, 30, -20, 25, 30, 12, 60];
 // var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-
-let tecs = datos.map(array => array[0]);
-let num = datos.map(array => array[1]);
 
 
 var misoptions = {
@@ -42,7 +39,7 @@ var misoptions = {
     scales : {
         y : {
             min : 0,
-            max : num[0] + 3
+            max : 50
         },
         x: {
             ticks: { color: "#34495E"}
@@ -51,11 +48,11 @@ var misoptions = {
 };
 
 var midata = {
-    labels: tecs,
+    labels: plats,
     datasets: [
         {
             label: 'nums',
-            data: num,
+            data: nums,
             backgroundColor: "#34495E"
         }
     ]
