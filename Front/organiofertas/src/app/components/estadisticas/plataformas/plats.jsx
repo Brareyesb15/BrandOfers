@@ -9,8 +9,10 @@ const traerPlats = async () => {
   }
 
 const dataProm = traerPlats()
+console.log(dataProm,"DATAAAAAAAAAA")
 
 export default function Plats() {
+    const plataformas = use(dataProm)
   
   function plataformasMasComunes(matriz) {
     const frecuenciaInversa = {};
@@ -28,7 +30,7 @@ export default function Plats() {
     return plataformasOrdenadas.map(([plataforma, frecuencia]) => [plataforma, frecuencia]);
   } 
 
-      const platsMas = plataformasMasComunes(matrix)
+      const platsMas = plataformasMasComunes(plataformas)
      
     return (
         <>
