@@ -6,6 +6,7 @@ const getPost = require("../controllers/getPost");
 const getStack = require("../controllers/getStack");
 const getEstado = require("../controllers/getEstado");
 const getIdioma = require("../controllers/getIdioma");
+const getPlats = require("../controllers/getPlats");
 
 const StatsRouter = Router()
 
