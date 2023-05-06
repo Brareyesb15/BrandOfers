@@ -22,9 +22,6 @@ ChartJS.register(
     Filler
 );
 
-var beneficios = [0, 56, 20, 36, 80, 40, 30, -20, 25, 30, 12, 60];
-var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-
 var midata = {
     labels: meses,
     datasets: [ // Cada una de las líneas del gráfico
