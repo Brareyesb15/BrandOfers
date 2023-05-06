@@ -4,7 +4,7 @@ import React, { useState, useEffect, use } from 'react';
 
 
 const traerFecha = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/exp`)
+    const response =  await fetch(`http://localhost:5000/stats/fechas`)
     return response.json()
   }
 
@@ -16,19 +16,19 @@ export default function Fecha() {
 
 
     function getFecha(fecha) {
-        const uniqueExp = [...new Set(exp)];
-        const counts = uniqueExp.map(expe => exp.filter(c => c === expe).length);
+        const uniqueFecha = [...new Set(fecha)];
+        const counts = uniqueFecha.map(fech => fecha.filter(c => c === fech).length);
         return [uniqueExp, counts];
       }
 
-        const [uniqueExp, counts] = getExperiencias(data);
-        console.log(uniqueExp);
+        const [uniqueFecha, counts] = getFecha(data);
+        console.log(uniqueFecha);
         console.log(counts);
 
     return (
     <>
     <div>
-        <Experiencia exp={uniqueExp} num={counts}></Experiencia>
+        <Experiencia fec={uniqueFecha} num={counts}></Experiencia>
    </div>
     </>
 )

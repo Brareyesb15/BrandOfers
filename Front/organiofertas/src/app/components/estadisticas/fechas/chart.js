@@ -22,12 +22,14 @@ ChartJS.register(
     Filler
 );
 
+export default function Fecha({fec,num}) {
+
 var midata = {
-    labels: meses,
+    labels: fec,
     datasets: [ // Cada una de las líneas del gráfico
         {
-            label: 'Beneficios',
-            data: beneficios,
+            label: 'Fechas',
+            data: fec,
             tension: 0.5,
             fill : true,
             borderColor: 'rgb(255, 99, 132)',
@@ -37,8 +39,8 @@ var midata = {
             pointBackgroundColor: 'rgba(255, 99, 132)',
         },
         {
-            label: 'Otra línea',
-            data: [20, 25, 60, 65, 45, 10, 0, 25, 35, 7, 20, 25]
+            label: 'numeros',
+            data: num
         },
     ],
 };
@@ -54,6 +56,8 @@ var misoptions = {
     }
 };
 
-export default function LinesChart() {
+
     return <Line data={midata} options={misoptions}/>
+
+
 }
