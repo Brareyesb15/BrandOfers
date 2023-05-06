@@ -4,6 +4,7 @@
     "@emotion/styled": "^11.10.6",
     "@mui/material": "^5.11.13",
     "chart.js": "^4.2.1",
+    "date-fns": "^2.30.0",
     "numeric": "^1.2.6",
     "pca-js": "^1.0.2",
     "plotly.js": "^2.21.0",
