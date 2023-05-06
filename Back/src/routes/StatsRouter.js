@@ -7,6 +7,8 @@ const getStack = require("../controllers/getStack");
 const getEstado = require("../controllers/getEstado");
 const getIdioma = require("../controllers/getIdioma");
 const getPlats = require("../controllers/getPlats");
+const getFechas = require("../controllers/getFechas");
+
 
 const StatsRouter = Router()
 
@@ -41,5 +43,10 @@ StatsRouter.get("/idioma", async(req,res) => {
 StatsRouter.get("/plataformas", async(req,res) => {
     await getPlats(req,res)
 })  
+
+StatsRouter.get("/fechas", async(req,res) => {
+    await getFechas(req,res)
+})  
+
 
 module.exports = StatsRouter
