@@ -3,6 +3,7 @@ import Fech from "./chart"
 import React, { useState, useEffect, use } from 'react';
 
 
+
 const traerFecha = async () => {
     const response =  await fetch(`http://localhost:5000/stats/fechas`)
     return response.json()
@@ -22,6 +23,7 @@ export default function Fecha() {
         return [uniqueFecha, counts];
       }
         const [uniqueFecha, counts] = getFecha(data);
+
     return (
     <>
     <div>

@@ -87,7 +87,7 @@ Estado: Cuantas se encuentrn activas y cuantas inactivas. ----
 Idioma: circular por idiomas generales. -----
         Por idiomas: toma el idioma y te dice en qué nivel te lo piden más. este puede ser barras apiladas.
 Plataforma: barras sobre plataformas más usadas.  --- 
-Fecha: grafico lineal. 
+Fecha: grafico lineal.  
 Tipo de postulación: circular.  -----
 Stack: circular.  ----
 
@@ -128,3 +128,5 @@ Fecha: grafico lineal.
 Terminé el de plataformas 
 
 5-5 
+Hoy puse a andar el de fechas, está hermoso, pero se le puede hacer mucho más a nivel funcional.
+Ideas: Poder jugar con el con una barra. QUe la persona pueda escoger revisar por mes o por año o incluso por semana. Poder ver que días se han hecho más también en todo el tiempo. Jugar con las funciones. 
