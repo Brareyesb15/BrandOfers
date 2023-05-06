@@ -1,5 +1,5 @@
 "use client"
-import Fechas from "./chart"
+import Fech from "./chart"
 import React, { useState, useEffect, use } from 'react';
 
 
@@ -28,7 +28,7 @@ export default function Fecha() {
     return (
     <>
     <div>
-        <Experiencia fec={uniqueFecha} num={counts}></Experiencia>
+        <Fech fec={uniqueFecha} num={counts}></Fech>
    </div>
     </>
 )

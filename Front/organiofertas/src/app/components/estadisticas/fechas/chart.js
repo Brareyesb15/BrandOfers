@@ -22,7 +22,7 @@ ChartJS.register(
     Filler
 );
 
-export default function Fecha({fec,num}) {
+export default function Fech({fec,num}) {
 
 var midata = {
     labels: fec,
