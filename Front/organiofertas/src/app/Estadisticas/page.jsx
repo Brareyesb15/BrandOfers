@@ -1,5 +1,6 @@
 import Estado from "../components/estadisticas/estado/estado"
 import Exp from "../components/estadisticas/experiencia/experiencia"
+import Fecha from "../components/estadisticas/fechas/Fechas"
 import Idioma from "../components/estadisticas/idiomas/idiomas"
 import Paises from "../components/estadisticas/paises/paises"
 import Plats from "../components/estadisticas/plataformas/plats"
@@ -22,6 +23,7 @@ export default function Estadisticas() {
     <Estado></Estado>
     <Idioma></Idioma>
     <Plats></Plats>
+    <Fecha></Fecha>
     </>
   )
 }

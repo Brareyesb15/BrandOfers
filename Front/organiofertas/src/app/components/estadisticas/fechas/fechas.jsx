@@ -17,14 +17,11 @@ export default function Fecha() {
 
     function getFecha(fecha) {
         const uniqueFecha = [...new Set(fecha)];
+        console.log(uniqueFecha, "DATOOOOOOOOOOOS")
         const counts = uniqueFecha.map(fech => fecha.filter(c => c === fech).length);
-        return [uniqueExp, counts];
+        return [uniqueFecha, counts];
       }
-
         const [uniqueFecha, counts] = getFecha(data);
-        console.log(uniqueFecha);
-        console.log(counts);
-
     return (
     <>
     <div>
