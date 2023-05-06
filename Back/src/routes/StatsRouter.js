@@ -42,4 +42,9 @@ StatsRouter.get("/plataformas", async(req,res) => {
     await getPlats(req,res)
 })  
 
+StatsRouter.get("/fechas", async(req,res) => {
+    await getFechas(req,res)
+})  
+
+
 module.exports = StatsRouter
