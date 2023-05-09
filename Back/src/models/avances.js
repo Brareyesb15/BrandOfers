@@ -12,6 +12,7 @@ module.exports = sequelize => {
             type: DataTypes.ENUM(
                 "entrevista",
                 "espontanea",
+                "respuesta",
                 "otro",
             )
         },
