@@ -5,15 +5,15 @@ import React, { useState, useEffect, use } from 'react';
 
 
 const traerFecha = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/fechas`)
+    const response =  await fetch(`http://localhost:5000/stats/fechas/1`)
     return response.json()
   }
   const traerFecha2 = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/fechas`)
+    const response =  await fetch(`http://localhost:5000/stats/fechas/2`)
     return response.json()
   }
   const traerFecha3 = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/fechas`)
+    const response =  await fetch(`http://localhost:5000/stats/fechas/3`)
     return response.json()
   }
 
