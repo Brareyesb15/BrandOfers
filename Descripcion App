@@ -136,3 +136,7 @@ Agregar a estadisticas una de respuestas:
 Respuesta es importante para las estadisticas, en las estadisticas sobre que ofertas están funcionando tomarás las que tienen entrevista o respuesta (positiva o negativa) y así sabrás cuales están funcionando y cuales no. 
 
 INVESTIGAR: Tengo una buena idea para el final del proyecto. Cómo se deployará? si se deployará? Podría tener solo el front montado pero de tal forma que el front esté montado solamente y el back se conecte con una base de datos propia en la maquina del usuario. Se podrá esto? 
+
+11-5
+A partir de ahora Estadisticas tendrá dos componentes, uno será el que muestra las estadisticas generales. Es lo que he hecho hasta ahora, te permitirá ver a lo que has aspirado. El segundo componente será será el de estadisticas por resultados. Tendrá un elector que te permitirá escoger si tiene avances o no. Si tiene avances te mostrará los mismos componentes que en el otro pero ahora con los datos filtrados por si tienen avances o no tienen avances, mostrando por defecto los con avances.
+En realidad podría no tener dos componentes si no un botón selector. El botón selector te dirá qué datos tendrá. Si se escoge en todos seguirá como ahora, si se escoge con avances te traerá solo los que tienen avances, sin avanzas te traerá los  demás. 
