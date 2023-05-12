@@ -24,7 +24,7 @@ const dataProm3 = traerFecha3()
 export default function Fecha({id}) {
     
   const data = id === 1 ? use(dataProm) : id === 2 ? use(dataProm2) : id === 3? use(dataProm3) : null ;
-
+  console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", data)
     function getFecha(fecha) {
         const uniqueFecha = [...new Set(fecha)];
         console.log(uniqueFecha, "DATOOOOOOOOOOOS")
