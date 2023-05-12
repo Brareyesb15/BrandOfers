@@ -1,23 +1,51 @@
 
+const {ofertas,avances} = require("../../configs/DB_connection");
 
-const {ofertas} = require("../../configs/DB_connection");
 
+const getPaises = async (req,res) => { 
+const { id } = req.params;
 
-const getPaises = async (req,res) => {
-    
-    try{
-        const oferta = await ofertas.findAll({
-            attributes: ['pais']
-          })
-          console.log(oferta)
-        const result = oferta.map(oferta => oferta.pais);
-       
-  return res.status(200).send(result)
-    
+try {
+  if (id === "1") {
+    const oferta = await ofertas.findAll({
+      attributes: ["paises"],
+    });
+    const result = oferta.map((oferta) => oferta.paises);
+    return res.status(200).send(result);
+  }
+  if (id === "2") {
+    const oferta = await ofertas.findAll({
+      attributes: ["paises"],
+      include: [
+        {
+          model: avances,
+          required: true,
+        },
+      ],
+    });
+    const result = oferta.map((oferta) => oferta.paises);
+    return res.status(200).send(result);
+  }
+  if (id === "3") {
+    const oferta = await ofertas.findAll({
+      attributes: ["paises"],
+      include: [
+        {
+          model: avances,
+          required: false,
+        },
+      ],
+      where: {
+        "$avances.id$": null,
+      },
+    });
+    const result = oferta.map((oferta) => oferta.paises);
+    return res.status(200).send(result);
+  }
+  return res.status(400).send("Invalid ID");
+} catch (error) {
+  return res.status(400).send(error.message);
 }
-    catch(error){
-        return res.status(400).send(error.message)
-    }
 }
 
 module.exports = getPaises; 
