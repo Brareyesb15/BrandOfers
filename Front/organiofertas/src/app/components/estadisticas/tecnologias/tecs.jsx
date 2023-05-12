@@ -4,7 +4,7 @@ import LinesChart from './chart';
 
 
 const traerTecs = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/tecs?id=1`)
+    const response =  await fetch(`http://localhost:5000/stats/tecs`)
     return response.json()
   }
 const traerTecs2 = async () => {
@@ -22,9 +22,8 @@ const dataProm3 = traerTecs3()
 
 export default function Tecs({id}) {
 
-  const matrix = []
-  id === 1 ? matrix = use(dataProm) : id === 2 ?  matrix = use(dataProm2) : id === 3?  matrix = use(dataProm3) : null ;
-  console.log (matrix)
+  const matrix = id === 1 ? use(dataProm) : id === 2 ? use(dataProm2) : id === 3? use(dataProm3) : null ;
+  console.log(matrix)
    
   function tecnologiasMasComunes(matriz) {
     const frecuenciaInversa = {};

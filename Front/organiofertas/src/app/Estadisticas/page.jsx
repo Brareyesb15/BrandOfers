@@ -15,7 +15,7 @@ export default function Estadisticas() {
   return (
     <>
     <div>Estamos en estadisticas</div>
-    <Tecs>Estadisticas sobre Tecnologías</Tecs>
+    <Tecs id={1}>Estadisticas sobre Tecnologías</Tecs>
     <Paises>Estadisticas sobre Países</Paises>
     <Exp></Exp>
     <Post></Post>
