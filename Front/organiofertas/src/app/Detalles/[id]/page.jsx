@@ -22,7 +22,6 @@ export default function DetalleID() {
     setCambiar(false)
   }, [id,cambiar]);
 
-  console.log(cambiar)
 
   return (
     <>
