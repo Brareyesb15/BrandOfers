@@ -48,6 +48,9 @@
           case "Agregar postulación espontanea":
             send("postulacion", data, oferta.id);
             break;
+            case "Respuesta":
+            send("respuesta", data, oferta.id);
+            break;
           default:
             send("otro", data, oferta.id);
             break;
@@ -74,6 +77,7 @@
                   </option>
                 )}
                 <option value="Otro">Otro</option>
+                <option value="Respuesta">Respuesta</option>
               </select>
     
               {tipoAvance && (
