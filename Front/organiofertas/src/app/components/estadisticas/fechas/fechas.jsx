@@ -8,13 +8,22 @@ const traerFecha = async () => {
     const response =  await fetch(`http://localhost:5000/stats/fechas`)
     return response.json()
   }
+  const traerFecha2 = async () => {
+    const response =  await fetch(`http://localhost:5000/stats/fechas`)
+    return response.json()
+  }
+  const traerFecha3 = async () => {
+    const response =  await fetch(`http://localhost:5000/stats/fechas`)
+    return response.json()
+  }
 
 const dataProm = traerFecha()
+const dataProm2 = traerFecha2()
+const dataProm3 = traerFecha3()
 
-export default function Fecha() {
+export default function Fecha({id}) {
     
-    const data = use(dataProm)
-
+  const data = id === 1 ? use(dataProm) : id === 2 ? use(dataProm2) : id === 3? use(dataProm3) : null ;
 
     function getFecha(fecha) {
         const uniqueFecha = [...new Set(fecha)];
