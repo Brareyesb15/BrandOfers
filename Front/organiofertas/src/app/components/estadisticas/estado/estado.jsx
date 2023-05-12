@@ -21,7 +21,7 @@ const dataProm = traerEstado()
 const dataProm2 = traerEstado2()
 const dataProm3 = traerEstado3()
 
-export default function Estado() {
+export default function Estado({id}) {
     
   const data = id === 1 ? use(dataProm) : id === 2 ? use(dataProm2) : id === 3? use(dataProm3) : null ;
 
