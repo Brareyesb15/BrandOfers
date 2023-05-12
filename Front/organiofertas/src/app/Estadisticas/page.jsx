@@ -25,10 +25,10 @@ export default function Estadisticas() {
         <option value={2}>Con avances</option>
         <option value={3}>Sin avances</option>
       </select>
-      <Tecs id={selectedOption}>Estadisticas sobre Tecnologías</Tecs>
+          <Tecs id={selectedOption}>Estadisticas sobre Tecnologías</Tecs>
           <Paises id={selectedOption}>Estadisticas sobre Países</Paises>
-          {/* <Exp id={selectedOption}></Exp>
-          <Post id={selectedOption}></Post>
+          <Exp id={selectedOption}></Exp>
+          {/* <Post id={selectedOption}></Post>
           <Stack id={selectedOption}></Stack>
           <Estado id={selectedOption}></Estado>
           <Idioma id={selectedOption}></Idioma>

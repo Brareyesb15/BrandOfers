@@ -20,7 +20,7 @@ const dataProm = traerExp()
 const dataProm2 = traerExp2()
 const dataProm3 = traerExp3()
 
-export default function Exp() {
+export default function Exp({id}) {
     
   const data = id === 1 ? use(dataProm) : id === 2 ? use(dataProm2) : id === 3? use(dataProm3) : null ;
 
