@@ -28,8 +28,8 @@ export default function Estadisticas() {
           <Tecs id={selectedOption}>Estadisticas sobre Tecnologías</Tecs>
           <Paises id={selectedOption}>Estadisticas sobre Países</Paises>
           <Exp id={selectedOption}></Exp>
-          {/* <Post id={selectedOption}></Post>
-          <Stack id={selectedOption}></Stack>
+          <Post id={selectedOption}></Post>
+          {/* <Stack id={selectedOption}></Stack>
           <Estado id={selectedOption}></Estado>
           <Idioma id={selectedOption}></Idioma>
           <Plats id={selectedOption}></Plats>

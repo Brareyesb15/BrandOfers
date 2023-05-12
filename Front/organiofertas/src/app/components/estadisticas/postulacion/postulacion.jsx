@@ -20,7 +20,7 @@ const dataProm = traerPost()
 const dataProm2 = traerPost2()
 const dataProm3 = traerPost3()
   
-export default function Post() {
+export default function Post({id}) {
     
   const data = id === 1 ? use(dataProm) : id === 2 ? use(dataProm2) : id === 3? use(dataProm3) : null ;
 
