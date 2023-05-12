@@ -16,10 +16,10 @@ const traerPaises = async () => {
   }
 
 const dataProm = traerPaises()
-const dataProm2 = traerPaises()
-const dataProm3= traerPaises()
+const dataProm2 = traerPaises2()
+const dataProm3= traerPaises3()
 
-export default function Paises() {
+export default function Paises({id}) {
     
   const data = id === 1 ? use(dataProm) : id === 2 ? use(dataProm2) : id === 3? use(dataProm3) : null ;
 

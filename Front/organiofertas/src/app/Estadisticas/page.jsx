@@ -26,14 +26,14 @@ export default function Estadisticas() {
         <option value={3}>Sin avances</option>
       </select>
       <Tecs id={selectedOption}>Estadisticas sobre Tecnologías</Tecs>
-      {/* <Paises id={selectedOption}>Estadisticas sobre Países</Paises>
-      <Exp id={selectedOption}></Exp>
-      <Post id={selectedOption}></Post>
-      <Stack id={selectedOption}></Stack>
-      <Estado id={selectedOption}></Estado>
-      <Idioma id={selectedOption}></Idioma>
-      <Plats id={selectedOption}></Plats>
-      <Fecha id={selectedOption}></Fecha> */}
+          <Paises id={selectedOption}>Estadisticas sobre Países</Paises>
+          {/* <Exp id={selectedOption}></Exp>
+          <Post id={selectedOption}></Post>
+          <Stack id={selectedOption}></Stack>
+          <Estado id={selectedOption}></Estado>
+          <Idioma id={selectedOption}></Idioma>
+          <Plats id={selectedOption}></Plats>
+          <Fecha id={selectedOption}></Fecha> */}
     </>
   );
 }
