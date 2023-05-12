@@ -21,7 +21,7 @@ const dataProm2 = traerTecs2()
 const dataProm3 = traerTecs3()
 
 export default function Tecs({id}) {
-  console.log(id)
+
 
   const matrix = id === 1 ? use(dataProm) : id === 2 ? use(dataProm2) : id === 3? use(dataProm3) : null ;
  
