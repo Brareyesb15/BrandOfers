@@ -4,13 +4,24 @@ import LinesChart from './chart';
 
 
 const traerTecs = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/tecs`)
+    const response =  await fetch(`http://localhost:5000/stats/tecs?id=1`)
+    return response.json()
+  }
+const traerTecs2 = async () => {
+    const response =  await fetch(`http://localhost:5000/stats/tecsid=2`)
+    return response.json()
+  }
+const traerTecs3 = async () => {
+    const response =  await fetch(`http://localhost:5000/stats/tecsid=3`)
     return response.json()
   }
 
 const dataProm = traerTecs()
+const dataProm2 = traerTecs2()
+const dataProm3 = traerTecs3()
 
 export default function Tecs() {
+
   
   function tecnologiasMasComunes(matriz) {
     const frecuenciaInversa = {};
@@ -28,7 +39,7 @@ export default function Tecs() {
     return tecnologiasOrdenadas.map(([tecnologia, frecuencia]) => [tecnologia, frecuencia]);
   } 
 
-    const matrix = use(dataProm)
+    
     const combinations = {
         two: {},
         three: {},
