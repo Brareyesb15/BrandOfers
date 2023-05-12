@@ -20,9 +20,12 @@ const dataProm = traerTecs()
 const dataProm2 = traerTecs2()
 const dataProm3 = traerTecs3()
 
-export default function Tecs() {
+export default function Tecs({id}) {
 
-  
+  const matrix = []
+  id === 1 ? matrix = use(dataProm) : id === 2 ?  matrix = use(dataProm2) : id === 3?  matrix = use(dataProm3) : null ;
+  console.log (matrix)
+   
   function tecnologiasMasComunes(matriz) {
     const frecuenciaInversa = {};
     for (const lista of matriz) {
