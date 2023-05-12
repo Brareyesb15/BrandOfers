@@ -4,15 +4,15 @@ import LinesChart from './chart';
 
 
 const traerTecs = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/tecsid=1`)
+    const response =  await fetch(`http://localhost:5000/stats/tecs/1`)
     return response.json()
   }
 const traerTecs2 = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/tecsid=2`)
+    const response =  await fetch(`http://localhost:5000/stats/tecs/2`)
     return response.json()
   }
 const traerTecs3 = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/tecsid=3`)
+    const response =  await fetch(`http://localhost:5000/stats/tecs/3`)
     return response.json()
   }
 
