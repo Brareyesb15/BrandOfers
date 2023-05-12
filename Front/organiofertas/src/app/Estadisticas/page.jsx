@@ -29,8 +29,8 @@ export default function Estadisticas() {
           <Paises id={selectedOption}>Estadisticas sobre Países</Paises>
           <Exp id={selectedOption}></Exp>
           <Post id={selectedOption}></Post>
-          {/* <Stack id={selectedOption}></Stack>
-          <Estado id={selectedOption}></Estado>
+          <Stack id={selectedOption}></Stack>
+          {/* <Estado id={selectedOption}></Estado>
           <Idioma id={selectedOption}></Idioma>
           <Plats id={selectedOption}></Plats>
           <Fecha id={selectedOption}></Fecha> */}

@@ -27,7 +27,7 @@ const getExp = async (req,res) => {
     }
     if (id === "3") {
       const oferta = await ofertas.findAll({
-        attributes: ["texperiencia"],
+        attributes: ["experiencia"],
         include: [
           {
             model: avances,
