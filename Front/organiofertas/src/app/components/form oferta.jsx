@@ -24,6 +24,7 @@ export default function FormOfertas() {
 
   });
   const [formData,setFormData] = useState(initial)
+  const [searchQuery, setSearchQuery] = useState('')
  
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -72,7 +73,14 @@ export default function FormOfertas() {
     }));
   }, [tempTec]);
 
-  console.log(formData);
+  const filteredTecs = tecs.filter(tec =>
+    tec.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const handleSearchChange = e => {
+    setSearchQuery(e.target.value);
+  };
+
     return (
         <>
         <h2>Ingresa la oferta</h2>
@@ -123,19 +131,24 @@ export default function FormOfertas() {
               </div>
             </label>
             <label>
-                Tecnologías:
-                {tecs.map((tec,id) => (
-              <label key={id}>
-                <input
-                  type="checkbox"
-                  name={tec}
-                  checked={tempTec.includes(tec)}
-                  value={tec}
-                  onChange={handleInputChange}
-                  
-                />
-                {tec}
-              </label>
+        Tecnologías:
+        <input
+          type="text"
+          placeholder="Buscar tecnología"
+          value={searchQuery}
+          onChange={handleSearchChange}
+        />
+        {filteredTecs.map((tec, id) => (
+          <label key={id}>
+            <input
+              type="checkbox"
+              name={tec}
+              checked={tempTec.includes(tec)}
+              value={tec}
+              onChange={handleInputChange}
+            />
+            {tec}
+          </label>
             ))}
                 <ul>
                   {formData.tecnologias.map((tec, index) => (
