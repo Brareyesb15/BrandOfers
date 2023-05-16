@@ -28,19 +28,19 @@ export default function BarChart({datos}) {
     function getBackgroundColor(nivel) {
         switch (nivel) {
           case 'A1':
-            return 'rgba(1, 99, 132, 0.5)';
+            return 'rgba(3, 99, 132, 0.5)';
           case 'A2':
-            return 'rgba(100, 162, 235, 0.5)';
+            return 'rgba(765, 162, 235, 0.5)';
           case 'B1':
-            return 'rgba(200, 206, 86, 0.5)';
+            return 'rgba(189, 206, 86, 0.5)';
           case 'B2':
-            return 'rgba(300, 192, 192, 0.5)';
+            return 'rgba(945, 192, 192, 0.5)';
           case 'C1':
-            return 'rgba(900, 102, 255, 0.5)';
+            return 'rgba(360, 102, 255, 0.5)';
           case 'C2':
-            return 'rgba(500, 159, 64, 0.5)';
+            return 'rgba(666, 159, 64, 0.5)';
           case 'Nativo':
-            return 'rgba(600, 162, 235, 0.5)';
+            return 'rgba(879, 162, 235, 0.5)';
           default:
             return 'rgba(0, 0, 0, 0.5)';
         }
