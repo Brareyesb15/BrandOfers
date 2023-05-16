@@ -2,15 +2,15 @@
 import BarChart from "./chart2";
 
 const traerIdioma = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/idioma/1`)
+    const response =  await fetch(`http://localhost:5000/stats/idioma2/1`)
     return response.json()
   }
   const traerIdioma2 = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/idioma/2`)
+    const response =  await fetch(`http://localhost:5000/stats/idioma2/2`)
     return response.json()
   }
   const traerIdioma3 = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/idioma/3`)
+    const response =  await fetch(`http://localhost:5000/stats/idioma2/3`)
     return response.json()
   }
 
