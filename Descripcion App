@@ -142,3 +142,6 @@ A partir de ahora Estadisticas tendrá dos componentes, uno será el que muestra
 En realidad podría no tener dos componentes si no un botón selector. El botón selector te dirá qué datos tendrá. Si se escoge en todos seguirá como ahora, si se escoge con avances te traerá solo los que tienen avances, sin avanzas te traerá los  demás. 
 
 Andando todo el tema de estos cambios de los que hablé arriba. Por lo pronto está bien, falta agregar las estadisticas que hacen falta y ya meterle visual
+
+15-5 
+Se hicieron cambios en el formulario para poder buscar las tecnologías que necesites clickear 
