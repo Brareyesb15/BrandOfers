@@ -23,7 +23,7 @@ ChartJS.register(
 );
 
 
-export default function BarChart() {
+export default function BarChart({resultado}) {
   const data = {
     labels: ['Categoría 1', 'Categoría 2'],
     datasets: [

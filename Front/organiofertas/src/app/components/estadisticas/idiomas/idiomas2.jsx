@@ -58,7 +58,7 @@ export default function Idioma2({id}) {
       return (
       <>
       <div>
-         <BarChart></BarChart>
+         <BarChart data={resultado}></BarChart>
      </div>
       </>
   )
