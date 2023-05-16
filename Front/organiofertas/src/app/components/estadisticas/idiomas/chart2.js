@@ -1,9 +1,31 @@
-import React from 'react';
 import { Bar } from 'react-chartjs-2';
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend,
+    Filler,
+} from 'chart.js';
+
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend,
+    Filler
+);
+
 
 export default function BarChart() {
   const data = {
-    labels: ['Categoría 1', 'Categoría 2', 'Categoría 3'],
+    labels: ['Categoría 1', 'Categoría 2'],
     datasets: [
       {
         label: 'Subcategoría 1',
@@ -15,7 +37,6 @@ export default function BarChart() {
         data: [5, 8, 12],
         backgroundColor: 'rgba(54, 162, 235, 0.5)',
       },
-      // Agrega más datasets para más subcategorías si es necesario
     ],
   };
 
