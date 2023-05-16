@@ -23,22 +23,46 @@ ChartJS.register(
 );
 
 
-export default function BarChart() {
-  const data = {
-    labels: ['Categoría 1', 'Categoría 2'],
-    datasets: [
-      {
-        label: 'Subcategoría 1',
-        data: [10, 15, 20],
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
-      },
-      {
-        label: 'Subcategoría 2',
-        data: [5, 8, 12],
-        backgroundColor: 'rgba(54, 162, 235, 0.5)',
-      },
-    ],
-  };
+export default function BarChart({datos}) {
+    console.log(datos)
+    function getBackgroundColor(nivel) {
+        switch (nivel) {
+          case 'A1':
+            return 'rgba(3, 99, 132, 0.5)';
+          case 'A2':
+            return 'rgba(765, 162, 235, 0.5)';
+          case 'B1':
+            return 'rgba(189, 206, 86, 0.5)';
+          case 'B2':
+            return 'rgba(945, 192, 192, 0.5)';
+          case 'C1':
+            return 'rgba(360, 102, 255, 0.5)';
+          case 'C2':
+            return 'rgba(666, 159, 64, 0.5)';
+          case 'Nativo':
+            return 'rgba(879, 162, 235, 0.5)';
+          default:
+            return 'rgba(0, 0, 0, 0.5)';
+        }
+      }
+
+      const nivelesDisponibles = Array.from(
+        new Set(datos.flatMap(objeto => objeto.niveles.map(nivel => nivel.nivel)))
+      );
+      
+      // Construir la estructura de datos para Chart.js
+      const data = {
+        labels: datos.map(objeto => objeto.nombre), // Nombres de idioma
+        datasets: nivelesDisponibles.map(nivel => ({
+          label: nivel,
+          data: datos.map(objeto => {
+            const nivelEncontrado = objeto.niveles.find(n => n.nivel === nivel);
+            return nivelEncontrado ? nivelEncontrado.repeticiones : 0;
+          }),
+          backgroundColor: getBackgroundColor(nivel), // Función para obtener el color de fondo basado en el nivel
+        })),
+      };    
+
 
   const options = {
     scales: {
