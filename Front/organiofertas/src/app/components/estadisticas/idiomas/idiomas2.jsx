@@ -53,12 +53,12 @@ export default function Idioma2({id}) {
       }
 
       const resultado = obtenerInformacionIdiomas(data);
-      console.log("RESULLLLLLLLLLLL", resultado);
+    
   
       return (
       <>
       <div>
-         <BarChart data={resultado}></BarChart>
+         <BarChart datos={resultado}></BarChart>
      </div>
       </>
   )
