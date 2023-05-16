@@ -1,6 +1,8 @@
 "use client"
 import Idiomi from "./chart"
 import React, { use } from 'react';
+import Barri from "./chart2";
+
 
 
 const traerIdioma = async () => {
@@ -39,6 +41,7 @@ export default function Idioma({id}) {
     <>
     <div>
         <Idiomi idio={uniqueIdioma} num={counts}></Idiomi>
+        {/* <Barri></Barri> */}
    </div>
     </>
 )
