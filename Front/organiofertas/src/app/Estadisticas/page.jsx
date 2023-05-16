@@ -9,6 +9,8 @@ import Plats from "../components/estadisticas/plataformas/plats";
 import Post from "../components/estadisticas/postulacion/postulacion";
 import Stack from "../components/estadisticas/stack/stack";
 import Tecs from "../components/estadisticas/tecnologias/tecs";
+import Idioma2 from '../components/estadisticas/idiomas/idiomas2';
+
 
 export default function Estadisticas() {
   const [selectedOption, setSelectedOption] = useState(1);
@@ -34,6 +36,7 @@ export default function Estadisticas() {
           <Idioma id={selectedOption}></Idioma>
           <Plats id={selectedOption}></Plats>
           <Fecha id={selectedOption}></Fecha>
+          <Idioma2 id={selectedOption}></Idioma2>
     </>
   );
 }
