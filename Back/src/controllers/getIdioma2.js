@@ -8,7 +8,7 @@ try {
     const oferta = await ofertas.findAll({
       attributes: ["idioma"],
     });
-    const result = oferta.map((oferta) => oferta.idioma.idioma);
+    const result = oferta.map((oferta) => oferta.idioma);
     return res.status(200).send(result);
   }
   if (id === "2") {
@@ -21,7 +21,7 @@ try {
         },
       ],
     });
-    const result = oferta.map((oferta) => oferta.idioma.idioma);
+    const result = oferta.map((oferta) => oferta.idioma);
     return res.status(200).send(result);
   }
   if (id === "3") {
@@ -37,7 +37,7 @@ try {
         "$avances.id$": null,
       },
     });
-    const result = oferta.map((oferta) => oferta.idioma.idioma);
+    const result = oferta.map((oferta) => oferta.idioma);
     return res.status(200).send(result);
   }
   return res.status(400).send("Invalid ID");
