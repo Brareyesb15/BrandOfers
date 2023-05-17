@@ -19,7 +19,7 @@ module.exports = sequelize => {
             defaultValue : true, 
         },
         linkOferta : {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull:true
         },
         fechaPresentacion: {
