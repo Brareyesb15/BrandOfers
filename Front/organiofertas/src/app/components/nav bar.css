@@ -7,4 +7,25 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     width: 100%;
   }
+  .navbar-items {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navbar-item {
+    padding: 10px;
+    background-color: #f1f1f1;
+  }
+
+
+
+  @media (max-width: 768px) {
+    .navbar-items {
+      flex-direction: column;
+    }
+  
+    .navbar-item {
+      padding: 10px 0;
+    }
+  }
   
