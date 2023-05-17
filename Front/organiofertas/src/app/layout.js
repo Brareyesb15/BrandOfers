@@ -5,12 +5,15 @@ import Navigation from "./components/nav bar"
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-       <body>
+    <body>
+      <div className="container">
         <Navigation />
-        {children}
-       </body>
-    </html>
-  )
+        <div className="content">{children}</div>
+      </div>
+    </body>
+  </html>
+);
+  
 }
 
 
