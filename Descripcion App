@@ -150,3 +150,5 @@ Configurada la barra apilada de idiomas que se llama idiomas2. Está andando bie
 
 16-6 
 A trabajar debugueos y parte visual. 
+Hoy se hizo mucho y buen trabajo visual. Lo que viene: 
+Construir un componente aparte para las tablas, que se llame Datos Ofertas. En el se mostrarán las tablas, Entonces el Home ahora será un componente de bienvenida, con la información de la aplicación y cosas bonitas y botones gigantes para clickear en a los otros componentes. 
