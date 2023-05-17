@@ -1,3 +1,7 @@
-.table-container {
-    overflow-x: auto;
-  }
+  .table-container {
+      overflow-x: auto;
+    }
+    .MuiTableCell-root {
+      border-bottom: 1px solid #c1b1b1;
+      border-right: 1px solid #c1b1b1;
+    }
