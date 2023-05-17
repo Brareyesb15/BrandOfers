@@ -1,4 +1,5 @@
 import Link from "next/link"
+import "./nav bar.css"
 
 const links = [{
     label :  "Home",
