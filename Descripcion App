@@ -155,3 +155,4 @@ Construir un componente aparte para las tablas, que se llame Datos Ofertas. En e
 
 17- 6 
 Debuggear el paises en tablas, ponerle que se pueda volver a escoger todos sin tener que actualizar. 
+EL problema del debuggeo del link demasiado largo no has podido solucionarlo. Quizá debas usar la migración, será un buen momento para aprenderlo, es importante. 
