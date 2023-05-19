@@ -180,16 +180,9 @@ export default function FormOfertas() {
                   />
                   <br />
                   Stack:
-                  <input
-                    type="text"
-                    name="stack"
-                    minLength="1"
-                    maxLength="100"
-                    placeholder="Insertar Título"
-                    required
-                    value={formData.stack}
-                    onChange={handleInputChange}
-                  />
+                  <select name="stack" value={formData.stack} onChange={handleInputChange}>
+    
+                  </select>
                   <br />
                   Idioma:
   <select name="idioma" value={formData.idioma.idioma} onChange={handleInputChange}>
