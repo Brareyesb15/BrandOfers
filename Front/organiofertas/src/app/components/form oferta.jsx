@@ -2,6 +2,7 @@
 import { useState, useEffect} from 'react';
 import tecs from "../../../../../Back/utils/tecs"
 import {idiomas,nivel} from "../../../../../Back/utils/idiomas"
+import stacks from "../../../../../Back/utils/stacks"
 
 // OJO!!! PONELE UN SELECT AL STACK.
 
@@ -180,16 +181,12 @@ export default function FormOfertas() {
                   />
                   <br />
                   Stack:
-                  <input
-                    type="text"
-                    name="stack"
-                    minLength="1"
-                    maxLength="100"
-                    placeholder="Insertar Título"
-                    required
-                    value={formData.stack}
-                    onChange={handleInputChange}
-                  />
+                  <select name="stack" value={formData.stack} onChange={handleInputChange}>
+                  {stacks.map((stack) => (
+      <option key={stack} value={stack}>
+        {stack}
+      </option>))}
+                  </select>
                   <br />
                   Idioma:
   <select name="idioma" value={formData.idioma.idioma} onChange={handleInputChange}>

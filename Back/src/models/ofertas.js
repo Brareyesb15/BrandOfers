@@ -49,7 +49,14 @@ module.exports = sequelize => {
           type: DataTypes.ENUM(
                 "Backend",
                 "Frontend",    // en el form agregar: Agregar nuevo stack, y agregarlo, buscar como, igual que en idiomas. 
-                "Fullstack"
+                "Fullstack",
+                "DevOps",
+                "Testing",
+                "Seguridad",
+                "Movil",
+                "Videojuegos",
+                "Database"
+
             )
         },
         tecnologias: 
