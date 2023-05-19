@@ -46,7 +46,7 @@
             send("entrevista", data, oferta.id);
             break;
           case "Agregar postulación espontanea":
-            send("postulacion", data, oferta.id);
+            send("espontanea", data, oferta.id);
             break;
             case "Respuesta":
             send("respuesta", data, oferta.id);
@@ -71,11 +71,11 @@
               <select id="tipoAvance" name="tipoAvance" onChange={handleChange}>
                 <option value="">Seleccione una opción</option>
                 <option value="Entrevista">Entrevista</option>
-                {oferta.postulacion === "Regular" && (
+                
                   <option value="Agregar postulación espontanea">
                     Agregada postulación espontanea
                   </option>
-                )}
+                
                 <option value="Otro">Otro</option>
                 <option value="Respuesta">Respuesta</option>
               </select>
