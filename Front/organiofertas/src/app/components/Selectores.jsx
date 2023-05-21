@@ -66,7 +66,9 @@ export default function Selector({offers,setRoffers,id}) {
       //   setRoffers(offers.filter(obj => obj.stack.toLowerCase().includes(selectedOption.toLowerCase())));
       // }
       if (id === "plataforma"){
-        setRoffers(offers.filter(obj => obj.plataforma.toLowerCase().includes(selectedOption.toLowerCase())));
+        if (selectedOption === "Todas") {
+          setRoffers(offers)}
+         else setRoffers(offers.filter(obj => obj.plataforma.toLowerCase().includes(selectedOption.toLowerCase())));
       }
       if (id === "estado") {
         setRoffers(offers.filter(obj => {
