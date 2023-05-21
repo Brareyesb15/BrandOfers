@@ -148,13 +148,18 @@ Se hicieron cambios en el formulario para poder buscar las tecnologías que nece
 
 Configurada la barra apilada de idiomas que se llama idiomas2. Está andando bien, pero hay que cambiar detalles visuales(que tambien pueden ser lógica) como los colores o el tema de que salgan organizados desde a2 hasta nativo, no en desorden como ahora.
 
-16-6 
+16-5 
 A trabajar debugueos y parte visual. 
 Hoy se hizo mucho y buen trabajo visual. Lo que viene: 
 Construir un componente aparte para las tablas, que se llame Datos Ofertas. En el se mostrarán las tablas, Entonces el Home ahora será un componente de bienvenida, con la información de la aplicación y cosas bonitas y botones gigantes para clickear en a los otros componentes. 
 
-17- 6 
+17- 5
 Debuggear el paises en tablas, ponerle que se pueda volver a escoger todos sin tener que actualizar. 
 EL problema del debuggeo del link demasiado largo no has podido solucionarlo. Quizá debas usar la migración, será un buen momento para aprenderlo, es importante. 
 También puedes hacer pruebas desde la tabla secundaria y probar qué pasa, documentando todo eso sí. 
 O en su defecto investigar como acortar links e implementarlo en la lógica del programa. 
+
+18-5
+Ponele opciones en el form de Stack solo con las opciones posibles y ponele más opciones. ---- 
+
+21-5

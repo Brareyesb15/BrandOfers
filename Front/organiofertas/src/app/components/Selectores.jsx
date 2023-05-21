@@ -15,13 +15,13 @@ export default function Selector({offers,setRoffers,id}) {
   useEffect(() => {
     if (id === "pais") {
       traerOpciones(id).then(opciones => {
-        setRender(opciones);
+        setRender(["Todos",...opciones]);
       });
       
     } 
     else if  ( id === "plataforma")  
       traerOpciones(id).then(opciones => {
-      setRender(opciones);
+      setRender(["Todas",...opciones]);
     });
     else if (id === "experiencia") {
       setRender(["Todos","-1 año","1 y 2 años","2 y 5 años","+5 años"]);
@@ -53,20 +53,23 @@ export default function Selector({offers,setRoffers,id}) {
         setPrevSelectedOption(selectedOption);
       }
       if (id === "pais"){
-        setRoffers(offers.filter(obj => obj.pais.toLowerCase().includes(selectedOption.toLowerCase())));
+          if (selectedOption === "Todos") {
+            setRoffers(offers)}
+           else setRoffers(offers.filter(obj => obj.pais.toLowerCase().includes(selectedOption.toLowerCase())));
       }
       if (id === "postulacion"){
-        setRoffers(offers.filter(obj => obj.postulacion.toLowerCase().includes(selectedOption.toLowerCase())));
+        if (selectedOption === "Todas") {
+          setRoffers(offers)}
+         else  setRoffers(offers.filter(obj => obj.postulacion.toLowerCase().includes(selectedOption.toLowerCase())));
       }
-      if (id === "stack"){
-        setRoffers(offers.filter(obj => obj.stack.toLowerCase().includes(selectedOption.toLowerCase())));
-      }
+      // if (id === "stack"){
+      //   setRoffers(offers.filter(obj => obj.stack.toLowerCase().includes(selectedOption.toLowerCase())));
+      // }
       if (id === "plataforma"){
         setRoffers(offers.filter(obj => obj.plataforma.toLowerCase().includes(selectedOption.toLowerCase())));
       }
       if (id === "estado") {
         setRoffers(offers.filter(obj => {
-          console.log(id,selectedOption)
           if (selectedOption === "Activa") {
             return obj.active;
           } else if (selectedOption === "Inactiva") {
