@@ -22,4 +22,14 @@ const textHome = <div>
 
 </div>;
 
+const textForm = 
+<div>
+    <p>
+        
+    </p>
+
+
+
+</div>
+
 export default textHome;
