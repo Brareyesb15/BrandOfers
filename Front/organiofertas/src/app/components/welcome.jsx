@@ -1,15 +1,9 @@
-
 import React, { use } from 'react';
 
   
-export default function Welcome() {
+export default function Welcome({text}) {
     return (
-        <div>
-            <p >Hola! Esto es Organi Ofertas, una app que te ayudará a organizar tus postulaciones!! 
-                Somos conscientes de que 
-            </p>
-            
-        </div>
+        text
       );
     
  

@@ -4,12 +4,13 @@ import dynamic from "next/dynamic";
 import { Box } from '@mui/material';
 import "./page.module.css"
 import Welcome from "./components/welcome";
+import textHome from "../../utils/textos"
 
 
   function Home() {
     return (
       <div>
-      <Welcome></Welcome>
+      <Welcome text={textHome}></Welcome>
       <Box border={1} p={2}>
         <Fetching></Fetching>
       </Box>
