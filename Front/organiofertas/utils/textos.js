@@ -28,7 +28,9 @@ export const textHome = <div>
 export const textForm = 
 <div>
     <p>Estamos en el formulario de llenado de ofertas! Sientete libre de guardar tu oferta, perdonanos si algunas opciones no están incluidas, iremos ampliandolas poco a poco.</p>
+</div>
 
-
-
+export const textEsta = 
+<div>
+    <p>Esto es estadisticas. Escribir más adelante acá todo lo que quieras, cuando organices estadisticas</p>
 </div>

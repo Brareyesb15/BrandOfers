@@ -10,6 +10,10 @@ import Post from "../components/estadisticas/postulacion/postulacion";
 import Stack from "../components/estadisticas/stack/stack";
 import Tecs from "../components/estadisticas/tecnologias/tecs";
 import Idioma2 from '../components/estadisticas/idiomas/idiomas2';
+import { textEsta } from '../../../utils/textos';
+import Welcome from '../components/welcome';
+
+
 
 
 export default function Estadisticas() {
@@ -21,7 +25,7 @@ export default function Estadisticas() {
 
   return (
     <>
-      <div>Estamos en estadisticas</div>
+      <Welcome text={textEsta}></Welcome>
       <select value={selectedOption} onChange={(e) => handleOptionChange(parseInt(e.target.value))}>
         <option value={1}>Todos</option>
         <option value={2}>Con avances</option>
