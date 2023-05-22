@@ -16,6 +16,9 @@ const textHome = <div>
 <p>Por último tenemos estadisticas, en estadisticas tendrás información valiosa sobre tus ofertas, lo que te permitirá
     estudiar a qué estás aspirando, que mecanismos y estrategias te están funcionando mejor y en que puedes mejorar respecto
     a tus estrategías de busqueda laboral. </p>
+<p>Sientete libre de clickear en cualquiera de las ofertas desde su nombre, ahí tendrás más información sobre ellas que no aparecen en
+    la tabla, como el stack, la experiencia requerida, idioma requerido, la plataforma desde la que encontraste la oferta y más! 
+</p>
     
 <p>Tenemos más información especifica sobre como usar la app en cada una de las paginas. Por lo pronto es una app muy enfocada al mundo del desarrollo web, pero esperamos a futuro poder ampliarla. 
     Que la disfrutes!</p>
@@ -24,9 +27,9 @@ const textHome = <div>
 
 const textForm = 
 <div>
-    <p>
-        
-    </p>
+    <p>Estamos en el formulario de llenado de ofertas! Sientete libre de guardar tu oferta, solo recuerda:</p>
+    <p>No dejes ningun espacio sin llenar, si no tienes información sobre alguno de los espacios    </p>
+    <p></p>
 
 
 
