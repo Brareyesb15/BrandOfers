@@ -1,6 +1,6 @@
 
 
-const textHome = <div>
+export const textHome = <div>
 <p>Hola! Esto es Organi Ofertas, una app que te ayudará a organizar tus postulaciones!! 
     Somos conscientes de la difícil tarea que es intentar conseguir un trabajo, para ello se hace
     necesario mantener un orden de todas tus postulaciones, por eso creamos Organi Ofertas. 
@@ -25,14 +25,10 @@ const textHome = <div>
 
 </div>;
 
-const textForm = 
+export const textForm = 
 <div>
-    <p>Estamos en el formulario de llenado de ofertas! Sientete libre de guardar tu oferta, solo recuerda:</p>
-    <p>No dejes ningun espacio sin llenar, si no tienes información sobre alguno de los espacios    </p>
-    <p></p>
+    <p>Estamos en el formulario de llenado de ofertas! Sientete libre de guardar tu oferta, perdonanos si algunas opciones no están incluidas, iremos ampliandolas poco a poco.</p>
 
 
 
 </div>
-
-export default textHome;

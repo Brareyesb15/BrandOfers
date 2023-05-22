@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import { Box } from '@mui/material';
 import "./page.module.css"
 import Welcome from "./components/welcome";
-import textHome from "../../utils/textos"
+import {textHome} from "../../utils/textos"
 
 
   function Home() {

@@ -1,11 +1,14 @@
 
 import FormOfertas from "../components/form oferta"
+import Welcome from "../components/welcome"
+import {textForm} from "../../../utils/textos"
+
 
 
 export default function Guardar() {
     return (
       <>
-      <div>Estamos en guardar</div>
+        <Welcome text={textForm}></Welcome>
         <FormOfertas />
       </>
     )
