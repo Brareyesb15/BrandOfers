@@ -6,3 +6,6 @@
   .content {
     padding: 20px; /* Agrega un espacio de relleno al contenido para evitar que se superponga al componente Navigation */
   } 
+  .divtabla{
+    padding: 7%;
+  }

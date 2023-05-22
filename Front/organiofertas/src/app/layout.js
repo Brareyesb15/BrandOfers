@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
     <body>
       <div className="container">
         <Navigation />
-        <div className="content">{children}</div>
+      <div className="divtabla" >{children}</div>
       </div>
     </body>
   </html>

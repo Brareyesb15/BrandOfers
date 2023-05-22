@@ -7,9 +7,11 @@
 
   function Home() {
     return (
+      <div>
       <Box border={1} p={2}>
         <Fetching></Fetching>
       </Box>
+      </div>
     );
   }
 
