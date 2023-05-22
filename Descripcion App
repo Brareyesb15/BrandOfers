@@ -164,3 +164,10 @@ Ponele opciones en el form de Stack solo con las opciones posibles y ponele más
 
 21-5
 Fixeado error del link. Ya admite texto, por lo tanto una URL más larga. Se agregaron documentos que hacen la migración, por lo tanto aprendimos migración. La migración la tengo configurada en config, ahí se configura. También se configuro el documento config.js que guarda los cambios que escuchan las migraciones, es un archivo JS que admite la importación de las variables de entorno. 
+Para crear una nueva migración: npx sequelize-cli migration:generate --name NOMBRE_DE_LA_MIGRACION
+
+Configuras el up y el down. la función up se utiliza para definir las operaciones que se deben realizar cuando se aplica una migración, es decir, cuando se quiere realizar un cambio en la estructura de la base de datos. Esta función se encarga de aplicar los cambios necesarios, como crear nuevas tablas, agregar o modificar columnas, establecer relaciones, etc.
+Por otro lado, la función down se utiliza para definir las operaciones que se deben realizar cuando se revierte una migración, es decir, cuando se quiere deshacer o deshacer los cambios realizados en la migración up. Esta función debe deshacer las operaciones que se realizaron en la función up, restaurando la estructura de la base de datos al estado anterior.
+sequelize-cli db:migrate:undo hace revertir. 
+
+Luego de terminada este comando: npx sequelize-cli db:migrate  Ejecuta las migraciones pendientes! 
