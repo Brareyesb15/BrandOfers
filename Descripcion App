@@ -157,7 +157,7 @@ Construir un componente aparte para las tablas, que se llame Datos Ofertas. En e
 Debuggear el paises en tablas, ponerle que se pueda volver a escoger todos sin tener que actualizar. 
 EL problema del debuggeo del link demasiado largo no has podido solucionarlo. Quizá debas usar la migración, será un buen momento para aprenderlo, es importante. 
 También puedes hacer pruebas desde la tabla secundaria y probar qué pasa, documentando todo eso sí. 
-O en su defecto investigar como acortar links e implementarlo en la lógica del programa. 
+O en su defecto investigar como acortar links e implementarlo en la lógica del programa.----
 
 18-5
 Ponele opciones en el form de Stack solo con las opciones posibles y ponele más opciones. ---- 
