@@ -1,18 +1,19 @@
-"use client"
-import Fetching from "./components/tablas";
-import dynamic from "next/dynamic";
-import { Box } from '@mui/material';
+  "use client"
+  import Fetching from "./components/tablas";
+  import dynamic from "next/dynamic";
+  import { Box } from '@mui/material';
+  import "./page.module.css"
 
 
-function Home() {
-  return (
-    <Box border={1} p={2}>
-      <Fetching></Fetching>
-    </Box>
-  );
-}
+  function Home() {
+    return (
+      <Box border={1} p={2}>
+        <Fetching></Fetching>
+      </Box>
+    );
+  }
 
-export default dynamic (() => Promise.resolve(Home), {ssr: false})
+  export default dynamic (() => Promise.resolve(Home), {ssr: false})
 
 
-// FUNDAMENTAL: Archivo Page.jsx, es una regla que tiene next para definir las rutas. 
+  // FUNDAMENTAL: Archivo Page.jsx, es una regla que tiene next para definir las rutas. 

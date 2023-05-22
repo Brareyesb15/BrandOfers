@@ -74,7 +74,7 @@ export default function Fetching() {  // el async acá rompe toda la funcion. No
 
     return ( 
         <>
-        <TableContainer>
+        <TableContainer className="custom-table-container">
         <Table>
           <TableHead>
     <TableRow>
