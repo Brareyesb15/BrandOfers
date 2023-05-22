@@ -2,13 +2,15 @@ import './globals.css' // estilos que se van a aplicar a toda la página.
 import Navigation from "./components/nav bar"
 
 
+
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
     <body>
       <div className="container">
         <Navigation />
-      <div className="divtabla" >{children}</div>
+      <div className="divtabla">{children}</div>
       </div>
     </body>
   </html>
