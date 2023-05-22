@@ -1,0 +1,110 @@
+
+import React, { use } from 'react';
+
+  
+export default function Welcome() {
+    return (
+        <div>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+            <p>welcome</p>
+
+
+        </div>
+      );
+    
+ 
+}
