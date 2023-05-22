@@ -163,3 +163,4 @@ O en su defecto investigar como acortar links e implementarlo en la lógica del 
 Ponele opciones en el form de Stack solo con las opciones posibles y ponele más opciones. ---- 
 
 21-5
+Fixeado error del link. Ya admite texto, por lo tanto una URL más larga. Se agregaron documentos que hacen la migración, por lo tanto aprendimos migración. La migración la tengo configurada en config, ahí se configura. También se configuro el documento config.js que guarda los cambios que escuchan las migraciones, es un archivo JS que admite la importación de las variables de entorno. 
