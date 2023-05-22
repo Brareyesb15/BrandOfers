@@ -1,4 +1,5 @@
 'use strict';
+const { DataTypes } = require('sequelize');
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -16,7 +17,10 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    
+    await queryInterface.changeColumn('ofertas', 'linkOferta', {
+      type: DataTypes.STRING,
+      allowNull: true
+    });
     /**
      * Add reverting commands here.
      *
