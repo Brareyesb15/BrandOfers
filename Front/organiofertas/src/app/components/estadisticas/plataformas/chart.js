@@ -28,7 +28,7 @@ export default function Bars({plats, nums}) {
 // var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
 
-var misoptions = {
+var options = {
     responsive : true,
     animation : false,
     plugins : {
@@ -47,7 +47,7 @@ var misoptions = {
     }
 };
 
-var midata = {
+var data = {
     labels: plats,
     datasets: [
         {
@@ -57,5 +57,9 @@ var midata = {
         }
     ]
 };
-    return <Bar data={midata} options={misoptions} />
+return (
+    <div className="chartContainer">
+    <Bar data={data} options={options} />
+    </div>
+    )
 }
