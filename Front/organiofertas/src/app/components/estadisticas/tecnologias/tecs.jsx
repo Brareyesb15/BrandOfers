@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect, use } from 'react';
 import LinesChart from './chart';
+import "../tecnologias/tecs.css"
 
 
 const traerTecs = async () => {
@@ -94,11 +95,12 @@ export default function Tecs({id}) {
       console.log(resultFour)
     return (
         <>
-      <div >
-        <LinesChart datos={tecsMas}></LinesChart>
-        <LinesChart datos={resultFour}></LinesChart>
-        <LinesChart datos={resultThree}></LinesChart>
-        <LinesChart datos={resultTwo}></LinesChart>
+      <div className="gridContainer">
+       
+        <div className="componentBox"><LinesChart datos={tecsMas}></LinesChart> </div>
+        <div className="componentBox"><LinesChart datos={resultFour}></LinesChart> </div>
+        <div className="componentBox"><LinesChart datos={resultThree}></LinesChart> </div>
+        <div className="componentBox"><LinesChart datos={resultTwo}></LinesChart> </div>
       </div>
         </>
     )

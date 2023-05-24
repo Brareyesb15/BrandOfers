@@ -31,26 +31,38 @@ export default function Bars({datos}) {
 let tecs = datos.map(array => array[0]);
 let num = datos.map(array => array[1]);
 
-
 var misoptions = {
-    responsive : true,
-    animation : false,
-    plugins : {
-        legend : {
-            display : false
+    responsive: true,
+    animation: false,
+    plugins: {
+        legend: {
+            display: false
         }
     },
-    scales : {
-        y : {
-            min : 0,
-            max : num[0] + 3
+    scales: {
+        y: {
+            min: 0,
+            max: num[0] + 3
         },
         x: {
-            ticks: { color: "#34495E"}
+            ticks: {
+                color: "#96495E",
+                maxRotation: 0,
+                minRotation: 0,
+                callback: function(value, index, values) {
+                    return index === 0 ? "Tecnologías" : ""; // Muestra "Tecnologías" en la primera etiqueta
+                },
+                padding: 10 // Agrega espacio adicional alrededor de las etiquetas
+            },
+            position: "bottom",
+            offset: true, // Activa el desplazamiento del eje x
+            grid: {
+                drawTicks: false, // Oculta las marcas de las divisiones en el eje x
+                drawOnChartArea: false // Evita que las líneas de división se superpongan a las barras
+            }
         }
     }
 };
-
 var midata = {
     labels: tecs,
     datasets: [

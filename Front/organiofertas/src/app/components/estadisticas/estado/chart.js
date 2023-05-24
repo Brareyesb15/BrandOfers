@@ -13,6 +13,7 @@ export default function Estadux({est,num}) {
     let options = {
         responsive : true,
         maintainAspectRatio: false,
+        display: false
     };
     
     let data = {
