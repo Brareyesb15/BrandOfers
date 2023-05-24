@@ -21,7 +21,7 @@ ChartJS.register(
     Legend,
     Filler
 );
-
+import "../general.css"
 
 export default function BarChart({datos}) {
     console.log(datos)
