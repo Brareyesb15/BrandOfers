@@ -1,0 +1,14 @@
+.componentBox {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 300px; /* Establece un ancho máximo para las cajas */
+    width: 100%; /* Asegura que las cajas ocupen el ancho completo de su contenedor */
+  }
+
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
