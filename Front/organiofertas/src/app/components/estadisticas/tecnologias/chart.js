@@ -21,6 +21,7 @@ ChartJS.register(
     Legend,
     Filler
 );
+import "../general.css"
 
 
 export default function Bars({datos}) {
@@ -60,5 +61,9 @@ var midata = {
         }
     ]
 };
-    return <Bar data={midata} options={misoptions} />
+    return (
+    <div className="chartContainer">
+        <Bar data={midata} options={misoptions} />
+     </div>
+    )
 }
