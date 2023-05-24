@@ -57,7 +57,11 @@ var misoptions = {
 };
 
 
-    return <Line data={midata} options={misoptions}/>
+return (
+    <div className="chartContainer">
+    <Line data={data} options={options} />
+    </div>
+    )
 
 
 }
