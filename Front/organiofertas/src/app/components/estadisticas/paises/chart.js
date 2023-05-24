@@ -1,6 +1,7 @@
 import React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
+import "../general.css"
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -34,5 +35,9 @@ export default function Pais({paises,num}) {
             },
         ],
     };
-    return <Pie data={data} options={options} />
+    return (
+        <div className="chartContainer">
+        <Pie data={data} options={options} />
+        </div>
+        )
 }

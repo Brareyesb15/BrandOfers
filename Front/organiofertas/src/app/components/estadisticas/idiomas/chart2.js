@@ -21,7 +21,7 @@ ChartJS.register(
     Legend,
     Filler
 );
-
+import "../general.css"
 
 export default function BarChart({datos}) {
     console.log(datos)
@@ -75,5 +75,9 @@ export default function BarChart({datos}) {
     },
   };
 
-  return <Bar data={data} options={options} />;
+  return (
+    <div className="chartContainer">
+    <Bar data={data} options={options} />
+    </div>
+    )
 }

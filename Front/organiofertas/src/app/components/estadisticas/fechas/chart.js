@@ -21,10 +21,11 @@ ChartJS.register(
     Legend,
     Filler
 );
+import "../general.css"
 
 export default function Fech({fec,num}) {
 
-var midata = {
+var data = {
     labels: fec,
     datasets: [ // Cada una de las líneas del gráfico
         {
@@ -45,7 +46,7 @@ var midata = {
     ],
 };
 
-var misoptions = {
+var options = {
     scales : {
         y : {
             min : 0
@@ -57,7 +58,11 @@ var misoptions = {
 };
 
 
-    return <Line data={midata} options={misoptions}/>
+return (
+    <div className="chartContainer">
+    <Line data={data} options={options} />
+    </div>
+    )
 
 
 }

@@ -31,10 +31,9 @@ const {avances, ofertas} = sequelize.models;
 
 // Acá van las relaciones: 
 
-
-avances.belongsTo(ofertas, {
-   foreignKey: "idOferta"
-});
+   avances.belongsTo(ofertas, {
+      foreignKey: "idOferta"
+   });
 
 ofertas.hasMany(avances, { foreignKey: 'idOferta' });
 

@@ -94,7 +94,7 @@ export default function Tecs({id}) {
       console.log(resultFour)
     return (
         <>
-      <div>
+      <div >
         <LinesChart datos={tecsMas}></LinesChart>
         <LinesChart datos={resultFour}></LinesChart>
         <LinesChart datos={resultThree}></LinesChart>
