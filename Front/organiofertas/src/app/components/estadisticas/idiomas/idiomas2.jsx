@@ -57,7 +57,8 @@ export default function Idioma2({id}) {
   
       return (
       <>
-      <div>
+      <div style={{ textAlign: 'center' }}>
+        <h2>Nivel de idioma</h2>
          <BarChart datos={resultado}></BarChart>
      </div>
       </>
