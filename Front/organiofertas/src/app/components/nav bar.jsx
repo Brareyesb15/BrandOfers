@@ -18,11 +18,11 @@ const links = [{
     return (
       <header>
       <nav>
-        <ul class="navbar-items">
+        <ul className="navbar-items">
           {links.map(({ label, route }) => (
             <li key={route}>
               <Link href={route}>
-                <div class="navbar-item">{label}</div>
+                <div className="navbar-item">{label}</div>
               </Link>
             </li>
           ))}
