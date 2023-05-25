@@ -95,12 +95,20 @@ export default function Tecs({id}) {
       console.log(resultFour)
     return (
         <>
-      <div className="gridContainer">
+      <div className="gridContainerTecs">
        
-        <div className="componentBox"><LinesChart datos={tecsMas}></LinesChart> </div>
-        <div className="componentBox"><LinesChart datos={resultFour}></LinesChart> </div>
-        <div className="componentBox"><LinesChart datos={resultThree}></LinesChart> </div>
-        <div className="componentBox"><LinesChart datos={resultTwo}></LinesChart> </div>
+        <div  style={{ textAlign: 'center' }}>
+          <h2>Tecnologías más postuladas</h2>
+          <LinesChart datos={tecsMas}></LinesChart> </div>
+        <div style={{ textAlign: 'center' }}>
+          <h2>Par de Tecnologías que más se repiten juntas</h2>
+          <LinesChart datos={resultFour}></LinesChart> </div>
+        <div style={{ textAlign: 'center' }}>
+          <h2>Trio de Tecnologías que más se repiten juntas</h2>
+          <LinesChart datos={resultThree}></LinesChart> </div>
+        <div style={{ textAlign: 'center' }}>
+          <h2>Poker de Tecnologías que más se repiten juntas</h2>
+          <LinesChart datos={resultTwo}></LinesChart> </div>
       </div>
         </>
     )

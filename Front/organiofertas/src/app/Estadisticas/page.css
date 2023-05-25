@@ -1,7 +1,9 @@
 .componentBox {
+    margin-top: 5%;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    padding-bottom: 2%; 
+    padding-bottom: 2%;
+    padding-top: 2%; 
     max-width: 600px;/* Establece un ancho máximo para las cajas */
     width: 100%; /* Asegura que las cajas ocupen el ancho completo de su contenedor */
   }
@@ -12,3 +14,6 @@
     grid-gap: 20px;
   }
   
+  .selectorContainer {
+    margin-bottom: 20px; /* Ajusta el valor según el espacio deseado */
+  }
