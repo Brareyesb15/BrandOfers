@@ -14,3 +14,6 @@
     grid-gap: 20px;
   }
   
+  .selectorContainer {
+    margin-bottom: 20px; /* Ajusta el valor según el espacio deseado */
+  }
