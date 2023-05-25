@@ -36,7 +36,8 @@ export default function Plats({id}) {
      
     return (
         <>
-      <div>
+      <div style={{ textAlign: 'center' }}>
+        <h2>Plataformas</h2>
         <LinesChart plats={uniqueIdioma} nums={counts}></LinesChart>
       </div>
         </>
