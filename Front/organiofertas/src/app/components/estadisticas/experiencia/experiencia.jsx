@@ -37,7 +37,8 @@ export default function Exp({id}) {
 
     return (
     <>
-    <div>
+     <div style={{ textAlign: 'center' }}>
+        <h2>Experiencia</h2>
         <Experiencia exp={uniqueExp} num={counts}></Experiencia>
    </div>
     </>
