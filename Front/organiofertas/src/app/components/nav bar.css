@@ -1,11 +1,10 @@
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: black;
-    box-shadow: 0   2px 4px rgba(0, 0, 0, 0.2);
-  }
+  header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #1e1e21;;
+      }
   .navbar-items {
     display: flex;
     justify-content: space-between;
@@ -13,7 +12,6 @@ header {
   
   .navbar-item {
     padding: 10px;
-    background-color: #f1f1f1;
   }
 
 
