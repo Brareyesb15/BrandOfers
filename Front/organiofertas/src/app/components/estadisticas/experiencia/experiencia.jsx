@@ -32,8 +32,6 @@ export default function Exp({id}) {
       }
 
         const [uniqueExp, counts] = getExperiencias(data);
-        console.log(uniqueExp);
-        console.log(counts);
 
     return (
     <>
