@@ -42,8 +42,8 @@ export default function Estado({id}) {
 
     return (
     <>
-    <div>
-        <p>Estado!!</p>
+     <div style={{ textAlign: 'center' }}>
+        <h2>Estado de la oferta</h2>
         <Estadux est={uniqueEst} num={counts}></Estadux>
    </div>
     </>
