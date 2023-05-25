@@ -42,8 +42,7 @@ export default function Estado({id}) {
 
     return (
     <>
-    <div>
-        <p>Estado!!</p>
+    <div style={{ textAlign: 'center' }}>
         <Estadux est={uniqueEst} num={counts}></Estadux>
    </div>
     </>
