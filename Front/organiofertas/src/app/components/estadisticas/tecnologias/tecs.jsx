@@ -95,12 +95,12 @@ export default function Tecs({id}) {
       console.log(resultFour)
     return (
         <>
-      <div className="gridContainer">
+      <div className="gridContainerTecs">
        
-        <div className="componentBox"><LinesChart datos={tecsMas}></LinesChart> </div>
-        <div className="componentBox"><LinesChart datos={resultFour}></LinesChart> </div>
-        <div className="componentBox"><LinesChart datos={resultThree}></LinesChart> </div>
-        <div className="componentBox"><LinesChart datos={resultTwo}></LinesChart> </div>
+        <div ><LinesChart datos={tecsMas}></LinesChart> </div>
+        <div ><LinesChart datos={resultFour}></LinesChart> </div>
+        <div ><LinesChart datos={resultThree}></LinesChart> </div>
+        <div ><LinesChart datos={resultTwo}></LinesChart> </div>
       </div>
         </>
     )
