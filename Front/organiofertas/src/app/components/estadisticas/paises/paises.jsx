@@ -35,10 +35,9 @@ export default function Paises({id}) {
 
     return (
     <>
-    <div>
-      <h2>Paises</h2>
+    <div style={{ textAlign: 'center' }}>
+        <h2>Paises</h2>
         <Pais paises={uniqueCountries} num={counts}></Pais>
-        
    </div>
     </>
 )
