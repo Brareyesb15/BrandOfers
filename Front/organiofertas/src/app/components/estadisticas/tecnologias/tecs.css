@@ -3,7 +3,8 @@
     border: 1px solid #ccc;
     padding: 20% 10px;  
     max-width: 600px;/* Establece un ancho máximo para las cajas */
-    width: 100%; /* Asegura que las cajas ocupen el ancho completo de su contenedor */
+    width: 100%;
+     /* Asegura que las cajas ocupen el ancho completo de su contenedor */
   }
 
   .gridContainer {
@@ -14,7 +15,7 @@
   
   .gridContainerTecs {
     border: 1px solid #ccc; /* Agrega el estilo de borde al contenedor */
-    padding: 20px; /* Agrega el estilo de padding al contenedor */
+    padding: 10px; /* Agrega el estilo de padding al contenedor */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
