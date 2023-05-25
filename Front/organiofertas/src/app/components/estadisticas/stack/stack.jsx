@@ -38,7 +38,8 @@ export default function Stack({id}) {
 
     return (
     <>
-    <div>
+    <div style={{ textAlign: 'center' }}>
+        <h2>Stack</h2>
         <Stacko stac={uniqueStack} num={counts}></Stacko>
    </div>
     </>
