@@ -9,10 +9,14 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 export default function Pais({paises,num}) {
 
     let options = {
-        responsive : true,
+        responsive: true,
         maintainAspectRatio: false,
-    };
-    
+        plugins: {
+          legend: {
+            position: 'right', // Ajusta la posición de la leyenda a la derecha
+          },
+        },
+      };    
     let data = {
         labels: paises,
         datasets: [

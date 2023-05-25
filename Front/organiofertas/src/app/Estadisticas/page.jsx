@@ -33,7 +33,7 @@ export default function Estadisticas() {
     <>
       <Welcome text={textEsta}></Welcome>
       {selector}
-        <div ><Tecs id={selectedOption}>Estadisticas sobre Tecnologías</Tecs></div>
+        <div><Tecs id={selectedOption}>Estadisticas sobre Tecnologías</Tecs></div>
         <div className="gridContainer">
         <div className="componentBox"><Paises id={selectedOption}>Estadisticas sobre Países</Paises></div>
         <div className="componentBox"><Exp id={selectedOption}></Exp></div>
