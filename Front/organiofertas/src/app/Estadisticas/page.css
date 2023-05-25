@@ -1,7 +1,7 @@
 .componentBox {
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    padding: 20% 10px;  
+    /* padding: % 10px;   */
     max-width: 600px;/* Establece un ancho máximo para las cajas */
     width: 100%; /* Asegura que las cajas ocupen el ancho completo de su contenedor */
   }

@@ -43,6 +43,7 @@ export default function Estado({id}) {
     return (
     <>
     <div>
+        <p>Estado!!</p>
         <Estadux est={uniqueEst} num={counts}></Estadux>
    </div>
     </>
