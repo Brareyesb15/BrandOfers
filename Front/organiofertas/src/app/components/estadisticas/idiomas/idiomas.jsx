@@ -37,7 +37,8 @@ export default function Idioma({id}) {
 
     return (
     <>
-    <div>
+    <div style={{ textAlign: 'center' }}>
+        <h2>Idiomas</h2>
         <Idiomi idio={uniqueIdioma} num={counts}></Idiomi>
    </div>
     </>

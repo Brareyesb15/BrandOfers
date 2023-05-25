@@ -36,7 +36,8 @@ export default function Post({id}) {
 
     return (
     <>
-    <div>
+    <div style={{ textAlign: 'center' }}>
+        <h2>Tipos de postulación</h2>
         <Postulacion post={uniquePost} num={counts}></Postulacion>
    </div>
     </>

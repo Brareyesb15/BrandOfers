@@ -35,11 +35,10 @@ export default function Fecha({id}) {
 
     return (
     <>
-    <div>
+     <div style={{ textAlign: 'center'}}>
+        <h2>Fecha de postulación</h2> 
         <Fech fec={uniqueFecha} num={counts}></Fech>
-   </div>
+      </div>
     </>
 )
-
-
 }
