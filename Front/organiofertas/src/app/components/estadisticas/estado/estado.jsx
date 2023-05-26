@@ -4,27 +4,18 @@ import React, { use } from 'react';
 
 
 const traerEstado = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/estado/1`)
-    return response.json()
+    const response =  await fetch(`http://localhost:5000/stats/estado`)
+    return response.json();
   }
-  const traerEstado2 = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/estado/2`)
-    return response.json()
-  }
-  const traerEstado3 = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/estado/3`)
-    return response.json()
-  }
-
 
 const dataProm = traerEstado()
-const dataProm2 = traerEstado2()
-const dataProm3 = traerEstado3()
+
 
 export default function Estado({id}) {
     
-  const data = id === 1 ? use(dataProm) : id === 2 ? use(dataProm2) : id === 3? use(dataProm3) : null ;
+  const result = use(dataProm) // Podrías pensar en ponerle un catcheador de errores aquí, luego averiguas como. Esto es algo que podría romper.
 
+  const data = id === 1 ? result.uno : id === 2 ? result.dos : id === 3? result.tres : null
 
     function getEstado(est) {
         let uniqueEst = [...new Set(est)];
@@ -36,9 +27,15 @@ export default function Estado({id}) {
         return [uniqueEst, counts];
       }
 
-        const [uniqueEst, counts] = getEstado(data);
-        
+      let uniqueEst, counts; 
       
+      if (data) {
+        [uniqueEst, counts] = getEstado(data);
+      } else {
+        uniqueEst = null;
+        counts = null;
+      }
+    
 
     return (
     <>

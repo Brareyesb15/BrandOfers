@@ -185,3 +185,5 @@ Ya estás en decisiones visuales y en esto no eres tan bueno. Toca trabajar al p
 
 Adelantaste a nivel visual. Ahora sigue el tema de color e ir revisando cositas para ir arreglando. Seguir viendo la base. 
 
+26-5
+Estado linea 16 tiene un comentario importante respecto al manejo de errores: Podrías pensar en ponerle un catcheador de errores aquí, luego averiguas como. Esto es algo que podría romper, ya que si viene un error result.uno no va a existir.

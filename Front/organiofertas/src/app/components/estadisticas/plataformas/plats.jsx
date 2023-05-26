@@ -4,33 +4,33 @@ import LinesChart from './chart';
 
 
 const traerPlats = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/plataformas/1`)
-    return response.json()
-  }
-  const traerPlats2 = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/plataformas/2`)
-    return response.json()
-  }
-  const traerPlats3 = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/plataformas/3`)
+    const response =  await fetch(`http://localhost:5000/stats/plataformas`)
     return response.json()
   }
 
 const dataProm = traerPlats()
-const dataProm2 = traerPlats2()
-const dataProm3 = traerPlats3()
+
 
 export default function Plats({id}) {
-    const plataformas = id === 1 ? use(dataProm) : id === 2 ? use(dataProm2) : id === 3? use(dataProm3) : null ;
+
+  const result = use(dataProm)
+  const data = id === 1 ? result.uno : id === 2 ? result.dos : id === 3? result.tres : null;
   
 
-    function getIdioma(idioma) {
-        const uniqueIdioma = [...new Set(idioma)];
-        const counts = uniqueIdioma.map(sta=> idioma.filter(c => c === sta).length);
-        return [uniqueIdioma, counts];
+    function getPlat(plat) {
+        const uniquePlat = [...new Set(plat)];
+        const counts = uniquePlat.map(sta=> plat.filter(c => c === sta).length);
+        return [uniquePlat, counts];
       }
 
-        const [uniqueIdioma, counts] = getIdioma(plataformas);
+      let uniquePlat, counts; 
+      
+      if (data) {
+        [uniquePlat, counts] = getPlat(data);
+      } else {
+        uniquePlat = null;
+        counts = null;
+      }
   
 
      
@@ -38,7 +38,7 @@ export default function Plats({id}) {
         <>
       <div style={{ textAlign: 'center' }}>
         <h2>Plataformas</h2>
-        <LinesChart plats={uniqueIdioma} nums={counts}></LinesChart>
+        <LinesChart plats={uniquePlat} nums={counts}></LinesChart>
       </div>
         </>
     )

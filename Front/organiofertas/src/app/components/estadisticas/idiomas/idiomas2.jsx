@@ -3,24 +3,18 @@ import BarChart from "./chart2";
 import React, { use } from 'react';
 
 const traerIdioma = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/idioma2/1`)
+    const response =  await fetch(`http://localhost:5000/stats/idioma2`)
     return response.json()
   }
-  const traerIdioma2 = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/idioma2/2`)
-    return response.json()
-  }
-  const traerIdioma3 = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/idioma2/3`)
-    return response.json()
-  }
+
 
 const dataProm = traerIdioma()
-const dataProm2 = traerIdioma2()
-const dataProm3 = traerIdioma3()
+
 
 export default function Idioma2({id}) {
-    const data = id === 1 ? use(dataProm) : id === 2 ? use(dataProm2) : id === 3? use(dataProm3) : null ;
+   
+const result = use(dataProm)
+const data = id === 1 ? result.uno : id === 2 ? result.dos : id === 3? result.tres : null;
     
     function obtenerInformacionIdiomas(info) {
         // Obtener los idiomas únicos y su cantidad de repeticiones
@@ -52,7 +46,7 @@ export default function Idioma2({id}) {
         return resultado;
       }
 
-      const resultado = obtenerInformacionIdiomas(data);
+      const resultado = data ? obtenerInformacionIdiomas(data) : null;
     
   
       return (
