@@ -13,7 +13,7 @@ const postTecs = async () => {
 
 }
     catch(error){
-        console.log("error",error.message)
+        return res.status(400).send({error: error.message})
     return error
     }
 }
