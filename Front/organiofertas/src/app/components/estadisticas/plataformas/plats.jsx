@@ -7,21 +7,14 @@ const traerPlats = async () => {
     const response =  await fetch(`http://localhost:5000/stats/plataformas/1`)
     return response.json()
   }
-  const traerPlats2 = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/plataformas/2`)
-    return response.json()
-  }
-  const traerPlats3 = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/plataformas/3`)
-    return response.json()
-  }
 
 const dataProm = traerPlats()
-const dataProm2 = traerPlats2()
-const dataProm3 = traerPlats3()
+
 
 export default function Plats({id}) {
-    const plataformas = id === 1 ? use(dataProm) : id === 2 ? use(dataProm2) : id === 3? use(dataProm3) : null ;
+
+  const result = use(dataProm)
+  const plataformas = id === 1 ? result.uno : id === 2 ? result.dos : id === 3? result.tres : null;
   
 
     function getIdioma(idioma) {
