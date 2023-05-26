@@ -24,10 +24,10 @@ export default function Navigation() {
   return (
     <header className="header">
       <nav>
-        <ul className="navbar-items">
+        <div className="navbar-items">
           {links.map(({ label, route, icon: Icon }) => (
             <div key={route}>
-              <Link href={route}>
+              <Link className="perso" href={route}>
                 <div className="navbar-item">
                   <Icon className="navbar-icon" />
                   <span>{label}</span>
@@ -35,7 +35,7 @@ export default function Navigation() {
               </Link>
             </div>
           ))}
-        </ul>
+        </div>
       </nav>
     </header>
   );

@@ -25,9 +25,12 @@ header {
   margin-bottom: 5px;
 }
 
-.navbar-item > span {
+.navbar-item > a {
   margin-top: 5px;
   text-decoration: none;
+}
+.perso {
+  text-decoration:none;
 }
 
 
