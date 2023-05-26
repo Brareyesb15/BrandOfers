@@ -2,46 +2,41 @@ const {ofertas,avances} = require("../../configs/DB_connection");
 
 
 const getEstado = async (req,res) => {
-    const { id } = req.params;
+    let resolv = {};
 
-  try {
-    if (id === "1") {
-      const oferta = await ofertas.findAll({
-        attributes: ["active"],
-      });
-      const result = oferta.map((oferta) => oferta.active);
-      return res.status(200).send(result);
-    }
-    if (id === "2") {
-      const oferta = await ofertas.findAll({
-        attributes: ["active"],
-        include: [
-          {
-            model: avances,
-            required: true,
+    try {
+        const oferta1 = await ofertas.findAll({
+          attributes: ["active"],
+        });
+        resolv.uno = oferta1.map((oferta) => oferta.active);
+        
+        const oferta2 = await ofertas.findAll({
+          attributes: ["active"],
+          include: [
+            {
+              model: avances,
+              required: true,
+            },
+          ],
+        });
+       resolv.dos = oferta2.map((oferta) => oferta.active);
+      
+        const oferta3 = await ofertas.findAll({
+          attributes: ["active"],
+          include: [
+            {
+              model: avances,
+              required: false,
+            },
+          ],
+          where: {
+            "$avances.id$": null,
           },
-        ],
-      });
-      const result = oferta.map((oferta) => oferta.active);
-      return res.status(200).send(result);
-    }
-    if (id === "3") {
-      const oferta = await ofertas.findAll({
-        attributes: ["active"],
-        include: [
-          {
-            model: avances,
-            required: false,
-          },
-        ],
-        where: {
-          "$avances.id$": null,
-        },
-      });
-      const result = oferta.map((oferta) => oferta.active);
-      return res.status(200).send(result);
-    }
-    return res.status(400).send({error: "Invalid ID"});
+        });
+        resolv.tres = oferta3.map((oferta) => oferta.active);
+       
+        return res.status(200).send(resolv)
+ 
   } catch (error) {
     return res.status(400).send({error: error.message})
   }

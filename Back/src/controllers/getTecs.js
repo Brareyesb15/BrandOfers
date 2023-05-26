@@ -36,7 +36,7 @@ const getTecs = async (req, res) => {
       });
       resolv.tres = oferta3.map((oferta) => oferta.tecnologias);
      
-      return res.status(400).send(resolv)
+      return res.status(200).send(resolv)
    
   } catch (error) {
     return res.status(400).send({error: error.message})
