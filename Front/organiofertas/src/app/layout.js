@@ -7,7 +7,7 @@ import Navigation from "./components/nav bar"
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    <body>
+    <body className="body">
       <div className="container">
         <Navigation />
       <div className="divtabla">{children}</div>

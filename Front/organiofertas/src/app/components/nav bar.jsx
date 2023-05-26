@@ -1,35 +1,42 @@
-import Link from "next/link"
-import "./nav bar.css"
+import Link from "next/link";
+import { MdHome, MdSave, MdInsertChart } from "react-icons/md";
+import "./nav bar.css";
 
-const links = [{
-    label :  "Home",
-    route: "/"            // trabajo de ruteo, las guardas en un link para trabajarlo.
+const links = [
+  {
+    label: "Home",
+    route: "/",
+    icon: MdHome,
   },
   {
     label: "Guardar Oferta",
-    route: "/Guardar"
+    route: "/Guardar",
+    icon: MdSave,
   },
   {
-    label : "Estadisticas",
-    route: "/Estadisticas"
-  }
-]
-  export default function Navigation() {
-    return (
-      <header>
+    label: "Estadisticas",
+    route: "/Estadisticas",
+    icon: MdInsertChart,
+  },
+];
+
+export default function Navigation() {
+  return (
+    <header className="header">
       <nav>
         <ul className="navbar-items">
-          {links.map(({ label, route }) => (
-            <li key={route}>
+          {links.map(({ label, route, icon: Icon }) => (
+            <div key={route}>
               <Link href={route}>
-                <div className="navbar-item">{label}</div>
+                <div className="navbar-item">
+                  <Icon className="navbar-icon" />
+                  <span>{label}</span>
+                </div>
               </Link>
-            </li>
+            </div>
           ))}
         </ul>
       </nav>
     </header>
-    
-    )
-  }
- 
+  );
+}

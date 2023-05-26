@@ -5,10 +5,23 @@
     padding-bottom: 2%;
     padding-top: 2%; 
     max-width: 600px;/* Establece un ancho máximo para las cajas */
-    width: 100%; /* Asegura que las cajas ocupen el ancho completo de su contenedor */
+    width: 100%;
+    background: #323236;
+    border-color: #404046;
+    box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06); 
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: inline-block;
+    width: 100%;
+    padding: 20px;
+    border-radius: 6px;
+    -webkit-transition: all .3s;
+    transition: all .3s;/* Asegura que las cajas ocupen el ancho completo de su contenedor */
   }
 
   .gridContainer {
+    
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;

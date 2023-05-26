@@ -1,8 +1,9 @@
 
 
 .container {
-    height: 100vh; /* Establece la altura del contenedor principal al 100% de la altura de la ventana */
-    padding-top: 60px; /* Ajusta el espacio superior para dejar espacio para el componente Navigation */
+    height: 100%; /* Establece la altura del contenedor principal al 100% de la altura de la ventana */
+    padding-top: 60px;/* Ajusta el espacio superior para dejar espacio para el componente Navigation */
+    background-color: #3b3b41;
   }
   
   .content {
@@ -10,4 +11,7 @@
   } 
   .divtabla{
     padding: 7%;
+  }
+  .body{
+    margin:0%
   }
