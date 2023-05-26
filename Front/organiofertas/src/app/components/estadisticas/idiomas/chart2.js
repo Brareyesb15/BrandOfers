@@ -24,6 +24,9 @@ ChartJS.register(
 import "../general.css"
 
 export default function BarChart({datos}) {
+  if (datos === null || datos === undefined) {
+    return <div>No hay datos disponibles</div>;
+  }
     function getBackgroundColor(nivel) {
         switch (nivel) {
           case 'A1':
