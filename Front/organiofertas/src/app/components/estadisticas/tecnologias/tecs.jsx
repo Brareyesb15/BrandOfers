@@ -5,7 +5,7 @@ import "../tecnologias/tecs.css"
 
 
 const traerTecs = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/tecs/1`)
+    const response =  await fetch(`http://localhost:5000/stats/tecs`)
     return response.json()
   }
 
@@ -15,7 +15,7 @@ const dataProm = traerTecs()
 export default function Tecs({id}) {
 
   const result = use(dataProm)
-  const matrix = id === 1 ? use(dataProm) : id === 2 ? use(dataProm2) : id === 3? use(dataProm3) : null ;
+  const matrix = id === 1 ? result.uno : id === 2 ? result.dos : id === 3? result.tres : null
  
    
   function tecnologiasMasComunes(matriz) {
