@@ -24,7 +24,6 @@ ChartJS.register(
 import "../general.css"
 
 export default function BarChart({datos}) {
-    console.log(datos)
     function getBackgroundColor(nivel) {
         switch (nivel) {
           case 'A1':

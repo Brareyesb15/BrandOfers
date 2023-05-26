@@ -8,7 +8,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 
 export default function Estadux({est,num}) {
-    console.log(est,num)
+
 
     let options = {
         responsive : true,
