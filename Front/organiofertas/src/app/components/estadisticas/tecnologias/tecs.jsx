@@ -8,22 +8,13 @@ const traerTecs = async () => {
     const response =  await fetch(`http://localhost:5000/stats/tecs/1`)
     return response.json()
   }
-const traerTecs2 = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/tecs/2`)
-    return response.json()
-  }
-const traerTecs3 = async () => {
-    const response =  await fetch(`http://localhost:5000/stats/tecs/3`)
-    return response.json()
-  }
 
 const dataProm = traerTecs()
-const dataProm2 = traerTecs2()
-const dataProm3 = traerTecs3()
+
 
 export default function Tecs({id}) {
 
-
+  const result = use(dataProm)
   const matrix = id === 1 ? use(dataProm) : id === 2 ? use(dataProm2) : id === 3? use(dataProm3) : null ;
  
    
