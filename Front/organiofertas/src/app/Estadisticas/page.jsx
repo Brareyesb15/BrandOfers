@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react';
+import dynamic from "next/dynamic";
 import Estado from "../components/estadisticas/estado/estado";
 import Exp from "../components/estadisticas/experiencia/experiencia";
 import Fecha from "../components/estadisticas/fechas/Fechas";
@@ -14,7 +15,7 @@ import { textEsta } from '../../../utils/textos';
 import Welcome from '../components/welcome';
 import "./page.css";
 
-export default function Estadisticas() {
+function Estadisticas() {
   const [selectedOption, setSelectedOption] = useState(1);
 
   const handleOptionChange = (id) => {
@@ -50,3 +51,5 @@ export default function Estadisticas() {
     </>
   );
 }
+
+export default dynamic (() => Promise.resolve(Estadisticas), {ssr: false})
