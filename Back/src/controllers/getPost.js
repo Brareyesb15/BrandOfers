@@ -41,7 +41,7 @@ const getPost = async (req,res) => {
       const result = oferta.map((oferta) => oferta.postulacion);
       return res.status(200).send(result);
     }
-    return res.status(400).send("Invalid ID");
+    return res.status(400).send({error: "Invalid ID"});
   } catch (error) {
     return res.status(400).send(error.message);
   }
