@@ -26,14 +26,14 @@ export default function Navigation() {
       <nav>
         <ul className="navbar-items">
           {links.map(({ label, route, icon: Icon }) => (
-            <li key={route}>
+            <div key={route}>
               <Link href={route}>
                 <div className="navbar-item">
                   <Icon className="navbar-icon" />
-                  {label}
+                  <span>{label}</span>
                 </div>
               </Link>
-            </li>
+            </div>
           ))}
         </ul>
       </nav>
