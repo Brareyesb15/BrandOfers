@@ -39,8 +39,8 @@ export default function Estadisticas() {
       <div className="gridContainer"> 
         <div className="componentBox"><Estado id={selectedOption}></Estado></div>
         <div className="componentBox"><Paises id={selectedOption}>Estadisticas sobre Países</Paises></div>
-        {/* <div className="componentBox"><Exp id={selectedOption}></Exp></div>
-        <div className="componentBox"><Post id={selectedOption}></Post></div>
+        <div className="componentBox"><Exp id={selectedOption}></Exp></div>
+        {/* <div className="componentBox"><Post id={selectedOption}></Post></div>
         <div className="componentBox"><Stack id={selectedOption}></Stack></div>
         <div className="componentBox"><Idioma id={selectedOption}></Idioma></div>
         <div className="componentBox"><Plats id={selectedOption}></Plats></div>

@@ -14,7 +14,8 @@ const dataProm = traerPaises()
 export default function Paises({id}) {
     
   const result = use(dataProm)
-  const data = id === 1 ? result.uno : id === 2 ? result.dos : id === 3? result.tres : null
+  const data = id === 1 ? result.uno : id === 2 ? result.dos : id === 3? result.tres : null;
+
   console.log(data)
 
     function getCountryCounts(countries) {

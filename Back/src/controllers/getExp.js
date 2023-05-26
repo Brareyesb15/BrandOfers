@@ -2,18 +2,16 @@ const {ofertas,avances} = require("../../configs/DB_connection");
 
 
 const getExp = async (req,res) => {
-    const { id } = req.params;
+  let resolv = {};
 
   try {
-    if (id === "1") {
-      const oferta = await ofertas.findAll({
+    
+      const oferta1 = await ofertas.findAll({
         attributes: ["experiencia"],
       });
-      const result = oferta.map((oferta) => oferta.experiencia);
-      return res.status(200).send(result);
-    }
-    if (id === "2") {
-      const oferta = await ofertas.findAll({
+      resolv.uno = oferta1.map((oferta) => oferta.experiencia);
+      
+      const oferta2 = await ofertas.findAll({
         attributes: ["experiencia"],
         include: [
           {
@@ -22,11 +20,9 @@ const getExp = async (req,res) => {
           },
         ],
       });
-      const result = oferta.map((oferta) => oferta.experiencia);
-      return res.status(200).send(result);
-    }
-    if (id === "3") {
-      const oferta = await ofertas.findAll({
+     resolv.dos = oferta2.map((oferta) => oferta.experiencia);
+    
+      const oferta3 = await ofertas.findAll({
         attributes: ["experiencia"],
         include: [
           {
@@ -38,10 +34,9 @@ const getExp = async (req,res) => {
           "$avances.id$": null,
         },
       });
-      const result = oferta.map((oferta) => oferta.experiencia);
-      return res.status(200).send(result);
-    }
-    return res.status(400).send({error: "Invalid ID"});
+      resolv.tres = oferta3.map((oferta) => oferta.experiencia);
+     
+      return res.status(200).send(resolv)
   } catch (error) {
     return res.status(400).send({error: error.message})
   }
