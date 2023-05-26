@@ -5,15 +5,21 @@ import React, { use } from 'react';
 
 const traerEstado = async () => {
     const response =  await fetch(`http://localhost:5000/stats/estado/1`)
-    return response.json()
+    let respu = await response.json();
+    console.log("Entre en 1", response,respu)
+    return respu
   }
   const traerEstado2 = async () => {
     const response =  await fetch(`http://localhost:5000/stats/estado/2`)
-    return response.json()
+    let respu = await response.json();
+    console.log("Entre en 2", response,respu)
+    return respu
   }
   const traerEstado3 = async () => {
     const response =  await fetch(`http://localhost:5000/stats/estado/3`)
-    return response.json()
+    let respu = await response.json();
+    console.log("Entre en 3", response,respu)
+    return respu
   }
 
 
@@ -22,10 +28,11 @@ const dataProm2 = traerEstado2()
 const dataProm3 = traerEstado3()
 
 export default function Estado({id}) {
+  console.log(id)
     
   const data = id === 1 ? use(dataProm) : id === 2 ? use(dataProm2) : id === 3? use(dataProm3) : null ;
 
-
+  console.log(data)
     function getEstado(est) {
         let uniqueEst = [...new Set(est)];
         
