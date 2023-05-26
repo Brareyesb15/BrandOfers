@@ -1,4 +1,4 @@
-header {
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -20,28 +20,36 @@ header {
   border-bottom: none;
 }
 
-.navbar-item > svg {
-  font-size: 24px;
-  margin-bottom: 5px;
+.navbar-item-inner {
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.navbar-item > a {
-  margin-top: 5px;
-  text-decoration: none;
+.navbar-item-inner.active {
+  border: 2px solid #f6c;
+  background-color: #f6c;
+  color: pink;
 }
 .perso {
   text-decoration:none;
 }
 
 
+.navbar-icon {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
 
-  @media (max-width: 768px) {
-    .navbar-items {
-      flex-direction: column;
-    }
-  
-    .navbar-item {
-      padding: 10px 0;
-    }
+.navbar-item-inner > span {
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .navbar-items {
+    flex-direction: column;
   }
-  
+
+  .navbar-item {
+    padding: 10px 0;
+  }
+}
