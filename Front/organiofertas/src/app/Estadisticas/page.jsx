@@ -42,10 +42,10 @@ export default function Estadisticas() {
         <div className="componentBox"><Exp id={selectedOption}></Exp></div>
         <div className="componentBox"><Post id={selectedOption}></Post></div>
         <div className="componentBox"><Stack id={selectedOption}></Stack></div>
-        {/* <div className="componentBox"><Idioma id={selectedOption}></Idioma></div>
+        <div className="componentBox"><Idioma id={selectedOption}></Idioma></div>
         <div className="componentBox"><Plats id={selectedOption}></Plats></div>
         <div className="componentBox"><Fecha id={selectedOption}></Fecha></div>
-        <div className="componentBox"><Idioma2 id={selectedOption}></Idioma2></div> */}
+        <div className="componentBox"><Idioma2 id={selectedOption}></Idioma2></div>
       </div>
     </>
   );

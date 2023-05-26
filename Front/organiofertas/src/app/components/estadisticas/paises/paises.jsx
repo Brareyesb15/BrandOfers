@@ -24,7 +24,14 @@ export default function Paises({id}) {
         return [uniqueCountries, counts];
       }
 
-        const [uniqueCountries, counts] = getCountryCounts(data);
+      let uniqueCountries, counts; 
+      
+      if (data) {
+        [uniqueCountries, counts] = getCountryCounts(data);
+      } else {
+        uniqueCountries = null;
+        counts = null;
+      }
     
 
     return (

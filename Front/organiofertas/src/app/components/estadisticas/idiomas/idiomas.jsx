@@ -25,7 +25,14 @@ export default function Idioma({id}) {
         return [uniqueIdioma, counts];
       }
 
-        const [uniqueIdioma, counts] = getIdioma(data);
+      let uniqueIdioma, counts; 
+      
+      if (data) {
+        [uniqueIdioma, counts] = getIdioma(data);
+      } else {
+        uniqueIdioma = null;
+        counts = null;
+      }
         
 
     return (

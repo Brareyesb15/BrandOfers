@@ -14,16 +14,23 @@ const dataProm = traerPlats()
 export default function Plats({id}) {
 
   const result = use(dataProm)
-  const plataformas = id === 1 ? result.uno : id === 2 ? result.dos : id === 3? result.tres : null;
+  const data = id === 1 ? result.uno : id === 2 ? result.dos : id === 3? result.tres : null;
   
 
-    function getIdioma(idioma) {
-        const uniqueIdioma = [...new Set(idioma)];
-        const counts = uniqueIdioma.map(sta=> idioma.filter(c => c === sta).length);
-        return [uniqueIdioma, counts];
+    function getPlat(plat) {
+        const uniquePlat = [...new Set(plat)];
+        const counts = uniquePlat.map(sta=> plat.filter(c => c === sta).length);
+        return [uniquePlat, counts];
       }
 
-        const [uniqueIdioma, counts] = getIdioma(plataformas);
+      let uniquePlat, counts; 
+      
+      if (data) {
+        [uniquePlat, counts] = getPlat(data);
+      } else {
+        uniquePlat = null;
+        counts = null;
+      }
   
 
      
@@ -31,7 +38,7 @@ export default function Plats({id}) {
         <>
       <div style={{ textAlign: 'center' }}>
         <h2>Plataformas</h2>
-        <LinesChart plats={uniqueIdioma} nums={counts}></LinesChart>
+        <LinesChart plats={uniquePlat} nums={counts}></LinesChart>
       </div>
         </>
     )

@@ -22,7 +22,14 @@ export default function Fecha({id}) {
         const counts = uniqueFecha.map(fech => fecha.filter(c => c === fech).length);
         return [uniqueFecha, counts];
       }
-        const [uniqueFecha, counts] = getFecha(data);
+      let uniqueFecha, counts; 
+      
+      if (data) {
+        [uniqueFecha, counts] = getFecha(data);
+      } else {
+        uniqueFecha = null;
+        counts = null;
+      }
 
     return (
     <>

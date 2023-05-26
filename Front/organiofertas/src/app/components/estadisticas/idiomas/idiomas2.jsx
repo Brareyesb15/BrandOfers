@@ -46,7 +46,7 @@ const data = id === 1 ? result.uno : id === 2 ? result.dos : id === 3? result.tr
         return resultado;
       }
 
-      const resultado = obtenerInformacionIdiomas(data);
+      const resultado = data ? obtenerInformacionIdiomas(data) : null;
     
   
       return (

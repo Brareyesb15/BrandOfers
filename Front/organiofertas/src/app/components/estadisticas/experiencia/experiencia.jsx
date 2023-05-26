@@ -22,7 +22,14 @@ export default function Exp({id}) {
         return [uniqueExp, counts];
       }
 
-        const [uniqueExp, counts] = getExperiencias(data);
+      let uniqueExp, counts; 
+      
+      if (data) {
+        [uniqueExp, counts] = getExperiencias(data);
+      } else {
+        uniqueExp = null;
+        counts = null;
+      }
 
     return (
     <>

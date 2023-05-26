@@ -25,7 +25,14 @@ export default function Post({id}) {
         return [uniquePost, counts];
       }
 
-        const [uniquePost, counts] = getPostulaciones(data);
+      let uniquePost, counts; 
+      
+      if (data) {
+        [uniquePost, counts] = getPostulaciones(data);
+      } else {
+        uniquePost = null;
+        counts = null;
+      }
         
 
     return (

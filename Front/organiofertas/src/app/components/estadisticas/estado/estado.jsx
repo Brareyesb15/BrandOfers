@@ -27,9 +27,15 @@ export default function Estado({id}) {
         return [uniqueEst, counts];
       }
 
-        const [uniqueEst, counts] = getEstado(data);
-        
+      let uniqueEst, counts; 
       
+      if (data) {
+        [uniqueEst, counts] = getEstado(data);
+      } else {
+        uniqueEst = null;
+        counts = null;
+      }
+    
 
     return (
     <>

@@ -27,7 +27,14 @@ export default function Stack({id}) {
         return [uniqueStack, counts];
       }
 
-        const [uniqueStack, counts] = getStack(data);
+      let uniqueStack, counts; 
+      
+      if (data) {
+        [uniqueStack, counts] = getStack(data);
+      } else {
+        uniqueStack = null;
+        counts = null;
+      }
         
 
     return (
