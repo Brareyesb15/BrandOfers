@@ -30,8 +30,7 @@ export default function Paises({id}) {
       }
 
         const [uniqueCountries, counts] = getCountryCounts(data);
-        console.log(uniqueCountries);
-        console.log(counts);
+    
 
     return (
     <>

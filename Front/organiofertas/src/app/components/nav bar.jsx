@@ -49,6 +49,7 @@ export default function Navigation() {
               </div>
             ))}
           </div>
+          
           <div className="navbar-item"></div> {/* Tercera división vacía */}
         </div>
       </nav>

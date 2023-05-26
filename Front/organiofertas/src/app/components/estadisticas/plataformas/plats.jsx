@@ -31,7 +31,7 @@ export default function Plats({id}) {
       }
 
         const [uniqueIdioma, counts] = getIdioma(plataformas);
-        console.log(uniqueIdioma,counts)
+  
 
      
     return (

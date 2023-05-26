@@ -32,7 +32,6 @@ export default function Idioma({id}) {
       }
 
         const [uniqueIdioma, counts] = getIdioma(data);
-        console.log(uniqueIdioma,counts)
         
 
     return (

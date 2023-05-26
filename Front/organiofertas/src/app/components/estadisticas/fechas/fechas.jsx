@@ -27,7 +27,6 @@ export default function Fecha({id}) {
   console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", data)
     function getFecha(fecha) {
         const uniqueFecha = [...new Set(fecha)];
-        console.log(uniqueFecha, "DATOOOOOOOOOOOS")
         const counts = uniqueFecha.map(fech => fecha.filter(c => c === fech).length);
         return [uniqueFecha, counts];
       }
