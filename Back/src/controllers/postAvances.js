@@ -16,8 +16,7 @@ const postAvances= async (req,res) => {
 
 
     catch(error){
-        console.log("error",error.message)
-    return error
+        return res.status(400).send({error: error.message})
     }
 }
 

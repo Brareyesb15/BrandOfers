@@ -1,4 +1,4 @@
-header {
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -20,25 +20,52 @@ header {
   border-bottom: none;
 }
 
-.navbar-item > svg {
+.navbar-item-inner {
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row; /* Cambiado a row */
+  align-items: center;
+}
+
+.navbar-item-inner.active {
+  border: 2px solid rgba(0, 0, 0, 0.3); /* Color más claro */
+  background-color: rgba(0, 0, 0, 0.1); /* Fondo más claro */
+  color: #f6c; /* Cambiado a gris (#f6c) */
+}
+
+.perso {
+
+  text-decoration: none; /* Cambiado a gris (#f6c) y añadido !important */
+}
+
+.navbar-icon {
   font-size: 24px;
   margin-bottom: 5px;
+  color: #f6c; /* Cambiado a gris (#f6c) */
 }
 
-.navbar-item > span {
+.navbar-item-inner > span {
   margin-top: 5px;
-  text-decoration: none;
+  color: #f6c; /* Cambiado a gris (#f6c) */
+}
+
+.navbar-item-inner.active {
+  border: 2px solid rgba(0, 0, 0, 0.3); /* Color más claro */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra */
+  transform: translateY(-2px); /* Elevación */
+}
+
+@media (max-width: 768px) {
+  .navbar-items {
+    flex-direction: row; /* Cambiado a row */
+    justify-content: center; /* Añadido */
+    align-items: center; /* Añadido */
+  }
+
+  .navbar-item {
+    padding: 10px 15px; /* Ajustado el espaciado */
+  }
 }
 
 
-
-  @media (max-width: 768px) {
-    .navbar-items {
-      flex-direction: column;
-    }
-  
-    .navbar-item {
-      padding: 10px 0;
-    }
-  }
-  

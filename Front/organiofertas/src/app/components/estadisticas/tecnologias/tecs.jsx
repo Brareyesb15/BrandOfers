@@ -51,7 +51,7 @@ export default function Tecs({id}) {
       };
 
       const tecsMas = tecnologiasMasComunes(matrix)
-      console.log(tecsMas)
+ 
       
       matrix.forEach((array) => {
         for (let i = 0; i < array.length; i++) {
@@ -92,7 +92,7 @@ export default function Tecs({id}) {
       const resultThree = Object.entries(combinations.three).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([technologies, count]) => [technologies.replace(/,/g, ', '), count]);
       const resultTwo = Object.entries(combinations.two).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([technologies, count]) => [technologies.replace(/,/g, ', '), count]);
       
-      console.log(resultFour)
+
     return (
         <>
       <div className="gridContainerTecs">

@@ -1,4 +1,6 @@
+"use client"
 import Link from "next/link";
+import { useState } from "react";
 import { MdHome, MdSave, MdInsertChart } from "react-icons/md";
 import "./nav bar.css";
 
@@ -21,22 +23,38 @@ const links = [
 ];
 
 export default function Navigation() {
+  const [activeLink, setActiveLink] = useState(""); // Estado para el enlace activo
+
+  const handleClick = (route) => {
+    setActiveLink(route); // Actualizar el enlace activo al hacer clic en un enlace
+  };
+
   return (
     <header className="header">
       <nav>
-        <ul className="navbar-items">
-          {links.map(({ label, route, icon: Icon }) => (
-            <div key={route}>
-              <Link href={route}>
-                <div className="navbar-item">
-                  <Icon className="navbar-icon" />
-                  <span>{label}</span>
-                </div>
-              </Link>
-            </div>
-          ))}
-        </ul>
+        <div className="navbar-items">
+          <div className="navbar-item"></div> {/* Primer división vacía */}
+          <div className="navbar-item">
+            {links.map(({ label, route, icon: Icon }) => (
+              <div key={route}>
+                <Link className="perso" href={route}>
+                  <div
+                    className={`navbar-item-inner ${activeLink === route ? "active" : ""}`}
+                    onClick={() => handleClick(route)}
+                  >
+                    <Icon className="navbar-icon" />
+                    <span>{label}</span>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+          
+          <div className="navbar-item"></div> {/* Tercera división vacía */}
+        </div>
       </nav>
     </header>
   );
 }
+
+
