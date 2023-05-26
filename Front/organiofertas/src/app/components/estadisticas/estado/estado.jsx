@@ -13,7 +13,8 @@ const dataProm = traerEstado()
 
 export default function Estado({id}) {
     
-  const result = use(dataProm)
+  const result = use(dataProm) // Podrías pensar en ponerle un catcheador de errores aquí, luego averiguas como. Esto es algo que podría romper.
+
   const data = id === 1 ? result.uno : id === 2 ? result.dos : id === 3? result.tres : null
 
     function getEstado(est) {
