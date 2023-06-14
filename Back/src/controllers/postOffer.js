@@ -2,7 +2,7 @@ const {ofertas} = require("../../configs/DB_connection");
 
 
 const postOffer = async (oferta) => {
-    console.log("en post offer", oferta)
+  
     try{
   const result = await ofertas.create({
     titulo: oferta.titulo,
@@ -19,7 +19,7 @@ const postOffer = async (oferta) => {
 
     }
     )
-console.log(result)
+
 return result; 
 
 }
