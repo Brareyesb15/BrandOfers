@@ -28,7 +28,7 @@ export default function Estado({id}) {
       }
 
       let uniqueEst, counts; 
-      
+
       if (data) {
         [uniqueEst, counts] = getEstado(data);
       } else {
@@ -36,7 +36,6 @@ export default function Estado({id}) {
         counts = null;
       }
     
-
     return (
     <>
      <div style={{ textAlign: 'center' }}>

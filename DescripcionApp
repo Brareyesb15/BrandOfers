@@ -187,3 +187,12 @@ Adelantaste a nivel visual. Ahora sigue el tema de color e ir revisando cositas 
 
 26-5
 Estado linea 16 tiene un comentario importante respecto al manejo de errores: Podrías pensar en ponerle un catcheador de errores aquí, luego averiguas como. Esto es algo que podría romper, ya que si viene un error result.uno no va a existir.
+
+27-5
+Algunos debugueos finales:  
+Formato de fecha en tablas debe acomodarse para que cualquier formato pueda ser buscado, es decir, si se empieza por el mes día pueda buscarse, o por el mes y encontrarlo.     
+El navbar o es invisible o no lo es, ahora mismo está en un intermedio en el que muestra los titulos de la tabla pero no los valores  a través de su invisibilidad. Cambiar. 
+O pones a combinar los filtros o haces que cuando uses un filtro los demás se cambien. No le encuentro mucho sentido a combinar los filtros de esta app pero podría ser. Si no que los filtros se reinicien.
+Ahora mismo la tabla está demasiado ancha para el espacio que tiene, por lo tanto toca sacar alguno de los filtros o abrir un  poco la tabla o quitar algo de info. 
+Cuando actualizas la página se quita el estilo de  la selección. El nav bar debe identificar en qué componente estamos y con esa info marcar los estilos. 
+Agregar un avance en el componente de detalle no lo está actualizando (es raro porque esta funcionalidad ya existia), revisar por qué no se está actualizando o en qué situaciones. Ahora si se está actualizando. Analizar en qué situaciones se actualiza y en cuales no...

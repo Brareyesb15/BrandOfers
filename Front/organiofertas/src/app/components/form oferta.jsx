@@ -18,7 +18,7 @@ export default function FormOfertas() {
     idioma: {idioma : "español", nivel : "Nativo"},
     experiencia: "",
     pais: "",
-    postulacion: "Espontanea",
+    postulacion: "Regular",
     experiencia: "Menos de 1 año",
     plataforma: ""
 
